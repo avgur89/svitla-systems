@@ -1,0 +1,226 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'How we work',
+		solutionCaption = ['financial_services', 'Big Data ', 'media', 'Data management ', 'Entertainment', 'Telecommunication', 'Human Resources', 'Education', 'Healthcare', 'Travel & Hospitality', 'E-commerce', 'Education', 'Healthcare', 'Travel & Hospitality'],
+		solutionSvgIcon = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '1', '2', '3'],
+		sliderImgSource = ['static/img/clients/ancestry.png', 'static/img/clients/bmc.png', 'static/img/clients/inflection.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png'],
+		breadList = ['main', 'how we work'];
+
+block main
+	main.content(data-page='we_work')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/how-we-work_main.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver exceptional value to our clients
+					+e.description-bot.hide-sm(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Svitla Systems is a proven software development and testing provider. We are experts in delivering managed team extension and build-to-order software applications.
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title How We Work
+		//end screen
+
+		//begin blog-1
+		+b.SECTION.blog-1_default.section
+			+e.container.container(data-anim='group')
+				+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Cooperation models
+				+e.H4.text.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Because every client is unique, we have developed engagement models tailored for businesses from start-ups to Fortune 500 companies.
+				+e.row.col__wrap_without-caption(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Managed Team Extension
+								+e.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Recommended For:
+								-BlogList_1 = ['Team Extensions: Our talented technical team becomes an extension of your team, saving you time and resources on recruiting and onboarding', 'Ongoing Bug Fixes & Support: You can rely on the team 24/7 for availability and assistance', 'Long-Term Development: Our team becomes as vested in the success of your project as your own team']
+								ul.ul-standart(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									each el, index in BlogList_1
+										li= el
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'Learn more about the model',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Build-to-Order Software Applications
+								+e.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Recommended For:
+								-BlogList_2 = ['Smart Delegation: No need to assign internal staff to build a project from scratch', 'Faster Results: With an Agile approach, short interactions guarantee that every step of your project is implemented on time', 'Transparency & Control: It is easy to hand over the requirements to a ready-to-go team and check in with them periodically']
+								ul.ul-standart(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									each el, index in BlogList_2
+										li= el
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'Learn more',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+		//end blog-1
+
+		//begin half
+		+b.half_video._turquoise._md.section
+			+e.bg-w
+				+e.bg
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/how-we-work_half-1.png' alt='image')
+						+e.bg-video
+							video(controls playsinline preload="none")
+								source(src='empty.mp4' data-load-src="static/video/how-1.mp4" type="video/mp4")
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item._center.is-active
+						+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Christian Martinez
+						+e.subtitle_dark.subtitle_uppercase.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') general counsel
+						+e.text._italic(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Our clients often look to us to define how we will push their businesses to the next level, with not just technical expertise but also straight-forward U.S. based contractual terms enabling easy sign-ups or termination. As part of our service, we observe the strictest standards to meet the best practices.
+		//end half
+
+		//begin blog-4-section
+		+b.SECTION.blog-4.section
+			.container(data-anim='group' data-anim-delay='.1' data-anim-duration='.7')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Our approach
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							p We cover all aspects of the software engineering process, starting with your strategy.
+							p So while we design, develop, and support your software products, you can focus on your core business.
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Custom Services
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Our software development services are tailored specifically to your needs, based on your requirements, budget, and timetable.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Hire the Best
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We employ talented architects, developers, engineers, testers, and designers who are experts in emerging technologies and understand different corporate cultures.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Innovation Technologies
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Strong partnerships with leading Silicon Valley companies provide Svitla with expertise in advanced technologies. We offer a wide range of services, from web and mobile applications to systems support and testing to Big Data architecture designs and Internet of Things deployments.
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'learn more about our expertise',
+								className: 'link-white js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end blog-4
+
+		//second half
+		+b.half_video._white._md.section
+			+e.bg-w
+				+e.bg
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/how-we-work_half-2.png' alt='image')
+						+e.bg-video
+							video(controls playsinline preload="none")
+								source(src='empty.mp4' data-load-src="static/video/how-2.mp4" type="video/mp4")
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item.is-active
+						+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mariia Petrovych
+						+e.subtitle_dark.subtitle_uppercase.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') HR Manager
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Here in Svitla we consider people to be our core asset and we do everything for them to stay at Svitla for years!  The longevity of our developers with the company is something we can boast about. We give our developers comfortable working environment. Team outings and corporate events in our company are integral part of our culture.   Our regular performance reviews enable our developers to have a clear development path for professional and career growth.
+		//end half
+
+		//SOLUTIONS_begin
+		+b.SECTION.solutions.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver top-notch solutions for industries
+				+e.row.col__wrap(data-anim='group' data-anim-delay='0.05' data-anim-duration='0.1')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							p
+								| Svitla Systems is proud to be at the forefront of new technological frontiers. Our engineers are among the brightest minds in the world
+							p
+								| We encourage you to read our case studies to learn about our implemented solutions and what we can do for you.
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Discover our solutions',
+								className: 'link-light-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							each solution, index in solutionCaption
+								+e.A.item.anim-line__item(data-mob-anim='group' data-mob-anim-stagger='fade-top' href="https://www.google.com.ua/")
+									+i(solutionSvgIcon[index], true)
+									+e.H3.title.h6(data-anim-stagger='fade-top' data-anim-parent-trigger)= solution
+		//SOLUTIONS_end
+
+		//SLIDER_begin
+		+b.SECTION.slider-inner_clients.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Clients
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_clients(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_clients.col__large.anim-line
+							each source, index in sliderImgSource
+								+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									img(src= source data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger" alt="")
+		//SLIDER_end
+
+		//begin meet
+		+b.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.title Contact us
+				//+e.title Let's meet We look forward to sharing our expertise, consulting you about your product idea, or helping you find the right solution for an existing project
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p We will help you form the right team for your project.
+					+e.col
+						+b.FORM.form.__form(action='URL')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text get in touch
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

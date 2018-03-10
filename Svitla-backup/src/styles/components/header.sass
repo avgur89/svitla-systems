@@ -1,0 +1,482 @@
+.header
+	$parent: &
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 98
+	opacity: 0
+	&.has-anim
+		+trs-slow
+	&.is-hide
+		transform: translateY(-100%)
+	&.is-disabled
+		z-index: 1
+	&__top
+		position: relative
+		+trs-slow
+		&-bg
+			+ratio-in
+			overflow: hidden
+			z-index: -1
+			&:before
+				pointer-events: none
+				content: ''
+				position: absolute
+				z-index: 0
+				left: calc(50% + 580px)
+				bottom: 45px
+				width: 0
+				height: 0
+				border-radius: 50%
+				transform: translate(-50%, 50%)
+				background-color: $color1
+				transition: all 1s ease
+				+md
+					left: auto
+					right: 64px
+					transform: translate(50%, 50%)
+				+sm
+					bottom: 30px
+					right: 33px
+			#{$parent}_white &:before,
+			#{$parent}.is-blue &:before
+				width: 200vw
+				height: 200vw
+				+md
+					width: 3072px
+					height: 3072px
+			#{$parent}_white &:before
+				background-color: $color0
+	&__mobile-nav
+		pointer-events: none
+		display: none
+		position: fixed
+		padding-top: 75px
+		padding-bottom: 20px
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+md
+			display: flex
+			justify-content: center
+			align-items: center
+		&-scroll
+			position: relative
+			height: 100%
+			width: 100%
+	
+	&__mobile-bg
+		pointer-events: none
+		display: none
+		position: fixed
+		z-index: 0
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+md
+			display: block
+		&:before
+			content: ''
+			position: absolute
+			top: 45px
+			right: 64px
+			width: 0
+			height: 0
+			border-radius: 50%
+			transform: translate(50%,-50%)
+			background-color: $color0
+			transition: all 0.25s ease
+			+sm
+				top: 30px
+				right: 33px
+			#{$parent}.is-white &
+				width: 4096px
+				height: 4096px
+				transition: all 0.5s ease
+	
+	&__container
+		z-index: 2
+		padding: 16px 0
+		display: flex
+		align-items: center
+		+sm
+			padding-top: 0
+			padding-bottom: 0
+		
+	&__logo
+		flex: 1 0 auto
+		overflow: hidden
+		&-icon
+			display: block
+		.icon
+			display: block
+			height: 30px
+			width: 90px
+			font-size: 30px
+			fill: $color0
+			+trs-slow
+			+sm
+				width: 60px
+				height: 20px
+				font-size: 20px
+			#{$parent}.is-blue &
+				fill: $color0
+			#{$parent}.is-white &,
+			#{$parent}_white &
+				fill: $color1!important
+			.logo-rect
+				fill: $color3
+				
+	&__controls
+		padding: 15px 0
+		overflow: hidden
+		position: relative
+		flex: 1 1 100%
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		+sm
+			overflow: visible
+		#{$parent}_nav &
+			overflow: visible
+	
+	&__menu
+		display: none
+		+link-menu
+		+md
+			display: block
+		+sm
+			padding-right: 27px
+			margin-right: -8px
+			.icon-w
+				margin-top: 7px
+				transform: translateY(-50%) scale(0.65)
+		
+	&__search-btn
+		display: none
+		flex: 0 0 auto
+		cursor: pointer
+		margin-left: 50px
+		margin-right: -5px
+		padding: 5px
+		font-size: 17px
+		+md
+			margin-top: 30px
+			margin-left: 0
+			margin-right: 0
+			transform: translateY(-20px)
+			opacity: 0
+		+sm
+			margin-top: 10px
+		.icon
+			display: block
+			color: $color2
+			+trs
+		.no-touch &:hover
+			.icon
+				color: $color3
+		.no-touch #{$parent}.is-blue &:hover
+			.icon
+				color: $color3
+		.no-touch #{$parent}_white &:hover
+			.icon
+				color: $color3
+		
+	&__search-close
+		display: none
+		flex: 0 0 auto
+		+link-close
+		color: $color1
+		.icon-w
+			.icon
+				+md
+					stroke: $color1
+		
+	&__form
+		display: none
+		flex: 1 1 auto
+		margin: -11px 0
+		padding: 0 50px
+		+md
+			flex: 0
+			margin: 10px 0
+			padding: 0
+			width: 480px
+			max-width: calc(100% - 40px) !important
+		.form-input
+			padding-left: 35px
+			color: $color1
+		.form-input-label
+			padding-left: 35px
+			span
+				color: $color1
+			&:after
+				background-color: $color2
+		.form-group + .form-group
+			margin-top: 0
+		.form-group_submit
+			position: absolute
+			z-index: 2
+			top: 11px
+			right: 50px
+			+md
+				right: 0
+		.input-icon
+			position: absolute
+			pointer-events: none
+			z-index: 1
+			top: 17px
+			left: 0
+			font-size: 17px
+			color: $color2
+			.icon
+				display: block
+		.form-submit-search
+			right: 0
+			+link-dark
+			border: none
+			
+	&__nav
+		pointer-events: auto
+		+md
+			pointer-events: none
+			display: none
+			#{$parent}.menu-active &
+				pointer-events: auto
+			
+	&__mobile-subnav
+		pointer-events: none
+		position: fixed
+		z-index: 2
+		top: 0
+		left: 50%
+		right: 0
+		bottom: 0
+		padding-top: 75px
+		padding-bottom: 20px
+		opacity: 0
+		transition: none
+		border-left: 1px solid $color2
+		&.is-active
+			opacity: 1
+			+trs-slow
+		&-scroll
+			position: relative
+			height: 100%
+		ul
+			pointer-events: auto
+			display: flex
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			overflow: auto
+			transform: translateY(10px)
+			transition: opacity 0.3s ease, transform 0.3s ease
+			+md
+				pointer-events: none
+				flex-direction: column
+				align-items: flex-start
+				justify-content: center
+				padding-left: 60px
+				width: 100%
+				transform: translateX(20px)
+			+sm
+				padding-left: 15px
+			+mob-fix
+				padding-left: 60px !important
+			&.is-active
+				pointer-events: auto
+				opacity: 1
+				transform: translateY(0)
+				transition-delay: 0.3s
+				+md
+					transform: translateX(0)
+			li
+				&.is-hide
+					display: none
+				&.more-btn
+					a
+						color: $color2
+				+ li
+					margin-left: 25px
+					+md
+						flex: 0 0 auto
+						margin-left: 0
+						margin-top: 9px
+					+sm
+						margin-top: 2px
+				a
+					+link-dark
+					color: $color1
+					.icon-w
+						.icon
+							stroke: $color3
+	&_white
+		box-shadow: 0 5px 5px 0 rgba(0,0,0,0.08)
+	&_dark
+		.header__top-bg
+			background-color: $color1
+/* nav
+	----------------------------------- */
+.nav
+	flex: 0 0 auto
+	+h6
+	letter-spacing: 0.1em
+	+md
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		overflow: auto
+	> ul
+		display: flex
+		justify-content: space-between
+		+md
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			min-height: 100%
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			+trs-slow
+		&.is-active
+			+md
+				right: 50%
+		> li
+			position: relative
+			+md
+				flex: 0 0 auto
+				width: 100%
+				display: flex
+				justify-content: center
+				opacity: 0
+				transform: translateY(-20px)
+			+ li
+				margin-left: 53px
+				+md
+					margin-top: 45px
+					margin-left: 0
+				+sm
+					margin-top: 30px
+			> a
+				+link-dark
+				color: $color2
+				&::after
+					+trs
+				+md
+					color: $color1
+				.header.is-blue &
+					color: $color0
+					+md
+						color: $color1
+				.header.header_white &
+					color: $color1
+				> .icon-w
+					pointer-events: none
+					position: absolute
+					top: 100%
+					left: 0
+					margin-left: -1px
+					transform: rotate(90deg)
+					opacity: 0
+					+trs
+					> .icon
+						font-size: 12px
+						stroke: $color2
+						+trs
+				&.disabled
+					.icon-w, .icons-w
+						display: none
+				> .icons-w
+					pointer-events: none
+					position: absolute
+					top: 100%
+					margin-top: 20px
+					left: 50%
+					margin-left: -6px
+					transform: rotate(-90deg)
+					+trs
+					+sm
+						margin-top: 13px
+					> .icon
+						font-size: 12px
+						stroke: $color2
+						+trs
+			&.is-active > a
+				color: $color2!important
+			&.is-active > a > .icon-w
+				opacity: 1
+			> ul
+				width: auto
+				margin-top: 31px
+				pointer-events: none
+				display: flex
+				position: absolute
+				flex-direction: column
+				z-index: 1
+				padding: 8px 15px 15px 40px
+				top: 100%
+				left: -21px
+				opacity: 0
+				background-color: $color0
+				transform: translateY(10px)
+				transition: opacity 0.3s ease, transform 0.3s ease
+				.header_white &
+					box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15)
+				+desk
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 25px
+						width: 1px
+						height: 0
+						background-color: $color2
+						transition: all 0.8s ease-out .3s
+					&.is-active
+						&::before
+							height: calc(100% - 24px)
+				+md
+					left: 100%
+					width: 100%
+					margin-top: 0
+					padding: 0
+					transform: translateX(20px)
+				&.is-active
+					pointer-events: auto
+					opacity: 1
+					transform: translateY(0)
+					transition-delay: 0.3s
+					+md
+						transform: translateX(0)
+				li
+					position: relative
+					flex: 1 0 auto
+					&:first-of-type
+						margin-top: -10px
+					a
+						+link-dark
+						color: $color1
+						padding: 7px 0 8px
+						.icon-w
+							.icon
+								stroke: $color3
+				li.is-hide
+					display: none
+				li.more
+					a
+						color: $color2

@@ -1,0 +1,82 @@
+.search__job
+	position: relative
+	margin-top: $topOffset
+	z-index: 3
+	+md
+		margin-top: $offsetTab
+	+sm
+		margin-top: 40px
+	form
+		display: flex
+		width: 100%
+		justify-content: space-between
+		+md
+			flex-wrap: wrap
+		.form-group
+			width: 255px
+			margin-top: 0
+			min-width: 200px
+			position: relative
+			z-index: 1 !important
+			cursor: pointer
+			input:disabled
+				cursor: pointer
+			+md
+				flex: 1 1 50%
+				margin-bottom: 20px
+				max-width: 45%
+			+sm
+				max-width: 100%
+				flex: 1 1 100%
+			&:nth-child(2)
+				z-index: 3 !important
+			&:last-child
+				width: auto
+				z-index: 0 !important
+			.btn
+				margin-right: auto
+				margin-left: auto
+				display: block
+				margin-top: 5px
+				z-index: 1
+			.form-input-label, input
+				text-transform: uppercase
+				color: $color1
+				font-size: 10px
+				padding: 20px 0px
+				+f('helvetica-bold', 10, 14, 0)
+				span
+					+trs-slow
+			.form-input-label:after
+				background: $color2
+			.js-link-single-circle
+				+link-dark
+				position: absolute
+				padding: 20px 0px
+				top: 0
+				bottom: 0
+				cursor: pointer
+				.icons-w
+					position: absolute
+					right: 0
+					transform: rotate(90deg)
+					transition: transform .6s
+					.icon
+						stroke: $color2
+			.form-input:hover + .js-link-single-circle, .form-input.active + .js-link-single-circle
+				color: $color2
+				span
+					color: $color3
+				.icons-w
+					transform: rotate(450deg)
+			.form-input:focus + .js-link-single-circle span
+				transform: translateX(0) !important
+				opacity: 1
+			.form-input.active ~ .form__item__container
+				opacity: 1
+				visibility: visible
+				transform: translateY(-1px)
+				z-index: 3
+			.form__item__container
+				+sm
+					width: 100%

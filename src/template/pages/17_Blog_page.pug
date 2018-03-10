@@ -1,0 +1,299 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Blog page',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		breadList = ['main', 'blog', 'blog page'];
+
+block main
+	main.content(data-page='blog page')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/build-to-order_main.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description_blog(data-anim='group')
+					+e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') WPF windows on two screens
+					+e.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p by Illya Reznykov, Developer @ Svitla
+					+e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+		//end screen
+
+		//begin sharing
+		+b.SECTION.blog-1_default.section_sharing
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.share_top
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large
+		//end sharing
+
+		//begin redactor
+		+b.SECTION.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small
+					+e.col.col__large.anim-line
+						.redactor
+							h2 Introduction
+							p
+								| The post shows how to position Wpf window on secondary monitor or show two windows on two monitors. The post contains complete code and we discuss how to address several scenario.
+							h5 There are the following disclaimers:
+							ol
+								li provided code and conclusions base on empiric results, so could be wrong or describe thing not correctly;
+								li the code was tested on computer with two monitors, so three and more monitors could behave differently;
+								li there are many topics concerning how to show or manipulate by the secondary monitor in Wpf application. The post doesn't include these links, as it may be easily googled.
+							p.redactor__img-wrap
+								span
+									img(src="https://lonelyplanetimages.imgix.net/a/g/hi/t/a6469f3993128cbcdde6e2b0a90aa1d3-kyiv.jpg?sharp=10&vib=20&w=1200")
+								span
+									img(src="http://ukrainetrek.com/blog/wp-content/uploads/2016/08/st-vladimir-cathedral-kyiv-ukraine-3.jpg")
+							h4 Features
+							h5 Application demonstrates the following features:
+							ol
+								li output maximized windows on all displays;
+								li window contains list box with sizes of screens from system parameters and Screen class;
+								li using of dependency container.
+							h4 Background
+							p Solution uses C#6,
+								a(href='http://google.com.ua') &nbsp.Net 4.6.1&nbsp
+								| , Wpf with MVVM pattern, <strong class="strong-orange">System.Windows.Forms, System.Drawing</strong>, NuGet packages #[u Unity] and Ikc5.#[u TypeLibrary].
+							h2 Solution
+							p
+								| Solution contains one Wpf application project. From the Wpf application all screens are considered as one "virtual" screen. In order to position window it is necessary set window coordinates in "current" screen size. <strong class="strong-orange">SystemParameters</strong> provides physical resolution of the primary screen, but according to Wpf architecture position of elements should not rely on physical dimensions of the display. The main issue is that exact value of "current" screen size depends on various factors. For example, they include text size from Windows' settings, how user connects to computer - by remote access or locally, and so on.
+							p
+								| <strong class="strong-orange">Screen class</strong> from <strong class="strong-orange">System.Windows</strong>. Forms library provides useful property Screen[] AllScreens. It allows enumerate all screen and reads their working area. But coordinates of non-primary screen are set according to "current" text size of the primary window.
+							h4 Application
+							p
+								strong
+									| As windows are created manually, <strong class="strong-orange">StartupUri</strong> should be removed from App.xaml. Method OnStartup executes the following code:
+							ul
+								li Init Unity container;
+								li Calculate current text size of the primary screen as ratio between Screen.PrimaryScreen.WorkingArea and SystemParameters.PrimaryScreen;
+									ul
+										li Each row of that table represent a particular “training example” that will be analyzed by machine learning.
+										li Cost function, or a formula that we use to understand how our hypothesis is working, and how accurate it is.
+								li And finally, a learning algorithm. This is where the magic happens. The learning algorithm is usually a complex mathematic based code that tweaks a hypothesis in one way or another, and after each iteration applies a cost function to measure the results of the tweaks.
+							pre
+								code.language-json
+									|{
+									|  "firstName": "John",
+									|  "lastName": "Smith",
+									|  "isAlive": true,
+									|  "age": 25,
+									|  "address": {
+									|    "streetAddress": "21 2nd Street",
+									|    "city": "New York",
+									|    "state": "NY",
+									|    "postalCode": "10021-3100"
+									|  },
+									|  "phoneNumbers": [
+									|    {
+									|      "type": "home",
+									|      "number": "212 555-1234"
+									|    },
+									|    {
+									|      "type": "office",
+									|      "number": "646 555-4567"
+									|    },
+									|    {
+									|      "type": "mobile",
+									|      "number": "123 456-7890"
+									|    }
+									|  ],
+									|  "children": [],
+									|  "spouse": null
+									| }
+							h4 MainWindow
+							p
+								| Main window contains <strong class="strong-orange">ListView</strong> that shows the list of ScreenRectangle models from MainWindowModel view model. In order to show window on expected screen, it should has the following properties:
+							pre
+								code.language-php
+									| class Person
+									| {
+									|     public $firstName;
+									|     public $lastName;
+									|     //
+									|     public function __construct($firstName, $lastName = '') { // optional second argument
+									|         $this->firstName = $firstName;
+									|         $this->lastName  = $lastName;
+									|     }
+									|     //
+									|     public function greet() {
+									|         return 'Hello, my name is ' . $this->firstName .
+									|                (($this->lastName != '') ? (' ' . $this->lastName) : '') . '.';
+									|     }
+									|     //
+									|     public static function staticGreet($firstName, $lastName) {
+									|         return 'Hello, my name is ' . $firstName . ' ' . $lastName . '.';
+									|     }
+									| }
+									| //
+									| $he    = new Person('John', 'Smith');
+									| $she   = new Person('Sally', 'Davis');
+									| $other = new Person('iAmine');
+									| //
+									| echo $he->greet(); // prints "Hello, my name is John Smith."
+									| //
+									| echo $she->greet(); // prints "Hello, my name is Sally Davis."
+									| //
+									| echo $other->greet(); // prints "Hello, my name is iAmine."
+									| //
+									| echo Person::staticGreet('Jane', 'Doe'); // prints "Hello, my name is Jane Doe."
+							h4 MainWindowModel
+							p
+								| Background color is used to colorized window and distinct them at different screens. <strong class="strong-orange">ViewHeight</strong> and <strong class="strong-orange">ViewWidth</strong> are bound to attached properties in order to obtain view size in view model (code is taken from #[b Pushing read-only GUI properties back into ViewModel]). ScreenRectangle class looks like derived class from Tuple<string, Rectangle> that implements NotifyPropertyChanged interface:  
+							pre
+								code.language-java
+									| import javax.swing.*;
+									| 
+									| public class Hello extends JFrame {
+									|     public Hello() {
+									|         super("hello");
+									|         super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+									|         super.add(new JLabel("Hello, world!"));
+									|         super.pack();
+									|         super.setVisible(true);
+									|     }
+									| 
+									|     public static void main(final String[] args) {
+									|         new Hello();
+									|     }
+									| }
+		//end redactor
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_white.section_redactor-signature
+			.container
+				+e.row.col__wrap
+					+e.col.col__small
+						+b.share
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large.anim-line
+						.redactor__signature(data-anim='group')
+							.redactor__signature-title by Illya Reznykov, Developer @ Svitla
+							.redactor__signature-date july 04, 2017
+		//end blog-4
+
+		//begin loop
+		+b.SECTION.loop
+				+e.container(data-anim='group')
+						+e.row
+								+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+										+e.link(data-anim-stagger='fade-top')
+												-
+														link = {
+														text: 'prev case',
+														className: 'link-dark js-link-multiple-circle',
+														icons: true
+														}
+												include ../components/link
+								+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+										+e.link(data-anim-stagger='fade-top')
+												-
+														link = {
+														text: 'next case',
+														className: 'link-dark js-link-multiple-circle',
+														icons: true
+														}
+												include ../components/link
+		//end loop
+
+		//SLIDER_begin
+		+b.SECTION.slider-inner_articles.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Related articles
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_articles(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_articles.col__large
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-14.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half15.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag events
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/slider-1.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag art
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag developments
+		//SLIDER_end
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Stay informed - subscribe
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Join our newsletter and get the latest content right in your inbox once or twice per week.
+					+e.col
+						+b.FORM.form.__form(action='URL')
+							.form-group.form-group_with-btn(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								input.form-input(type='text' id='formName' autocomplete='off' required)
+								label.form-input-label(for='formName'): span Your Email
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text sing up
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

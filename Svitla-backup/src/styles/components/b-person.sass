@@ -1,0 +1,62 @@
+.person
+	height: auto
+	padding: 10px 40px 0 40px
+	align-items: flex-start
+	&::before, &::after
+		top: 10px
+		max-height: calc(100% - 10px)
+	img
+		margin-bottom: 19px
+		height: 100px
+		width: 100px
+		border-radius: 50%
+		object-fit: cover
+		font-family: 'object-fit: cover;'
+	ul
+		line-height: 18px
+		letter-spacing: 0.1px
+		+small-text
+		& > li
+			line-height: 18px
+			letter-spacing: .2px
+		& + p
+			margin-top: 34px
+			letter-spacing: 0.05px
+	&__title
+		+h6
+		letter-spacing: 1px
+		margin-bottom: 10px
+	&__descr
+		+small-text
+		letter-spacing: 0
+		margin-bottom: 18px
+	&__links
+		a
+			+small-text
+			display: block
+			line-height: 18px
+			letter-spacing: 0
+			color: $color2
+			+trs
+		div
+			display: flex
+			span
+				+small-text
+				line-height: 18px
+				letter-spacing: 0
+				margin-right: 4px
+			.no-touch &
+				&:hover
+					a
+						color: $color1
+	+md
+		&::before, &::after
+			top: 0
+		&::after
+			display: block
+	+sm
+		&:not(:first-child)
+			margin-top: 40px!important
+		&::after
+			display: block
+			right: 1px

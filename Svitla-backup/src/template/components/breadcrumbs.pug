@@ -1,0 +1,11 @@
+if breadList
+	+b.UL.breadcrumbs(data-anim='group' class = breadClassName || '')
+		each element, index in breadList
+			if index === breadList.length - 1
+				+e.LI.active(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					a(href='' data-hover= element).link-breadcrumbs
+						span= element
+			else
+				+e.LI(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					a(href='' data-hover= element).link-breadcrumbs
+						span= element

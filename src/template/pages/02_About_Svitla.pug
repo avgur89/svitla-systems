@@ -1,0 +1,379 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'About Svitla',
+		sliderImgSource = ['static/img/timeline/california.jpg', 'static/img/timeline/kyiv2.jpg', 'static/img/main-photo.jpg', 'static/img/slider-1.jpg', 'static/img/half-14.jpg', 'static/img/half-2.jpg', 'static/img/half15.jpg', 'static/img/timeline/montenegro.jpg', 'static/img/managed_team_extension_main.jpg'],
+		sliderMounth = ['January', 'March', 'January', null, null, null, null, null, null],
+		sliderYear = ['2004', '2004', '2008', '2008', '2012', '2013', '2014', '2016', '2017'],
+		sliderText = ['Mountain View, California office opens', 'Kyiv, Ukraine office opens', 'headquarters moves to San Francisco', 'first notable project (Inflection)', 'Svitla is 100 people', 'woman-owned business certification received', 'Svitla is 300 people', '5 global locations (USA, Ukraine, Mexico, Germany, Montenegro)', '13 office locations, move headquarters to Corte Madera, CA'],
+		sliderClassList = ['', '', '', '', '', '', '', '', 'timeline_future'],
+		tooltipContent = '<div class ="google-map__tooltip"><div class="google-map__tooltip-title">Suboffice</div><div class="google-map__tooltip-descr">sub city</div><div class="google-map__tooltip-text">1501 Howard Street, San Francisco California 94103, USA</div><a href="tel:+1650-917-9544" class="google-map__tooltip-link">+1650-917-9544</div></div>',
+		tooltipContentMain = '<div class ="google-map__tooltip"><div class="google-map__tooltip-title">Headquaters</div><div class="google-map__tooltip-descr">san Francisco</div><div class="google-map__tooltip-text">1501 Howard Street, San Francisco California 94103, USA</div><a href="tel:+1650-917-9544" class="google-map__tooltip-link">+1650-917-9544</div></div>',
+		breadList = ['main', 'about us', 'svitla'],
+		dataMapJSON = {
+			"markers" : [
+				{
+					"position": {
+						"lat": 37.917345,
+						"lng": -122.508917
+					},
+					"icon": {
+						url: "static/img/marker-main.png",
+						width: 26,
+						height: 27
+					},
+					"tooltip": tooltipContentMain
+				},
+				{
+					"position": {
+						"lat": 51.514361,
+						"lng": 7.467225
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 36.062649,
+						"lng": -86.961153
+					},
+						"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+						"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 47.298493,
+						"lng": -122.578156
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 20.672949,
+						"lng": -103.365950
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 40.763519,
+						"lng": -73.987634
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 50.454241,
+						"lng": 30.592053
+				},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+				},
+					"tooltip": tooltipContent
+				},
+				{
+				"position": {
+					"lat": 49.995980,
+					"lng": 36.237002
+				},
+				"icon": {
+					url: "static/img/marker-standart.png",
+					width: 21,
+					height: 22
+				},
+				"tooltip": tooltipContent
+				},
+				{
+					"position": {
+					"lat": 49.437095,
+					"lng": 32.067563
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+					"lat": 48.255490,
+					"lng": 25.962248
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 49.837941,
+						"lng": 24.003760
+					},
+					"icon": {
+						url: "static/img/marker-standart.png",
+						width: 21,
+						height: 22
+					},
+					"tooltip": tooltipContent
+				},
+				{
+					"position": {
+						"lat": 42.441911,
+						"lng": 19.245090
+					},
+					"icon": {
+					url: "static/img/marker-standart.png",
+					width: 21,
+					height: 22
+					},
+					"tooltip": tooltipContent
+				}
+			],
+			center: {
+				lat: 42.441911,
+				lng: 19.245090
+			},
+			tooltips: true,
+			autozoom: true,
+			zoom: 2,
+			clusterIcon: "static/img/marker-cluster.png",
+			clusterIconHeight: 68,
+			clusterIconWidth: 44,
+			key: "AIzaSyCMeu_HVgZmMTnRLECYkjxLqNF7HIMDs2I",
+			lang: "en"
+		};
+
+block main
+	main.content(data-page='about svitla')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/np2.png' alt='image')
+			+e.CANVAS.canvas_middle#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.H1.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Svitla is a proven software development and testing provider headquartered in Silicon Valley.
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H2.title Svitla
+		//end screen
+
+		//begin map-section
+		+b.blog-4_flexibility._without-padding-bot.section
+			.container(data-anim='group' data-anim-delay='.1' data-anim-duration='.7')
+				+e.row.col__wrap
+					+e.col.col__small
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p We are your conduit to the most cutting-edge technological innovations. We deliver unparalleled value to our clients, who rely on our expertise and many years of experience in Managed Team Extension and Build-to-Order Software Applications.
+					+e.col.col__large
+						+b.statistic_small._four-item._text-uppercase.anim-line
+							+statistic('', '', '5', '', 'Countries', null, null)
+							+statistic('', '', '13', '', 'Years of Experience', null, null)
+							+statistic('', '', '13', '', 'office locations', null, null)
+							+statistic('', '', '1000', '+', 'Completed Projects', null, null)
+						+b.google-map.google-map_large(data-map = dataMapJSON)
+		//end map
+
+		//Developer slider_begin
+		+b.SECTION.slider-inner_timeline.section
+			.container(data-anim='group')
+				svg.timeline__line(width='100%', height='1')
+					pattern#pattern(patternunits='userSpaceOnUse', width='10px', height='100%')
+						circle.dot(cx='1', cy='1', r='.5px', fill='#000', width='1', height='1')
+					rect(fill='url(#pattern)', stroke='none', width='100%', height='100%')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Our story
+				+e.row(data-anim='group')
+					.timeline__left
+						svg.timeline__line(width='100%', height='1')
+							pattern#pattern(patternunits='userSpaceOnUse', width='10px', height='100%')
+								circle.dot(cx='1', cy='1', r='.5px', fill='#000', width='1', height='1')
+							rect(fill='url(#pattern)', stroke='none', width='100%', height='100%')
+						+e.A.prev(href="")
+							span
+							span
+							+i('arrow-left')
+					.timeline__right
+						svg.timeline__line(width='100%', height='1')
+							pattern#pattern(patternunits='userSpaceOnUse', width='10px', height='100%')
+								circle.dot(cx='1', cy='1', r='.5px', fill='#000', width='1', height='1')
+							rect(fill='url(#pattern)', stroke='none', width='100%', height='100%')
+						+e.A.next(href="")
+							span
+							span
+							+i('arrow-right')
+					+e.slides_timeline
+							each year, index in sliderYear
+								+b.timeline.slider-inner__item(class = sliderClassList[index] || '')
+									img(src= sliderImgSource[index] alt="")
+									+e.content
+										if sliderMounth[index] !== null
+											+e.mounth= sliderMounth[index]
+										+e.year= year
+										+e.text= sliderText[index]
+									+e.hover-block
+										span
+		//Developer slider_end
+
+		//begin our_values-section
+		+b.SECTION.blog-4_blue.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Our values
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/frisco.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Silicon Valley Spirit
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Strong partnerships with leading Silicon Valley companies provide Svitla with expertise in advanced technologies.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/deliver.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) We Deliver the Best
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We approach every project – big or small – with the same level of care and professionalism. And we work alongside our clients every step of the way.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/Diversity.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) We Believe in Diversity
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| People are the foundation of Svitla’s success. Our employees represent different cultures, backgrounds, and experiences. As a result of our diversity, we provide clients with fresh ideas and innovative software solutions.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/woman.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Certified Woman-Owned Company
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Svitla is a certified woman-owned company and we are proud of it. We believe that each of the millions of successful businesses launched and managed by women now dotting the US business landscape is a testament to the legitimacy of the aspirations and talents of women-entrepreneurs.
+		//end our_values
+
+		//begin glory-section
+		+b.SECTION.blog-4.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Certificates, Awards, Conferences
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							p We always enjoy receiving awards and certificates for our work, as well as being invited to and organizing our own industry events.
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/certified.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Your Certified Partner
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We take pride in being continually recognized as a world-class software development and testing company. For us, it is an indication of success.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/conference.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Regular Conference Participant and Organizer
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We love participating in and hosting industry events, forums, conferences, workshops, both locally and internationally. This way we support the software development industry and always stay on top of the latest trends.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/award.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Award-Winning Company
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We are being recognized for our excellent work by local and international organizations. Most of our awards have been won repeatedly.
+		//end glory
+
+		//begin our clients section
+		+b.SECTION.half_video._turquoise._lg.section
+			+e.bg-w
+				+e.bg
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.bg-video
+							video(controls playsinline preload="none")
+								source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/scr-1.png' alt='image')
+						+e.bg-video
+							video(controls playsinline preload="none")
+								source(src='empty.mp4' data-load-src="static/video/main-1.mp4" type="video/mp4")
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/scr-2.png' alt='image')
+						+e.bg-video
+							video(controls playsinline preload="none")
+								source(src='empty.mp4' data-load-src="static/video/main-3.mp4" type="video/mp4")
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Inflection
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Inflection selected Svitla Systems as its development partner partly because the two companies share similar cultures and the Silicon Valley vibe.  For more than 10 years now, Svitla has delivered exceptional value to Inflection, providing a large development team closely integrated into Inflection’s development process.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Nachi Sendowski
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') chief architect, Inflection
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') The Rainmaker Group
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p The Rainmaker Group provides software that helps hotels and apartment buildings price and manage revenue. Usually it takes several months to find someone in the US to join their team. With Svitla the company can get a right person with the necessary expertise within a week or two.  The advantage that works in Svitla’s favor is a vast number of technologies that Svitla covers. Svitla can provide professionals of any level, from junior to middle to senior and enables its clients to get things done faster and more cost effectively.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Douglas LaPointe
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Sr. Director Product Management, The Rainmaker Group
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Cordial
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla helped the US-based Cordial to build the major portion of their platform functionality. While Cordial had a good understanding of what they want to build, they needed a development partner to provide additional resources. This is when Svitla’s professionalism and expertise became a huge asset to Cordial’s reaching their milestones and goals.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Adam Gillespie
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') CTO, Cordial
+		//end our clients section
+
+		//begin discover
+		+b.SECTION.half_left._with-img-mask._dark._smaller.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Discover How We Work
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla Systems is a proven software development and testing provider. We are experts in delivering Managed Team Extension and Build-To-Order Software Applications.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Learn more',
+								className: 'link-white js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end discover

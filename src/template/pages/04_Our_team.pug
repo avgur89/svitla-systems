@@ -1,0 +1,188 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Our_team',
+		solutionCaption = ['financial_services', 'Big Data ', 'media', 'Data management ', 'Entertainment', 'Telecommunication', 'Human Resources', 'Education', 'Healthcare', 'Travel & Hospitality', 'E-commerce', 'Education', 'Healthcare', 'Travel & Hospitality'],
+		leaderImgSource = ['static/img/leader/1.jpg', 'static/img/leader/2.jpg', 'static/img/leader/3.jpg', 'static/img/leader/4.jpg', 'static/img/leader/5.jpg', 'static/img/leader/6.jpg', 'static/img/leader/7.jpg', 'static/img/leader/8.jpg', 'static/img/leader/9.jpg', 'static/img/leader/10.jpg', 'static/img/leader/11.jpg'],
+		leaderTitle = ['Nataliya Anon', 'Chris Cosmos', 'Andriy Galich', 'Kostyantyn Kharchenko', 'Sergiy Andryenko', 'Sergiy Shubin', 'Victor Tsuik', 'Nataliya Yerisova', 'Nataliya Maletska', 'Jorge Valadez', 'Christian Martinez'],
+		leaderDescr = ['CEO AND FOUNDER', 'CHIEF SALES OFFICER', 'MANAGING DIRECTOR OF DELIVERY IN EASTERN EUROPE', 'PH.D., CHIEF TECHNICAL ARCHITECT', 'HEAD OF PROJECT MANAGEMENT DEPARTMENT', 'LEAD PROJECT MANAGER', 'DIRECTOR OF FINANCE', 'Chief Talent Acquisition Officer', 'RECRUITMENT TEAM LEADER', 'EXEC. VP SALES AND OPERATIONS MEXICO', 'General Counsel'],
+		breadList = ['main', 'about us', 'our team'];
+
+block main
+	main.content(data-page='our_team')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/how-we-work_main.jpg' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver unparalleled value to our customers, who rely on our expertise and many years of experience in Managed Team Extension and Build-to-Order Software Applications.
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Our Team
+		//end screen
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_white._flexibility.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We Deliver the Best
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							p Svitla Systems is a proven software development and testing provider.
+					+e.col.col__large
+						+e.row-2.anim-line
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) We are always within reach
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Our team becomes an extension of your team.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) You define your product concept. We deliver it.
+		//end blog-4
+
+		//begin our_values-section
+		+b.SECTION.blog-4_dark.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Leadership
+				+e.row.col__wrap(data-anim='group' data-anim-delay='.1' data-anim-duration='.7')
+					+e.col.col__small
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla's Leadership, headed by Nataliya Anon, combines experience and strategy to deliver solid results and an excellent client experience.
+					+e.col.col__large
+						+e.row-2.anim-line_white(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							each leader, index in leaderTitle
+								+b.leader
+									+e.IMG(data-anim-stagger='fade-top' data-anim-parent-trigger src=leaderImgSource[index]).img
+									+e(data-anim-stagger='fade-top' data-anim-parent-trigger).title= leader
+									+e(data-anim-stagger='fade-top' data-anim-parent-trigger).descr= leaderDescr[index]
+									+e.tooltip
+										if index === 2
+											+e.tooltip-close
+											+e.tooltip-title
+											+e.tooltip-descr
+											+e.text
+												p
+													|  Nataliya Anon - a Stanford Business School graduate with Ukrainian heritage, entrepreneur, leader, and strategic implementer - is the Founder and CEO of Svitla Systems.
+												p
+													|  Nataliya brings to Svitla extensive international business experience, keen cross-cultural knowledge and strong interpersonal skills. Her client-centric approach and relentless dedication to the highest standards have propelled Svitla’s success in the last decade.
+										else
+											+e.tooltip-close
+											+e.tooltip-title
+											+e.tooltip-descr
+											+e.text
+												p
+													|	Nataliya Anon - a Stanford Business School graduate with Ukrainian heritage, entrepreneur, leader, and strategic implementer - is the Founder and CEO of Svitla Systems.
+												p
+													|	Nataliya brings to Svitla extensive international business experience, keen cross-cultural knowledge and strong interpersonal skills. Her client-centric approach and relentless dedication to the highest standards have propelled Svitla’s success in the last decade.
+												p
+													|	Prior to founding Svitla in 2003, Nataliya founded and served as CEO of Lohika Systems (acquired by Altran Solutions Corp.) Before that, she held management positions at Ernst & Young as well as received private equity and venture capital experience in the US and UK, where she made investments in various emerging technologies and manufacturing companies. Nataliya was a member of the Fourth Class of Growing Entrepreneurs Mentoring Program administered by the Committee of 200. Nataliya was also the co-founder of Ukrainian Students Association at Stanford. She holds a Masters Degree in IT and Accounting from the University of Kansas and an MBA from Stanford University.
+												p
+													|  Nataliya Anon - a Stanford Business School graduate with Ukrainian heritage, entrepreneur, leader, and strategic implementer - is the Founder and CEO of Svitla Systems.
+												p
+													|  Nataliya brings to Svitla extensive international business experience, keen cross-cultural knowledge and strong interpersonal skills. Her client-centric approach and relentless dedication to the highest standards have propelled Svitla’s success in the last decade.
+												p
+													|  Prior to founding Svitla in 2003, Nataliya founded and served as CEO of Lohika Systems (acquired by Altran Solutions Corp.) Before that, she held management positions at Ernst & Young as well as received private equity and venture capital experience in the US and UK, where she made investments in various emerging technologies and manufacturing companies. Nataliya was a member of the Fourth Class of Growing Entrepreneurs Mentoring Program administered by the Committee of 200. Nataliya was also the co-founder of Ukrainian Students Association at Stanford. She holds a Masters Degree in IT and Accounting from the University of Kansas and an MBA from Stanford University.
+		//end our_values
+
+		//begin expertise
+		+b.SECTION.expertise_default._white.section
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title Expertise
+				+e.left
+					+e.H3.subtitle(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver expertise for industries
+					+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Svitla is your conduit to the cutting-edge technological innovations within emerging industries, from Web and Mobile to Big Data to Internet of Things.
+						p Our development process revolves entirely around your needs. If you want software products, systems, solutions, and services that improve the way you do business, stop searching. We approach every project – big or small – with the same level of care and professionalism. And we work alongside you every step of the way.
+					+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'View all expertise',
+							className: 'link-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+				+b.expertise-nav
+					+e.list
+						-navList = ['Web', 'Front End', 'Back End', 'Mobile', 'Quality Assurance', 'Design', 'Internet of Things', 'Big Data', 'Dev Ops', 'Tech Support', 'Ecommers', 'Database']
+						-navInnerList = [['Angular JS', 'ASP .NET', 'JQuery', 'JS', 'Magento', 'Node.js', 'PHP', 'Python', 'React', 'Ruby'],['Angular JS', 'JQuery', 'JS', 'React', 'CSS, SAAS', 'HTML5', 'VisualStudio'],['Mongo DB', 'MySQL', 'VisualStudio', 'Oracle', 'Redis', 'SQLite', 'SQL server', 'C#', '.Net', 'Ruby on Rails', 'Ruby', 'Node.js', 'PHP', 'Python', 'Django'],['Android', 'Android Studio', 'IOs', 'Swift', 'Titanium', 'VisualStudio', 'Java', 'C#', '.Net'],['Hewlett Packard', 'Jira', 'Jmeter', 'QA', 'Selenium'],['HTML5', 'UI\\UX'],['Python', 'Linux', 'Embedded C'],['Hadoop', 'Spark', 'Kafka', 'Amazon RedShift', 'Java', 'Python', '.Net'],['Amazon AWS', 'Microsoft Azure', 'Cheff', 'Puttet', 'Ansible'],['Windows', 'Linux', 'Jira', 'Mac OSX'],['Magento', 'SAP', 'Shopify', 'OpenCart'],['Mongo DB', 'MySQL', 'VisualStudio', 'Oracle', 'Redis', 'SQLite', 'SQL server']]
+						ul
+							each el, index in navList
+								li
+									h4= el
+									ul
+										each el2 in navInnerList[index]
+											li: h5= el2
+					+e.sublist
+					+e.nav-circle
+						+e.nav-circle-in
+							+e.nav-circle-top
+								+e.nav-circle-icon_top
+									+i('arrow-left')
+							+e.nav-circle-bot
+								+e.nav-circle-icon_bot
+									+i('arrow-right')
+					+e.svg
+						svg(viewBox='0 0 2150 2000')
+							g.line
+								line(x1='1075' y1='0' x2='1075' y2='2000')
+							g.circle
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+							g.sector
+								circle(cx='1075' cy='1000' r='102')
+								circle(cx='1075' cy='1000' r='102')
+		//end expertise
+
+		//begin map-section
+		+b.SECTION.blog-4_flexibility.blog-4_blue.section
+			.container(data-anim='group' data-anim-delay='.2' data-anim-duration='.7')
+				+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Our Team Around the Globe
+				+e.row.col__wrap
+					+e.col.col__small
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla is built on the belief that true innovations happen when the best minds come together, no matter their location. Our teams of dedicated, savvy technical experts and strategic thinkers allow us to form collaborative relationships with our clients.
+					+e.col.col__large
+						+b.statistic_small._white._four-item._text-uppercase.anim-line
+							+statistic('', '', '5', '', 'Countries', null, null)
+							+statistic('', '', '13', '', 'Years of Experience', null, null)
+							+statistic('', '', '13', '', 'office locations', null, null)
+							+statistic('', '', '1000', '+', 'Completed Projects', null, null)
+		//end map
+
+		//begin discover
+		+b.SECTION.half_left._with-img-mask._dark.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We Always Look for New Talent
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p If you share Svitla's values and mission, we’d like to hear from you.
+						+e.center-container(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a.btn(href='')
+								.btn__bg
+									.btn__bg-top
+								.btn__bg
+									.btn__bg-bot
+								.SPAN.btn__text Get a quote
+		//end discover

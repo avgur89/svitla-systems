@@ -1,0 +1,238 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Svitla Blog',
+		breadList = ['main', 'career'];
+
+block main
+	main.content(data-page='svitla_career')
+
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/career.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We offer excellent job opportunities
+					+e.description-bot.hide-sm(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We offer excellent job opportunities / Exciting projects. Advanced technologies. Unlimited possibilities.
+					+e.description-btn(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.btn(href='')
+							+e.bg
+								+e.bg-top
+							+e.bg
+								+e.bg-bot
+							+e.SPAN.text Find your position
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Career
+		//end screen
+
+		//begin glory-section
+		+b.SECTION.blog-4.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Join the Svitla Team
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/prof.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Professional Growth
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We care deeply about our people. Svitla understands the importance of providing employees with every opportunity to continue their education. Throughout the year we offer technical webinars, conferences, workshops, hackathons, and other courses.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/prof.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Multiplie Locations
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We are a US-based company, headquatered in the heart of Silicon Valley - San Francisco, California - with 13 offices around the globe.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/diam.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Exciting Projects
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| As part of the Svitla team, you'll be encouraged to do what you love. Tap into new technologies and experiment with cutting-edge solutions for leading Silicon Valley companies.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/pl.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Healthcare and Social Package
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									|  We care that all our employees are in good health and in good spirit! Svitla Systems provides medical and dental insurance as well as gym memberships to all our employees. We celebrate major holidays and traditions, while also making some of our own.
+		//end glory
+
+		//begin SJ
+		+b.SECTION.search__job
+			+e.container.container(data-anim='group')
+				+b.FORM.form.__form(action='')
+					.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						input.form-input(type='text' id='keywords' autocomplete='off' required)
+						label.form-input-label(for='keywords'): span Key Words
+						.help-block Error
+					.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						input.form-input.js-dropper(type='email' disabled id='category' autocomplete='off' required)
+						label.form-input-label.js-link-single-circle(for='category' data-inner="Job Category"): span Job Category
+						.help-block Error
+						.form__item__container.ps-init
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check31" type="radio" checked=true)
+								label(for="check31") Administrative
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check32" type="radio")
+								label(for="check32") Finance & Legal
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check33" type="radio")
+								label(for="check33") HR & Talent Acquisition
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check34" type="radio")
+								label(for="check34") Maintenance & Support
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check35" type="radio")
+								label(for="check35") Management
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check36" type="radio")
+								label(for="check36") Project & Program Management
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check37" type="radio")
+								label(for="check37") Sales & Marketing
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check38" type="radio")
+								label(for="check38") Software Architecture
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check39" type="radio")
+								label(for="check39") Software Engineering
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check310" type="radio")
+								label(for="check310") Support & Profession Services
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check311" type="radio")
+								label(for="check311") System & Network Administration
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check312" type="radio")
+								label(for="check312") Testing & Quality Assurance
+							.form__item__checkbox
+								input.js-drop-in( name="category" id="check313" type="radio")
+								label(for="check313") User Experiance & Design
+					.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						input.form-input.js-dropper(type='email' disabled id='country' autocomplete='off' required)
+						label.form-input-label.js-link-single-circle(for='country' data-inner="Country"): span country
+						.help-block Error
+						.form__item__container.ps-init
+							.form__item__checkbox
+								input.js-drop-in(id="check1" type="checkbox" checked=true)
+								label(for="check1") Ukraine
+							.form__item__checkbox
+								input.js-drop-in(id="check2" type="checkbox" checked=true)
+								label(for="check2") Germany
+							.form__item__checkbox
+								input.js-drop-in(id="check3" type="checkbox")
+								label(for="check3") Russia
+							.form__item__checkbox
+								input.js-drop-in(id="check4" type="checkbox")
+								label(for="check4") Poland
+							.form__item__checkbox
+								input.js-drop-in(id="check5" type="checkbox")
+								label(for="check5") Moldova
+					.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.BUTTON.btn(type='submit')
+							+e.SPAN.bg
+								+e.SPAN.bg-top
+							+e.SPAN.bg
+								+e.SPAN.bg-bot
+							+e.SPAN.text search 
+		//end SJ
+
+		//begin blog-1
+		+b.SECTION.blog-1_career.section
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_without-caption(data-anim='group' data-anim-delay='0.08' data-anim-duration='0.4')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Senior Ruby Engineer for Digital Currency Exchange
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 .NET developer (Microsoft Dynamics CRM)
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle Magento Developer
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle PHP-developer
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 C++ senior Mac developer for CCS project
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle Front-end Developer #Healthcare #PaaS
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle Magento Developer
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle PHP-developer
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 C++ senior Mac developer for CCS project
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.A.title.h4( href="" data-anim-stagger='fade-top' data-anim-parent-trigger)
+									h3 Middle Front-end Developer #Healthcare #PaaS
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine, 1 position
+						UL.pagination(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							li.pagination__prev.pagination__arrow.disabled
+								div(data-hover= 'Previous')
+									div Previous
+							li.active
+								a(href="") 1
+							li
+								a(href="") 2
+							li
+								a(href="") 3
+							li
+								a(href="") 4
+							li
+								a(href="") 5
+							li.pagination__next.pagination__arrow
+								div(data-hover= 'Next')
+									div Next
+		//end blog-1
+
+		//begin discover
+		+b.SECTION.half_left._with-img-mask._dark.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We are always looking for talent
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p If there's no open position that feels just right for you, send us your resume and we'll contact you about new openings.
+						+e.center-container(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+b.btn(href="mailto: o.alekseeva@svitla.com")
+								+e.bg
+									+e.bg-top
+								+e.bg
+									+e.bg-bot
+								+e.SPAN.text Send resume
+		//end discover

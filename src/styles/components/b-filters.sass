@@ -1,0 +1,164 @@
+.filters
+	$parent: &
+	margin-top: $topOffset
+	margin-bottom: 60px
+	position: relative
+	z-index: 2
+	& + .cases
+		min-height: 380px
+	+md
+		margin-top: $offsetTab
+	+sm
+		margin-top: 60px
+		margin-bottom: -30px
+	&__cont
+		display: flex
+		justify-content: space-between
+		+mob-fix
+			justify-content: space-between !important
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+	&__item
+		cursor: pointer
+		width: 235px
+		border-bottom: 1px solid $color2
+		position: relative
+		max-width: 23%
+		z-index: 2
+		&:last-of-type
+			#{$parent}__item__container:not(.filters__item__container_single)
+				right: 0
+				left: inherit
+		&.active
+			.icons-w
+				transform: rotate(450deg)
+		+md
+			max-width: 137px
+			&:nth-last-of-type(1)
+				.filters__item__container
+					left: inherit
+					right: 0
+		+tab-fix
+			max-width: 100%!important
+			width: 22%
+		+sm
+			width: calc(50% - 10px)
+			max-width: calc(50% - 10px)
+			margin-bottom: 20px
+			&:nth-child(odd)
+				margin-right: 20px
+			&:nth-child(even)
+				.filters__item__container
+					left: inherit
+					right: 0
+		&.active
+			z-index: 10
+			.filters__item__link
+				color: $color3
+			.filters__item__container
+				visibility: visible
+				opacity: 1
+				transform: translateY(0px)
+		&__container
+			position: absolute
+			width: 100%
+			left: 0
+			top: 100%
+			background: $color2
+			padding: 27px 30px 25px
+			box-sizing: border-box
+			z-index: 2
+			cursor: default
+			visibility: hidden
+			opacity: 0
+			transition: .4s
+			transform: translateY(-20px)
+			max-height: 400px
+			+md
+				width: 150%
+				padding: 27px 20px 25px
+			+sm
+				width: calc(100vw - 40px)
+				max-width: calc(100vw - 40px)
+				padding: 25px 20px 25px
+			&_single
+				column-count: 1
+				width: 100%
+				display: flex
+				flex-direction: column
+				+sm
+					width: 150%
+					max-width: 150%
+		&__checkbox
+			position: relative
+			margin-bottom: 18px
+			input
+				position: absolute
+				left: 0
+				top: 0
+				visibility: hidden
+				&:checked +	label
+					color: #ffffff
+					&:after
+						border: 1px solid #fff
+					&:before
+						opacity: 1
+			label
+				display: block
+				padding-left: 26px
+				font-size: 13px
+				color: $color1
+				transition: .5s
+				cursor: pointer
+				position: relative
+				&:after
+					width: 16px
+					height: 16px
+					position: absolute
+					display: block
+					content: ''
+					border: 1px solid $color1
+					left: 0
+					transition: .5s
+					top: 2px
+					margin: auto
+				&:before
+					width: 10px
+					height: 10px
+					position: absolute
+					display: block
+					content: ''
+					background: #fff
+					transition: .5s
+					opacity: 0
+					left: 3px
+					top: 5px
+					margin: auto
+				&:hover
+					color: #fff
+					&:after
+						border: 1px solid #fff
+		&__link
+			color: $color1
+			text-transform: uppercase
+			text-decoration: none
+			font-size: 10px
+			+link-dark
+			width: 100%
+			padding-bottom: 17px
+			padding-top: 10px
+			.no-touch &
+				&:hover
+					color: $color2
+					& > span
+						opacity: 1!important
+						transition: all 0.3s!important
+			.icons-w
+				position: absolute
+				right: 0
+				top: 10px
+				transform: rotate(90deg)
+				transition: all .6s
+				.icon-circle
+					stroke: $color2

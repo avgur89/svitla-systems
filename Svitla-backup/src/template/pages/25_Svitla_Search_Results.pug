@@ -1,0 +1,107 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Search Results',
+		headerClass = 'header_dark',
+		breadClassName = 'breadcrumbs_dark',
+		breadList = ['main', 'Search Results'];
+
+block main
+	main.content(data-page='search')
+		+b.SECTION.search__result(data-anim='group')
+			.container
+				.col__wrap(data-anim='group' data-anim-delay='0.15' data-anim-duration='1')
+					.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						h1.search__main-title Search results
+						span Found 145 results
+					.col__large(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						form.search__form-2(action='' data-anim-parent-trigger data-anim-stagger='fade-top')
+							.form-group
+								.input-icon
+									+i('search2')
+								input.form-input(type='text' id='formSearch' autocomplete='off' required)
+								label.form-input-label(for='formSearch'): span &nbsp;
+							.form-group.form-group_submit
+								button.form-submit-search.js-link-single-circle(type='submit' data-hover='search'): span search
+						+b.tags_search(data-anim-parent-trigger data-anim-stagger='fade-top')
+							+e.cont(data-open-title="more tags" data-close-title="hide tags" data-max-tags="10")
+								+e(href="").item.active all
+								+e(href="").A.item expertise
+								+e(href="").A.item case study
+								+e(href="").A.item testimonials
+								+e(href="").A.item blog entry
+								+e(href="").A.item site page
+						+e.item-wrap
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 01
+								+e.content
+									+e.category Case study
+									+e.H2.title Here you'll find all the most recent and useful <a href="">information about software technology</a>, development trends, topical news and events.
+									+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 02
+								+e.content
+									+e.category testimonials
+									+e.title Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 03
+								+e.content
+									+e.category Expertise
+									+e.H2.title Here you'll find front-end and useful information.
+									+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 04
+								+e.content
+									+e.category Case study
+									+e.H2.title Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 05
+								+e.content
+									+e.category Expertise
+									+e.H2.title Here you'll find all the most recent and useful <a href="">information about software technology</a>, development trends, topical news and events.
+									+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 06
+								+e.content
+									+e.category Expertise
+									+e.H2.title Useful front-end information about software technology, development trends, topical news and events.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 07
+								+e.content
+									+e.category Expertise
+									+e.H2.title Here you'll find all the most recent and useful information about software technology, development trends, topical news and events.
+									+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 08
+								+e.content
+									+e.category Expertise
+									+e.H2.title Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 09
+								+e.content
+									+e.category Expertise
+									+e.H2.title Here you'll find all the most recent and useful information about software technology, development trends, topical news and events.
+									+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							+e.item(data-anim-parent-trigger data-anim-stagger='fade-top')
+								+e.number 10
+								+e.content
+									+e.category Expertise
+									+e.H2.title Useful front-end information about software technology, development trends, topical news and events.
+							UL.pagination(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								li.pagination__prev.pagination__arrow.disabled
+									div(data-hover= 'Previous')
+										div Previous
+								li.active
+									a(href="") 1
+								li
+									a(href="") 2
+								li
+									a(href="") 3
+								li
+									a(href="") 4
+								li
+									a(href="") 5
+								li.pagination__next.pagination__arrow
+									div(data-hover= 'Next')
+										div Next

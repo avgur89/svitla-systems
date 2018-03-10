@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.94 40.97">
+    <title>Law</title>
+    <g data-name="Layer 2">
+        <g data-name="Layer 5">
+            <polygon
+                    points="39.92 35.72 39.92 31.53 20.68 31.53 20.68 35.72 17.66 35.72 17.66 40.97 42.94 40.97 42.94 35.72 39.92 35.72"/>
+            <rect x="27.65" y="16.86" width="3.17" height="12.27" transform="translate(24.82 -13.93) rotate(45)"/>
+            <rect x="10.1" y="-0.68" width="3.17" height="12.27" transform="translate(7.28 -6.67) rotate(45)"/>
+            <rect x="12.8" y="9.34" width="15.31" height="9.78" transform="translate(16.05 -10.3) rotate(45)"/>
+            <rect x="8.05" y="12.62" width="3.71" height="24.31" transform="translate(20.42 0.25) rotate(45)"/>
+        </g>
+    </g>
+</svg>

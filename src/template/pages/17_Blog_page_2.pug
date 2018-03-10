@@ -1,0 +1,255 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Blog page',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		breadList = ['main', 'blog', 'blog page'];
+
+block main
+	main.content(data-page='blog page')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/build-to-order_main.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description_blog(data-anim='group')
+					+e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Just store it – the truth behind Amazon S3 hype
+					+e.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p by Oleksandr Bormetskyi
+					+e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+		//end screen
+
+		//begin sharing
+		+b.blog-1_default.section_sharing
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.share_top
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large
+		//end sharing
+
+		//begin redactor
+		+b.SECTION.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small
+					+e.col.col__large.anim-line
+						.redactor
+							p
+								| Nowadays businesses have to deal with huge amounts of data. When customers face this problem they try to find an efficient solution for safe, accessible and elastic storage service. Cloud storage market provides users with a range of different opportunities. But one particular service still remains on the top.
+							p
+								| When our customers ask for a piece of advice about the best way to store data, we usually recommend Amazon S3 service. And there are several good reasons for this choice.
+							blockquote.redactor__quote
+								p Amazon launched its cloud story at the beginning of the 2000s. It was the time when they tried to solve the problem of scaling, elasticity and dynamic growth. The solution, firstly designed for personal needs, was so successful, that the company decided to provide others with this service worldwide. Actually Amazon was the one who gave a kick to the whole cloud infrastructure market
+							blockquote.redactor__quote Amazon launched its cloud story at the beginning of the 2000s. It was the time when they tried to solve the problem of scaling, elasticity and dynamic growth. The solution, firstly designed for personal needs, was so successful, that the company decided to provide others with this service worldwide. Actually Amazon was the one who gave a kick to the whole cloud infrastructure market
+							h2 Amazon S3 – store it simple
+							p
+								| Amazon Simple Storage Service (S3) is designed for this particular need – to store and retrieve any amount of data from any web source. S3 provides object storage with a web service interface.
+							blockquote
+								| Amazon Web Services is special because of its scale and wide variety of solutions. Its growth is highly dynamic, each year it provides programmers with solutions and innovations, absolutely new for the whole market. According to the company, this approach to innovations helps make infrastructure easy to handle. Simply speaking, Amazon wants users to pay more attention to the new product they make and forget about routine operations, which become automatic.
+							p
+								| Cloud technologies in general provide ordinary users with an opportunity to store and use files within a simple infrastructure that won’t go down because of any overload.
+							p
+								| To put it simple, it becomes easy for anyone to give access to a massive file link to hundreds of thousands of people and have no fear of putting the site down when all these people start downloading simultaneously.
+							p
+								| Any user can expand this infrastructure almost to infinity. Imagine if you need the same amount of technological support in your own place, it will cost you a spaceship. Cloud solution makes it much cheaper.
+							p
+								| Amazon S3 remains the preferred cloud solution for all these demands. Why is it still prevailing? Well, the answer consists of three simple points.
+							img(src="static/img/portfolio.jpg" alt="image")
+							h2 Three “yes” to Amazon S3
+							p
+								| Amazon S3 service was introduced in 2006. Nowadays this service is more versatile and extended, but at  the beginning of the 2000s this cloud storage service raised a huge wave of interest even with its limited solution pack. Now S3 offers integration with the customer’s own data centers, as well as prolonged data storage (for example, when it comes to massive archives which require storage for a long time).
+							blockquote
+								| Amazon launched its cloud service infrastructure with the storage solution minding that there’s no way data storage demand would get weaker in time. Analytics shows that the storage service market is going to increase and raise new waves in the cloud niche. The reason is simple. There’s no way one will stop requiring some secure place to store all the data this century provides. So according to the Gartner’s analytics Amazon nowadays stores 1,6 times more data than all the other cloud providers put together.
+							p
+								| But there are three specific features which put Amazon S3 on the top of the clouds.
+							h4 Durability
+							p
+								| Amazon storage infrastructure is designed the way it can provide 99.999999999% durable data storage. This means if you have 10 thousand files, only one file may get lost in 10 mln years.
+							h4 Accessibility
+							p
+								| Amazon infrastructure includes ramified regional network of data centers, which means information gets faster from one place to another, but this also includes wide opportunities to get different prices for solutions according to specific region. This regional network helps store data in any chosen region (sometimes businesses require particular data storage places).
+							// Table
+							table
+								thead
+									tr
+										th Date
+										th Article
+								tbody
+									tr
+										td 09.25.2017
+										td SECURE DEVELOPMENT LIFECYCLE FOR STARTUPS
+									tr
+										td 09.05.2017
+										td EVOLUTION OF APPLICATION SECURITY TESTING TOOLS
+									tr
+										td 08.31.2017
+										td TUTORIAL: CREATE AZURE API APP WITH AAD AUTHENTICATION AND WEB JOBS
+									tr
+										td 08.28.2017
+										td WEB APPLICATION SECURITY: INTEGRATION OR EXTINCTION
+											p Today, almost every enterprise produces, leverages, transacts business or depends upon web or Cloud enabled software. As a result, web applications have become the number one target for malicious attacks.
+							// Video
+							iframe(src='https://www.youtube.com/embed/XKu_SEDAykw', frameborder='0', allowfullscreen)
+							iframe(src='https://player.vimeo.com/video/237044542', frameborder='0', allowfullscreen)
+							video(controls='' poster='static/img/video-preview.png')
+								source(src='static/video/main-4.mp4', type='video/mp4')
+							+b.testimonals_video._turquoise._main
+								+e.bg-w
+									+e.bg
+										+e.bg-item
+											+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+												img(src='static/img/half-11.jpg' alt='image')
+											+e.bg-video
+												video(controls playsinline preload="none")
+													source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+								+e.container.container(data-anim='group')
+									+e.inner
+										+e.inner-bg
+							h4 Scalability
+							p
+								| S3 offers storage for large amounts of data. The largest file one can store is 5 terabytes. This storage is designed to be unlimited in essence. This means you can store as much data as you are ready to pay for. And it doesn’t hurt your performance or accessibility.
+							blockquote
+								| Amazon S3 also offers a specific serverless solution. You can place a static website in your storage and forget about scaling or workload. No matter how many people visit your website, this solution supports the load without going down. And in this particular case you pay only for your storage.
+							p
+								| In general, Amazon S3 remains on the top of the storage solutions for several simple reasons. It’s safe, it’s regionally ramified, it’s elastic and almost unlimited and it can offer a huge number of connected services on the basis of this storage system so that a customer gets full-scale modern infrastructure.
+							p
+								| No magic, only reasonable solutions and successful practice.
+		//end redactor
+
+		//begin blog-4-section
+		+b.blog-4_white.section_redactor-signature
+			.container
+				+e.row.col__wrap
+					+e.col.col__small
+						+b.share
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large.anim-line
+						.redactor__signature(data-anim='group')
+							.redactor__signature-title by Svitla Team
+							.redactor__signature-date july 04, 2017
+		//end blog-4
+
+		//begin loop
+		+b.loop
+				+e.container(data-anim='group')
+						+e.row
+								+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+										+e.link(data-anim-stagger='fade-top')
+												-
+														link = {
+														text: 'prev case',
+														className: 'link-dark js-link-multiple-circle',
+														icons: true
+														}
+												include ../components/link
+								+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+										+e.link(data-anim-stagger='fade-top')
+												-
+														link = {
+														text: 'next case',
+														className: 'link-dark js-link-multiple-circle',
+														icons: true
+														}
+												include ../components/link
+		//end loop
+
+		//SLIDER_begin
+		+b.slider-inner_articles.section
+			.container(data-anim='group')
+				+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Related articles
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_articles(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_articles.col__large
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-14.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half15.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag events
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/slider-1.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag art
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag developments
+		//SLIDER_end
+
+		//begin meet
+		+b.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.title_smaller Stay informed - subscribe
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Join our newsletter and get the latest content right in your inbox once or twice per week.
+					+e.col
+						+b.FORM.form.__form(action='URL')
+							.form-group.form-group_with-btn(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								input.form-input(type='text' id='formName' autocomplete='off' required)
+								label.form-input-label(for='formName'): span Your Email
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text sing up
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

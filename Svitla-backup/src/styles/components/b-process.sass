@@ -1,0 +1,29 @@
+.process
+	$parent: &
+	padding: $topOffset 0 $botOffset
+	background-color: $color4
+	color: $color1
+	&__item
+		& + #{$parent}__item
+			margin-top: $botOffset
+			+md
+				margin-top: $offsetTab
+			+sm
+				margin-top: 40px
+	&__title
+		& + #{$parent}__text
+			margin-top: 45px
+		+sm
+			font-size: 23px
+			line-height: 30px
+			& + #{$parent}__text
+				margin-top: 20px
+	&__text
+		+h4
+		+sm
+			font-size: 15px
+			line-height: 24px
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: 55px 0 70px

@@ -1,0 +1,289 @@
+.expertise
+	$parent: &
+	background-color: $color1
+	color: $color0
+	min-height: 625px
+	overflow: hidden
+	+mac
+		height: 640px
+	+md
+		height: 1024px
+	+sm
+		height: auto
+		min-height: 0
+	&_default
+		padding: 138px 0 70px
+		+mac
+			padding-top: 150px
+		+md
+			padding-top: 120px
+		+sm
+			padding-top: 46px
+			padding-bottom: $botOffsetMob
+	&_white
+		background-color: $color0
+		color: $color1
+		#{$parent}-nav__list ul li.is-active h4, #{$parent}-nav__sublist ul h5
+			color: $color1
+		#{$parent}-nav__nav-circle-in
+			background-color: $color1
+		#{$parent}-nav__nav-circle-bot .icon, .expertise-nav__nav-circle-top .icon
+			color: $color1
+		.no-touch &
+			#{$parent}-nav__nav-circle-bot:hover, #{$parent}-nav__nav-circle-top:hover
+				.icon
+					color: $color2
+			#{$parent}-nav__list ul li:hover
+				color: $color1
+	&__left
+		padding-top: 38px
+		position: relative
+		z-index: 3
+		width: 50%
+		+sm
+			padding-top: 15px
+			width: auto
+	
+	&__title
+		position: relative
+		display: table
+		z-index: 3
+		margin-left: -5px
+		+h0
+		letter-spacing: 0.02em
+		overflow: hidden
+		+sm
+			font-size: 48px
+			line-height: 72px
+		&-char
+			svg
+				position: absolute
+				width: 86px
+				height: 86px
+				top: 21px
+				left: -4px
+				fill: none
+				stroke-width: 2.6px
+				stroke: $color3
+		
+	&__subtitle
+		margin-bottom: 19px
+		+h4
+		+md
+			margin-bottom: 12px
+		+sm
+			letter-spacing: 0.01em
+			margin-bottom: 17px
+			font-size: 17px
+			line-height: 24px
+	
+	&__text
+		padding-right: 25px
+		column-count: 2
+		column-gap: 25px
+		max-height: 180px
+		+md
+			padding-right: 85px
+			column-count: 1
+			max-height: 500px
+		+tab-fix
+			max-width: none !important
+		+sm
+			padding-right: 0
+			max-width: none
+			max-height: none
+	
+	&__link
+		display: table
+		margin-top: 12px
+		
+/* expertise-nav
+	----------------------------------- */
+.expertise-nav
+	$parent: &
+	position: absolute
+	z-index: 2
+	top: 65px
+	right: 265px
+	+md
+		top: 284px
+		right: 198px
+	+sm
+		display: none
+	&__list
+		pointer-events: none
+		position: absolute
+		z-index: 3
+		right: 45px
+		top: -15px
+		#{$parent}.has-anim &
+			pointer-events: auto
+		ul
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			color: $color2
+			text-align: right
+			h4
+				+h6
+				line-height: 30px
+				letter-spacing: 0.1em
+				white-space: nowrap
+			li
+				pointer-events: none
+				cursor: pointer
+				+trs
+				.no-touch &:hover
+					color: $color0
+				&.is-active
+					h4
+						font-size: 18px
+						color: $color0
+				ul
+					display: none
+	&__sublist
+		pointer-events: none
+		position: absolute
+		z-index: 4
+		top: -17px
+		left: 185px
+		+md
+			left: 80px
+		#{$parent}.has-anim &
+			pointer-events: auto
+		ul
+			position: absolute
+			top: 0
+			right: -70px
+			text-align: right
+			h5
+				+h6
+				color: #f0f0f0
+				line-height: 30px
+				letter-spacing: 0.1em
+				white-space: nowrap
+			li
+				display: flex
+				justify-content: flex-end
+				a
+					flex: 1 0 auto
+					+trs
+					.no-touch &:hover
+						color: $color2
+	&__nav-circle
+		$prev: &
+		position: absolute
+		z-index: 4
+		top: 0
+		left: -4px
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		+desk
+			pointer-events: none
+		#{$parent}.has-anim &
+			pointer-events: auto
+		&:before
+			overflow: hidden
+			content: ''
+			+vcenter
+			width: 100px
+			height: 100px
+			border-radius: 50%
+		&-in
+			+vcenter
+			width: 50px
+			height: 50px
+			background-color: $color0
+			border-radius: 50%
+			transform: scale(0.15) translate(-50%,-50%)
+			transform-origin: left top
+			+trs-slow
+			.no-touch #{$prev}:hover &,
+			#{$prev}.is-active &
+				transform: scale(1) translate(-50%,-50%)
+		&-top
+			cursor: pointer
+			position: absolute
+			top: -25px
+			left: 0
+			right: 0
+			height: calc(50% + 25px)
+			display: flex
+			justify-content: center
+			align-items: center
+			opacity: 0
+			+trs-slow
+			&.is-disabled
+				pointer-events: none
+				opacity: 0.25!important
+			#{$prev}.is-active &,
+			.no-touch #{$prev}:hover &
+				opacity: 1
+			.icon
+				position: relative
+				top: -12px
+				color: $color2
+				font-size: 9px
+				transform: rotate(90deg)
+				+trs
+			.no-touch &:hover
+				.icon
+					color: $color0
+		&-bot
+			cursor: pointer
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -25px
+			height: calc(50% + 25px)
+			display: flex
+			justify-content: center
+			align-items: center
+			opacity: 0
+			+trs-slow
+			&.is-disabled
+				pointer-events: none
+				opacity: 0.25!important
+			#{$prev}.is-active &,
+			.no-touch #{$prev}:hover &
+				opacity: 1
+			.icon
+				position: relative
+				bottom: -12px
+				color: $color2
+				font-size: 9px
+				transform: rotate(90deg)
+				+trs
+			.no-touch &:hover
+				.icon
+					color: $color0
+		
+	&__svg
+		pointer-events: none
+		+vcenter
+		z-index: 1
+		width: 2150px
+		height: 2000px
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			.line
+				line
+					fill: none
+					stroke: $color2
+					stroke-width: 1px
+					opacity: 0.1
+			.circle
+				circle
+					fill: none
+					stroke: $color2
+					stroke-width: 1px
+					
+			.sector
+				circle
+					fill: none
+					stroke: $color2
+					stroke-width: 66px
+	

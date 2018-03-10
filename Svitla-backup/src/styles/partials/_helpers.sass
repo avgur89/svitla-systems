@@ -1,0 +1,511 @@
+/* ===================================
+	 MEDIA
+	 =================================== */
+=mac
+	+r($mac)
+		@content
+
+=desk
+	+rmin($minDesk)
+		@content
+
+=tab
+	+rmin($minTab)
+		@content
+
+=md
+	+r($tab)
+		@content
+
+=only-tab
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px')
+		@content
+
+=tab-fix
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px') and (orientation: landscape)
+		@content
+
+=tab-land
+	@media only screen and (max-width: $tab + 'px') and (orientation: landscape)
+		@content
+
+=sm
+	+r($mob)
+		@content
+
+=mob-fix
+	@media only screen and (max-width: $mob + 'px') and (orientation: landscape)
+		@content
+
+/* ===================================
+	 TRANSITION
+	 =================================== */
+=trs
+	transition: all 0.3s ease
+
+=trs-slow
+	transition: all 0.6s ease
+	
+.transition-off
+	transition: none!important
+
+/* ===================================
+	 FONT
+	 =================================== */
+=helvetica-bold
+	font-family: 'HelveticaNeue-Bold', Arial, sans-serif
+
+=solomon
+	font-family: 'Solomon-Sans-Normal', Arial, sans-serif
+
+=solomon-book
+	font-family: 'Solomon-Sans-Book', Arial, sans-serif
+
+=solomon-semibold
+	font-family: 'Solomon-Sans-Semibold', Arial, sans-serif
+
+=solomon-bold
+	font-family: 'Solomon-Sans-Bold', Arial, sans-serif
+
+=h0
+	+f('solomon-bold', 140, 130, 0)
+	+sm
+		font-size: 48px
+		line-height: 48px
+
+.h0
+	+h0
+
+=h1
+	+f('solomon-bold', 40, 44, 0)
+
+h1
+	+h1
+
+.h1
+	+h1
+
+=h2
+	+f('solomon-bold', 32, 36, 0)
+
+h2
+	+h2
+
+.h2
+	+h2
+
+=h3
+	+f('solomon-bold', 24, 28, 0)
+
+h3
+	+h3
+
+.h3
+	+h3
+
+=h4
+	+f('solomon-semibold', 27, 36, 0)
+
+h4
+	+h4
+
+.h4
+	+h4
+
+=h5
+	+f('solomon-semibold', 17, 24, 0)
+
+h5
+	+h5
+
+.h5
+	+h5
+
+=h6
+	+f('helvetica-bold', 10, 14, 0)
+	text-transform: uppercase
+
+h6
+	+h6
+
+.h6
+	+h6
+
+=h7
+	+f('helvetica-bold', 8, 10, 0)
+	text-transform: uppercase
+	letter-spacing: .1em
+h7
+	+h7
+
+.h7
+	+h7
+
+=medium-text
+	+f('solomon-semibold', 23, 30, 0)
+
+=paragraph-text
+	+f('solomon-normal', 13, 22, 25)
+
+=small-text
+	+f('solomon-normal', 11, 22, 25)
+
+/* ===================================
+	 LINK
+	 =================================== */
+=link-dark
+	position: relative
+	display: flex
+	align-items: center
+	padding: 7px 0
+	+h6
+	color: $color5
+	letter-spacing: 0.1em
+	text-decoration: none
+	white-space: nowrap
+	text-align: left
+	-webkit-font-smoothing: antialiased
+	+trs
+	+sm
+		white-space: normal
+	
+	span
+		transition: all 0.15s ease
+	.no-touch &:hover
+		span
+			opacity: 0
+			transition: all 0.3s ease 0.25s
+	
+	&:after
+		pointer-events: none
+		content: '' attr(data-hover) ''
+		width: 0
+		overflow: hidden
+		position: absolute
+		left: 0
+		top: 7px
+		color: $color3
+		+trs-slow
+	.no-touch &:hover
+		&:after
+			width: 100%
+	
+	.icon-w
+		pointer-events: none
+		display: block
+		margin-left: 6px
+		+gpu
+		.icon
+			display: block
+			font-size: 12px
+			fill: none
+			stroke-width: 2px
+			stroke: $color0
+	
+	.icons-w
+		pointer-events: none
+		display: flex
+		margin-left: 5px
+		+gpu
+		.icon
+			display: block
+			font-size: 12px
+			fill: none
+			stroke-width: 2px
+			stroke: $color3
+			+trs-slow
+			+ .icon
+				margin-left: 4px
+
+.link-dark
+	+link-dark
+
+=link-dark-light
+	+link-dark
+	&:after
+		color: $color0
+		
+=link-light-dark
+	+link-dark
+	color: $color0
+	&:after
+		color: $color1
+		
+.link-light-dark
+	+link-light-dark
+.link-light-circle-dark
+	+link-light-dark
+	.icon-w,
+	.icons-w
+		.icon
+			stroke: $color1
+=link-dark-light-circle-light
+	+link-dark-light
+	.icon-w,
+	.icons-w
+		.icon
+			stroke: $color0
+			
+=link-white
+	+link-dark
+	color: $color0
+	
+.link-white
+	+link-white
+	&:after
+		color: $color3
+
+=link-breadcrumbs
+	+link-dark
+	+h7
+	padding: 3px 0
+	&:after
+		color: $color2
+		left: 16px
+		top: 3px
+
+/* CLOSE LINK
+	----------------------------------- */
+=link-close
+	cursor: pointer
+	position: relative
+	padding: 7px 40px 7px 0
+	+h6
+	color: $color0
+	letter-spacing: 0.1em
+	text-decoration: none
+	white-space: nowrap
+	-webkit-font-smoothing: antialiased
+	
+	span
+		display: block
+		
+	.icon-w
+		pointer-events: none
+		position: absolute
+		width: 28px
+		height: 28px
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+		.icon
+			position: absolute
+			left: 0
+			right: 0
+			display: block
+			width: 100%
+			height: 100%
+			fill: none
+			stroke: $color2
+			stroke-width: 5px
+			&_top
+				bottom: 50%
+				margin-bottom: -2px
+			&_bot
+				top: 50%
+				margin-top: -2px
+			svg
+				display: block
+	
+/* MENU LINK
+	----------------------------------- */
+=link-menu
+	cursor: pointer
+	position: relative
+	padding: 7px 40px 7px 0
+	+h6
+	color: $color0
+	letter-spacing: 0.1em
+	text-decoration: none
+	white-space: nowrap
+	-webkit-font-smoothing: antialiased
+	
+	span
+		display: block
+		
+	.icon-w
+		pointer-events: none
+		position: absolute
+		width: 28px
+		height: 28px
+		top: 50%
+		margin-top: 8px
+		right: 0
+		transform: translateY(-50%)
+		.icon
+			position: absolute
+			left: 0
+			right: 0
+			display: block
+			width: 100%
+			height: 100%
+			fill: none
+			stroke: $color2
+			stroke-width: 5px
+			&_top
+				bottom: 50%
+				margin-bottom: -2px
+			&_mid
+				top: 50%
+				margin-top: -14px
+			&_bot
+				top: 50%
+				margin-top: -2px
+			svg
+				display: block
+				
+=link-vertical
+	position: relative
+	display: flex
+	align-items: center
+	padding: 7px 0
+	+h6
+	color: $color0
+	letter-spacing: 0.1em
+	text-decoration: none
+	white-space: nowrap
+	-webkit-font-smoothing: antialiased
+	transform: rotate(-90deg) translateY(-100%) translateX(50%)
+	transform-origin: right top
+	+trs
+	+sm
+		white-space: normal
+		
+	span
+		transition: all 0.15s ease
+	.no-touch &:hover
+		span
+			opacity: 0
+			transition: all 0.3s ease 0.25s
+	
+	&:after
+		pointer-events: none
+		content: '' attr(data-hover) ''
+		width: 0
+		overflow: hidden
+		position: absolute
+		left: 49px
+		top: 7px
+		color: $color3
+		+trs-slow
+	.no-touch &:hover
+		&:after
+			width: 100%
+	
+	.icons-w
+		pointer-events: none
+		display: flex
+		margin-right: 5px
+		+gpu
+		.icon
+			display: block
+			font-size: 12px
+			fill: none
+			stroke-width: 2px
+			stroke: $color2
+			+trs-slow
+			+ .icon
+				margin-left: 4px
+
+
+/* ===================================
+	 BUTTON
+	 =================================== */
+.btn
+	display: table
+	position: relative
+	text-align: center
+	padding: 18px 22px
+	min-width: 142px
+	width: auto
+	border: none
+	outline: none
+	background-color: transparent
+	+h6
+	color: $color0
+	letter-spacing: 0.1em
+	white-space: nowrap
+	-webkit-transform: translateZ(0)
+	+gpu
+	&.is-disabled,
+	&[disabled]
+		pointer-events: none
+	&_white-orange
+		color: $color3
+		.btn__bg-top, .btn__bg-bot
+			background-color: $color0
+		.btn__bg-top::before
+			background-color: $color0
+	&__bg
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+gpu
+	&.is-disabled &__bg,
+	&[disabled] &__bg
+		opacity: 0.2
+	&__bg-top
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		bottom: 50%
+		background-color: $color3
+		transform: skewX(-45deg)
+		transform-origin: 50% 100%
+		outline: none
+		+trs
+		@media only screen and (-ms-high-contrast: active) and (-ms-high-contrast: none)
+			&:before
+				content: ''
+				position: absolute
+				bottom: -1px
+				height: 2px
+				left: 1px
+				right: 1px
+				background-color: $color3
+		.transition-off &
+			+trs-slow
+		[data-prepare-anim] &
+			+desk
+				width: 0
+				transform: skewX(-45deg) translateX(10px)
+	.no-touch &:hover &__bg-top
+		transform: skewX(-45deg) translateX(7px)
+		&:before
+			transform: translateX(1px)
+	&.is-disabled &__bg-top:before,
+	&[disabled] &__bg-top:before
+		opacity: 0.25
+	&__bg-bot
+		position: absolute
+		top: 50%
+		left: 0
+		bottom: 0
+		width: 100%
+		background-color: $color3
+		transform: skewX(-45deg)
+		transform-origin: 50% 0
+		+trs
+		.transition-off &
+			+trs-slow
+		[data-prepare-anim] &
+			+desk
+				width: 0
+				transform: skewX(-45deg) translateX(-10px)
+	.no-touch &:hover &__bg-bot
+		transform: skewX(-45deg) translateX(-7px)
+	&__text
+		display: block
+		position: relative
+		z-index: 2
+		+trs
+		transition-delay: 0.3s
+		[data-prepare-anim] &
+			+desk
+				opacity: 0
+	span
+		user-select: none

@@ -1,0 +1,106 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Social',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		sliderImgSource = ['static/img/half-14.jpg', 'static/img/build-to-order_main.png', 'static/img/half15.jpg', 'static/img/np1.png', 'static/img/np3.png', 'static/img/project4.jpg', 'static/img/np3.png', 'static/img/project4.jpg'],
+		breadList = ['main', 'about us', 'Corporate Social Responsibility', 'Good people Fund'];
+
+block main
+	main.content(data-page='social')
+		//begin screen
+		+b.screen
+			+e.img.without-mask
+				img(src='static/img/build-to-order_main.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description_blog(data-anim='group')
+					+e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Good People Fund
+					+e.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p by Svitla Team
+					+e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+		//end screen
+
+		//begin sharing
+		+b.blog-1_default.section_sharing
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.share_top
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large
+		//end sharing
+
+		//begin redactor
+		+b.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small
+					+e.col.col__large.anim-line
+						.redactor
+							p
+								| Our mission is to build a business that is not only profitable but also contributes to the well-being of our employees and their families, improves our communities, and makes a lasting difference in the world.
+							blockquote
+								| The Good Samaritan Fund program invites Svitla employees to contribute their time and talent to help build a healthy society by participating in City Health Days for the residents of various cities.
+							img(src="static/img/portfolio.jpg" alt="image")
+							p
+								| In 2015, Svitla held a City Health Day in Ternopil to promote healthy lifestyles. All residents could have their eyes examined, get free vitamins, and learn simple but effective exercises that they could do every day to stay in shape.
+		//end redactor
+
+		//Gallery slider_begin
+		+b.SECTION.slider-inner_gallery.section_redactor-incoming
+			.container
+				+e.H2.title.h2 Photo report
+				+e.preview
+					img(src='' alt="")
+				+e.row.col__wrap
+					+e.col.col__small
+						+e.arrows_gallery
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_gallery.col__large
+						each source in sliderImgSource
+							+e.item
+								img(src= source alt="")
+		//Gallery slider_end
+
+		//begin redactor
+		+b.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large.anim-line
+						.redactor
+							p
+								| Students from the local medical university joined the Svitla team to measure the blood pressure and blood sugar of residents and advise them about special diets for people with heart problems. Residents also learned how to provide first aid and properly brush their teeth.
+							p
+								| Together with the medical students, our team educated residents about cardiovascular disease, since Ukrainians are four times more likely to die from it than other European citizens. "The Cardiology Club of Ternopil State Medical University was set up only a few years ago, but since then the students have created a program for preventing cardiovascular diseases. And we are presenting it today," stated the club’s mentor and Associate Professor of Medical Rehabilitation, Larysa Levitska.
+		//end redactor
+
+		//begin blog-4-section
+		+b.blog-4_white.section_redactor-signature
+			.container
+				+e.row.col__wrap
+					+e.col.col__small
+						+b.share
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large.anim-line
+						.redactor__signature(data-anim='group')
+							.redactor__signature-title by Svitla Team
+							.redactor__signature-date july 04, 2017
+		//end blog-4

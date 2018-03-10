@@ -1,0 +1,407 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Case Studies',
+		breadList = ['main', 'portfolio', 'case studies'];
+
+block main
+	main.content(data-page='case studies')
+
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/portfolio.jpg' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Do our best, keep our clients happy, and look out for new technolgies and trends - this is what Svitla is all about
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Case studies
+		//end screen
+
+		//filter begin
+		+b.filters
+			+e.container.container(data-anim='group')
+				+e.cont
+					+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.item__link.js-link-single-circle(data-inner="services")
+							span services
+						+e.item__container.ps-init
+							+e.item__checkbox
+								input(id="check1" type="checkbox" checked=true)
+								label(for="check1") Android
+							+e.item__checkbox
+								input(id="check2" type="checkbox" checked=true)
+								label(for="check2") AngularJs
+							+e.item__checkbox
+								input(id="check3" type="checkbox" checked=true)
+								label(for="check3") ASP.Net
+							+e.item__checkbox
+								input(id="check4" type="checkbox")
+								label(for="check4") C++
+							+e.item__checkbox
+								input(id="check5" type="checkbox")
+								label(for="check5") HTML5
+							+e.item__checkbox
+								input(id="check6" type="checkbox")
+								label(for="check6") iOS
+							+e.item__checkbox
+								input(id="check7" type="checkbox")
+								label(for="check7") Java
+							+e.item__checkbox
+								input(id="check8" type="checkbox")
+								label(for="check8") Jira
+							+e.item__checkbox
+								input(id="check9" type="checkbox")
+								label(for="check9") JS
+							+e.item__checkbox
+								input(id="check10" type="checkbox")
+								label(for="check10") Magento
+							+e.item__checkbox
+								input(id="check11" type="checkbox")
+								label(for="check11") Node.js
+							+e.item__checkbox
+								input(id="check12" type="checkbox")
+								label(for="check12") PHP
+							+e.item__checkbox
+								input(id="check13" type="checkbox")
+								label(for="check13") Python
+							+e.item__checkbox
+								input(id="check14" type="checkbox")
+								label(for="check14") QA
+							+e.item__checkbox
+								input(id="check15" type="checkbox")
+								label(for="check15") R&D
+							+e.item__checkbox
+								input(id="check16" type="checkbox")
+								label(for="check16") Redis
+					+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.item__link.js-link-single-circle(data-inner="industry")
+							span industry
+						+e.item__container.ps-init
+							+e.item__checkbox
+								input(id="check41" type="checkbox")
+								label(for="check41") Android
+							+e.item__checkbox
+								input(id="check42" type="checkbox")
+								label(for="check42") AngularJs
+							+e.item__checkbox
+								input(id="check43" type="checkbox")
+								label(for="check43") ASP.Net
+							+e.item__checkbox
+								input(id="check44" type="checkbox")
+								label(for="check44") C++
+							+e.item__checkbox
+								input(id="check45" type="checkbox")
+								label(for="check45") HTML5
+							+e.item__checkbox
+								input(id="check46" type="checkbox")
+								label(for="check46") iOS
+							+e.item__checkbox
+								input(id="check47" type="checkbox")
+								label(for="check47") Java
+							+e.item__checkbox
+								input(id="check48" type="checkbox")
+								label(for="check48") Jira
+							+e.item__checkbox
+								input(id="check49" type="checkbox")
+								label(for="check49") JS
+							+e.item__checkbox
+								input(id="check410" type="checkbox")
+								label(for="check410") Magento
+							+e.item__checkbox
+								input(id="check411" type="checkbox")
+								label(for="check411") Node.js
+							+e.item__checkbox
+								input(id="check412" type="checkbox")
+								label(for="check412") PHP
+							+e.item__checkbox
+								input(id="check413" type="checkbox")
+								label(for="check413") Python
+							+e.item__checkbox
+								input(id="check414" type="checkbox")
+								label(for="check414") QA
+							+e.item__checkbox
+								input(id="check415" type="checkbox")
+								label(for="check415") R&D
+							+e.item__checkbox
+								input(id="check416" type="checkbox")
+								label(for="check416") Redis
+					+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.item__link.js-link-single-circle(data-inner="technologies")
+							span technologies
+						+e.item__container.ps-init
+							+e.item__checkbox
+								input(id="check21" type="checkbox")
+								label(for="check21") Android
+							+e.item__checkbox
+								input(id="check22" type="checkbox")
+								label(for="check22") AngularJs
+							+e.item__checkbox
+								input(id="check23" type="checkbox")
+								label(for="check23") ASP.Net
+							+e.item__checkbox
+								input(id="check24" type="checkbox")
+								label(for="check24") C++
+							+e.item__checkbox
+								input(id="check25" type="checkbox")
+								label(for="check25") HTML5
+							+e.item__checkbox
+								input(id="check26" type="checkbox")
+								label(for="check26") iOS
+							+e.item__checkbox
+								input(id="check27" type="checkbox")
+								label(for="check27") Java
+							+e.item__checkbox
+								input(id="check28" type="checkbox")
+								label(for="check28") Jira
+							+e.item__checkbox
+								input(id="check29" type="checkbox")
+								label(for="check29") JS
+							+e.item__checkbox
+								input(id="check210" type="checkbox")
+								label(for="check210") Magento
+							+e.item__checkbox
+								input(id="check211" type="checkbox")
+								label(for="check211") Node.js
+							+e.item__checkbox
+								input(id="check212" type="checkbox")
+								label(for="check212") PHP
+							+e.item__checkbox
+								input(id="check213" type="checkbox")
+								label(for="check213") Python
+							+e.item__checkbox
+								input(id="check214" type="checkbox")
+								label(for="check214") QA
+							+e.item__checkbox
+								input(id="check215" type="checkbox")
+								label(for="check215") R&D
+							+e.item__checkbox
+								input(id="check22" type="checkbox")
+								label(for="check22") AngularJs
+							+e.item__checkbox
+								input(id="check23" type="checkbox")
+								label(for="check23") ASP.Net
+							+e.item__checkbox
+								input(id="check24" type="checkbox")
+								label(for="check24") C++
+							+e.item__checkbox
+								input(id="check25" type="checkbox")
+								label(for="check25") HTML5
+							+e.item__checkbox
+								input(id="check26" type="checkbox")
+								label(for="check26") iOS
+							+e.item__checkbox
+								input(id="check27" type="checkbox")
+								label(for="check27") Java
+							+e.item__checkbox
+								input(id="check28" type="checkbox")
+								label(for="check28") Jira
+							+e.item__checkbox
+								input(id="check29" type="checkbox")
+								label(for="check29") JS
+							+e.item__checkbox
+								input(id="check210" type="checkbox")
+								label(for="check210") Magento
+							+e.item__checkbox
+								input(id="check211" type="checkbox")
+								label(for="check211") Node.js
+							+e.item__checkbox
+								input(id="check212" type="checkbox")
+								label(for="check212") PHP
+							+e.item__checkbox
+								input(id="check213" type="checkbox")
+								label(for="check213") Python
+							+e.item__checkbox
+								input(id="check214" type="checkbox")
+								label(for="check214") QA
+							+e.item__checkbox
+								input(id="check215" type="checkbox")
+								label(for="check215") R&D
+					+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.item__link.js-link-single-circle(data-inner="platform")
+							span platform
+						+e.item__container.ps-init
+							+e.item__checkbox
+								input(id="check31" type="checkbox")
+								label(for="check31") Android
+							+e.item__checkbox
+								input(id="check32" type="checkbox")
+								label(for="check32") AngularJs
+							+e.item__checkbox
+								input(id="check33" type="checkbox")
+								label(for="check33") ASP.Net
+							+e.item__checkbox
+								input(id="check34" type="checkbox")
+								label(for="check34") C++
+							+e.item__checkbox
+								input(id="check35" type="checkbox")
+								label(for="check35") HTML5
+							+e.item__checkbox
+								input(id="check36" type="checkbox")
+								label(for="check36") iOS
+							+e.item__checkbox
+								input(id="check37" type="checkbox")
+								label(for="check37") Java
+		//filter end
+
+		//case begin
+		+b.SECTION.cases
+			+e.container.container(data-anim='group')
+				+e.cont
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						a.cases__media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						a.cases__media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						a.cases__media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						a.cases__media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					UL.pagination(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						li.pagination__prev.pagination__arrow.disabled
+							div(data-hover= 'Previous')
+								div Previous
+						li.active
+							a(href="") 1
+						li
+							a(href="") 2
+						li
+							a(href="") 3
+						li
+							a(href="") 4
+						li
+							a(href="") 5
+						li.pagination__next.pagination__arrow
+							div(data-hover= 'Next')
+								div Next
+		//case end
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Have a project in mind?
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Briefly describe your project, and we will contact you within a day.
+					+e.col
+						+b.FORM.form.__form(action='URL')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text Get in touch
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet
+

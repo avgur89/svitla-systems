@@ -1,0 +1,276 @@
+extends ../extend/default
+
+block variables
+    -
+        title = 'Svitla_Job_Page',
+        socialIconList = ['fb', 'tw', 'linkedin'],
+        breadList = ['main', 'blog', 'blog page'];
+
+block main
+    main.content(data-page='Svitla_Job_Page').expertise_page
+        //begin screen
+        +b.screen
+            +e.img
+                img(src='static/img/jobbg.jpg' alt='image')
+            +e.CANVAS.canvas_vertical-arc#screenCanvas
+            +e.container.container
+                +e.description_blog(data-anim='group')
+                    +e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Content Writer
+                    +e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+                +e.svg-line
+                    svg(viewBox='0 0 600 600')
+                        path(d='M600,0 0,600')
+                +e.content
+                    +e.scroll.is-active(data-hover='scroll')
+                        span scroll
+        //end screen
+
+        //begin sharing
+        +b.SECTION.blog-1_default.section_sharing
+            +e.container.container(data-anim='group')
+                +e.row.col__wrap_redactor(data-anim='group')
+                    +e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                        +b.share_top
+                            div Share
+                            +e.UL.icon
+                                each el in socialIconList
+                                    li
+                                        a(href=''): +i(el)
+                    +e.col.col__large
+        //end sharing
+
+        //begin blog-4-section
+        +b.SECTION.blog-4.section.blog-4_white.blog-4_job
+            .container(data-anim='group')
+                +e.row.col__wrap(data-anim='group' data-anim-delay='0.1' data-anim-duration='0.4')
+                    +e.col.col__small
+                    +e.col.col__large
+                        +e.row-2.anim-line
+                            +e.three_item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                +e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    +e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+                                        | 1 position
+                                    +e.H2.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Content Writer
+                                +e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    +e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+                                        | location
+                                    +e.H2.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Kyiv, Ukraine
+                                +e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    +e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+                                        | additionally
+                                    +e.H2.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Full-time
+                            +e.full_item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                +e.text.h5(data-anim-parent-trigger data-anim-stagger='fade-top')  Svitla Systems Inc. is looking for a full-time (40 hours per week) Content Writer who is passionate about IT and new technologies. If you are highly creative, love our industry, and are driven to share your knowledge with others, this job is perfect for you.
+                            +e.full_item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 About Svitla:
+                                    +e.text.redactor
+                                        p Svitla Systems is a proven software development and testing provider. We deliver unparalleled value to our customers, who rely on our expertise in managed team extension and build-to-order software applications. Our main office is in the heart of Silicon Valley - San Francisco, California - with sales and development offices throughout the US, Mexico, and Europe (Ukraine, Montenegro, and Germany).
+                                        p Our mission is to build a business that is not only profitable but also contributes to the well-being of our employees and their families, improves our communities, and makes a lasting difference in the world.
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 Responsibilities:
+                                    +e.text.redactor
+                                        ul
+                                            li  Writing articles for a blog and Svitla’s website
+                                            li  Conducting market research for writing quality analytical articles
+                                            li  Conducting interviews with industry experts
+                                            li  Analyzing technology trends
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 Requirements:
+                                    +e.text.redactor
+                                        ul
+                                            li  Written English that is indistinguishable from a native speaker
+                                            li  You have written over 50 articles and can show at least 10 pieces of your material, or have 3+ years of experience in writing (please share with us the links to articles you are proud of in your portfolio)
+                                            li  Proven experience in content writing for websites/landing pages (with examples in portfolio)
+                                            li  You understand and are interested in IT technologies, methodologies, and the basics of business
+                                            li  You understand client business, business needs, interests, and pains of your target audience
+                                            li  Ability to draft an article before writing it
+                                                ul
+                                                    li  You understand and are interested in IT technologies, methodologies, and the basics of business
+                                                    li  You understand client business, business needs, interests, and pains of your target audience
+                                                    li  Ability to draft an article before writing it
+                                            li  Ability to argue your points of view by providing facts
+                                            li  Ability to write straight-to-the-point, short, informative texts, avoiding "beating around the bush"
+                                            li  Experience in writing long-form content (with examples in portfolio)
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 This will be a plus:
+                                    +e.text.redactor
+                                        ul
+                                            li  Participation in international exchange programs
+                                            li  Start-up company experience
+                                            li  Marketing experience
+                                            li  IT experience  have worked in IT as a tester, developer, technical writer, etc.
+                                            li  Work experience in online media / journalism
+                                            li  Basic knowledge of SEO
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 Personal qualities:
+                                    +e.text.redactor
+                                        ul
+                                            li  Interest in IT
+                                            li  Willingness to dig deep, absorb and understand knowledge, and get things done
+                                            li  Striving for understanding and creating new knowledge, not re-telling the old
+                                            li  Attention to details
+                                            li  Putting quality over quantity
+                                            li  Strong analytical skills
+                                            li  Quick learner
+                                            li  Ability to manage large amounts of information
+                                            li  Ability to structure information
+                                            li  Perfectionist
+                                            li  Readiness for experimenting and implying non-trivial approaches.
+                                +e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+                                    +e.H2.title.h4 What we love about Svitla Systems:
+                                    +e.text.redactor
+                                        ul
+                                            li  Flexible working day start & stop times
+                                            li  English classes, professional and personal trainings, conferences and webinars
+                                            li  Competitive compensation, including regular performance regular performance and career-based development reviews
+                                            li  Medical insurance (health, dental), employee assistance program
+                                            li  Personal time off: paid vacation and holidays (work hard, play hard, right?)
+                                            li  Fast-paced, hard-working, and fun-loving environment! Our cool co-workers play soccer and poker; go skiing, biking, and hiking; watch movies or just enjoy chatting
+                                            li  Birthday cakes, lunch bunch and subsidized drinks and snacks, funny celebrations, team outings, and unforgettable corporate events
+                                            li  A welcoming team that is always happy to meet new colleagues and hear their new ideas
+        //end blog-4
+
+        //begin blog-4-section
+        +b.SECTION.blog-4_white.section_redactor-signature.job
+            .container
+                +e.row.col__wrap
+                    +e.col.col__small
+                        +b.share
+                            div Share
+                            +e.UL.icon
+                                each el in socialIconList
+                                    li
+                                        a(href=''): +i(el)
+                    +e.col.col__large.anim-line
+                        .redactor__signature.full-line(data-anim='group')
+                            +e.text.h5(data-anim-parent-trigger data-anim-stagger='fade-top')  If you are interested in our vacancy, please, send your CV and at least 5 links to your best articles. We will be happy to see you in our friendly team! :)
+        //end blog-4
+
+        //begin meet
+        +b.SECTION.meet_default.section_dark
+            +e.container.container(data-anim='group' data-anim-delay='0.4')
+                +e.H2.title_smaller Why hesitate? Apply now
+                +e.row
+                    +e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                        p  If you are interested in our vacancy, please, send your CV and at least 5 links to your best articles. We will be happy to see you in our friendly team!
+                    +e.col
+                        +b.FORM.form.__form(action='')
+                            .form-group.form-group_half
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='text' id='formName' autocomplete='off' required)
+                                    label.form-input-label(for='formName'): span Your Name
+                                    .help-block Error
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='text' id='formLastName' autocomplete='off' required)
+                                    label.form-input-label(for='formLastName'): span Your Last Name
+                                    .help-block Error
+                            .form-group.form-group_half
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='mail' id='E-Mail' autocomplete='off' required)
+                                    label.form-input-label(for='E-Mail'): span Your Email
+                                    .help-block Error
+                                .form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='tel' id='phoneNumber' autocomplete='off' required)
+                                    label.form-input-label(for='phoneNumber'): span Your Phone Number
+                                    .help-block Error
+                            .form-group.form-group_half
+                                .form-group.get_file(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input.input-file(type='file' id='Resume' autocomplete='off' required)
+                                    label.form-input-label(for='Resume')
+                                        .attach attach resume/cv
+                                        span.loader 1 file is loaded
+                                        span No file chosen
+                                    .help-block Error
+                                .form-group.get_file(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input.input-file(type='file' id='Cover' autocomplete='off')
+                                    label.form-input-label(for='Cover')
+                                        .attach attach cover letter
+                                        span.loader 1 file is loaded
+                                        span No file chosen
+                                    .help-block Error
+                            .form-group.form-group_with-btn(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                input.form-input(type='text' id='formName' autocomplete='off' required)
+                                label.form-input-label(for='formName'): span Linked profile
+                                .help-block Error
+                            .form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                +b.BUTTON.btn(type='submit')
+                                    +e.SPAN.bg
+                                        +e.SPAN.bg-top
+                                    +e.SPAN.bg
+                                        +e.SPAN.bg-bot
+                                    +e.SPAN.text apply
+
+                        +e.form-ty
+                            +e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+                            p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+        //end meet
+
+        //begin meet
+        +b.SECTION.meet_default.section_dark
+            +e.container.container(data-anim='group' data-anim-delay='0.4')
+                +e.H2.title_smaller Additional form
+                +e.row
+                    +e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                        p  If you are interested in our vacancy, please, send your CV and at least 5 links to your best articles. We will be happy to see you in our friendly team!
+                    +e.col
+                        +b.FORM.form.__form(action='')
+                            .form-group.form-group_half
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='text' id='formName' autocomplete='off' required)
+                                    label.form-input-label(for='formName'): span Your Name
+                                    .help-block Error
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='text' id='formLastName' autocomplete='off' required)
+                                    label.form-input-label(for='formLastName'): span Your Last Name
+                                    .help-block Error
+                            .form-group.form-group_half
+                                .form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='mail' id='E-Mail' autocomplete='off' required)
+                                    label.form-input-label(for='E-Mail'): span Your Email
+                                    .help-block Error
+                                .form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input(type='tel' id='phoneNumber' autocomplete='off' required)
+                                    label.form-input-label(for='phoneNumber'): span Your Phone Number
+                                    .help-block Error
+                            .form-group.form-group_half
+                                .form-group.get_file(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                    input.form-input.input-file(type='file' id='Resume' autocomplete='off' required)
+                                    label.form-input-label(for='Resume')
+                                        .attach attach resume/cv
+                                        span.loader 1 file is loaded
+                                        span No file chosen
+                                    .help-block Error
+                            .form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                textarea.form-textarea
+                                .form-textarea-label: span Type your message here
+                                .help-block Error
+                            .form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                                +b.BUTTON.btn(type='submit')
+                                    +e.SPAN.bg
+                                        +e.SPAN.bg-top
+                                    +e.SPAN.bg
+                                        +e.SPAN.bg-bot
+                                    +e.SPAN.text Send
+
+                        +e.form-ty
+                            +e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+                            p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+        //end meet
+
+        //begin half
+        +b.SECTION.client_novideo.client_job
+            +e.container.container(data-anim='group').anim-line
+                +e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Or let's meet in person
+                +e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+                    +e.img(data-anim-stagger='fade-top' data-anim-parent-trigger)
+                        img(src="./static/img/pers1.jpg")
+                    +e.content(data-anim-stagger='fade-top' data-anim-parent-trigger)
+                        +e.title.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Olga Alekseeva
+                        +e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Recruiter
+                        +e.text
+                            +e.link(href="mailto: o.alekseeva@svitla.com") e-mail:
+                                span o.alekseeva@svitla.com 
+                            +e.link(href="skype:alekseevaoli") skype:
+                                span alekseevaoli
+        //end half

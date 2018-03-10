@@ -1,0 +1,157 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Blog page',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		breadList = ['main', 'blog', 'whitepaper longread'];
+
+block main
+	main.content(data-page='longread')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/build-to-order_main.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description_blog(data-anim='group')
+					+e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') 4 Things to know before starting your Software Outsourcing Journey
+					+e.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p by Svitla Team
+					+e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+		//end screen
+
+		//begin glory-section
+		+b.blog-4_flexibility._redactor.section
+			.container(data-anim='group')
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.A.item.redactor__anchor(href="#anchor-1" data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 1. Why start outsourcing Now?
+							+e.A.item.redactor__anchor(href="#anchor-2" data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 2. Find you perfect technical team!
+							+e.A.item.redactor__anchor(href="#anchor-3" data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 3. Communicate through time and space with ease!
+							+e.A.item.redactor__anchor(href="#anchor-4" data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 4. In technical talent you trust!
+		//end glory
+
+		//begin sharing
+		+b.blog-1_default.section_sharing
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.share_top
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large
+		//end sharing
+
+		//begin redactor
+		+b.SECTION.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small
+					+e.col.col__large.anim-line
+						.redactor
+							ol.ol-orange(start="9")
+								li
+									h2(id="anchor-1") Why Start Outsourcing Now?
+									p My recent programming-related work was quite interesting; at Rebased I’m working with a solar energy company, writing software for monitoring and administration of their solar panel farms, and at my university I’m researching reversible computing, while dabbling a bit in Crystal.
+									ul
+										li
+											h3 You feel that your project is not developing quickly enough
+											p The world changes dynamically and features that you find great today may be already out-of-date in two-three years. That is why you have little time for implementing your fresh ideas. An outsourcing team can speed up your project.
+										li
+											h3 You want to reduce operational and labor costs
+											p Renting office, buying equipment, paying for the Internet, software and licenses, searching for and hiring the right talent may take a lot of time and money. The outsourcing partner, however, can save your budget.
+											h3 You need a team of experts
+											p How many specialists that you need live in your area? How many of them are unemployed or ready to change their job? Are there any specialists for your specific needs? Difficult to answer? And now imagine that you have access to the database of the world’s best engineers with international experience and at affordable rates!
+											blockquote.redactor__quote.redactor__quote_with-title
+												p Nachi Sendowski, Chief Architect, Inflection
+												p From the beginning we felt Svitla was run much like local Silicon Valley Company. Our ways were not foreign to them. In addition, Svitla always accommodated our IT infrastructure needs, office space configuration requests and strict access security. Svitla’s ability to attract good talent over the years also made the difference. From smart junior level engineers eager to learn, to experienced and fluent in English team leads to mentor and manage the teams. We were always able to grow the team and match our growth needs.
+										li
+											h3 You are a small start-up with a small budget
+											p Not everyone starts their business having millions of dollars in the pocket. Many people start with almost nothing except for their zest for success. Outsourcing is an evident choice if you want to minimize the expenditures on salaries and business administration.
+										li
+											h3 You have no time to work on higher value-add things
+											p If the list of your current tasks leaves you no time for analyzing your strategy, practicing creative thinking or communicating with customers, it means that you need to delegate part of your routine tasks to somebody. As a product owner, your mission is high-level supervising and planning for future success. Delegate everything else to the outsourced specialists (developers, QA, project managers, designers, HR managers, tech support) to free yourself for generating ideas and promoting your product on the market.
+								li
+									h2(id="anchor-2") Find Your Perfect Technical Team!
+									p Have you ever tried to hire a tech specialist for your company? If so, you might know how much time and effort goes into finding the right person. Since 2003, Svitla Systems has been successfully working in the software outsourcing market, providing the leading international companies and young start-ups in Silicon Valley with the best technical talent. Over the years, Svitla has perfected its recruitment services.
+									p So let us share our experience and help you make the right decisions and save your efforts.
+									ul
+										li
+											h3 What are the main rules to select a proper candidate?
+											p Try to pull as much information as possible about the vacancy; it is very important to have on hand a good project description and specific job requirements and responsibilities for the open position. Analyze each candidate to identify his/her strengths and areas for growth opportunities to determine whether the candidate is a good fit for the position. Provide feedback on candidates’ resumes and interviews within a few days, so you don’t overload the recruitment process with additional steps.
+											blockquote.redactor__quote.redactor__quote_with-title
+												p Nachi Sendowski, Chief Architect, Inflection
+												p From the beginning we felt Svitla was run much like local Silicon Valley Company. Our ways were not foreign to them. In addition, Svitla always accommodated our IT infrastructure needs, office space configuration requests and strict access security. Svitla’s ability to attract good talent over the years also made the difference. From smart junior level engineers eager to learn, to experienced and fluent in English team leads to mentor and manage the teams. We were always able to grow the team and match our growth needs.
+										li
+											h3 Where should one search for finest talent?
+											p Post vacancies on all possible venues: your website, popular Job-boards, IT Forums, etc. Use an internal recommendations program, and last but not least, take advantage of your social and professional networks.
+										li
+											h3 How much time does it usually take to fill a vacancy?
+											p Much will depend on your procedures, but it usually takes a few days to find a suitable person, and then the internal procedure for approval can last for 1-2 weeks. However, with a third party help, you can finish your task really quickly, as most outsourcing companies can suggest people from the bench.
+										li
+											h3 Does location matter?
+											p Nowadays location doesn’t matter and that’s the beauty of it! Having 13 years of experience, we can definitely say that developers in Ukraine, Montenegro, or Mexico are equally talented and professional. You can ask your outsourcing vendor to provide an office for the team or let them work from home. It’s loyalty and dedication and talent that matter!
+								li
+									h2(id="anchor-3") 3. Communicate through time and space with ease!
+									p There are relatively few areas covered by both <strong class="strong-orange">RuboCop</strong> and <strong class="strong-orange">Reek</strong> RuboCop is more of a syntax style enforcer, while Reek is an architectural tool. There are some common areas of interest –e.g., RuboCop tries to eradicate long methods because they’re a readability issue, while Reek points them out as potential code smells that mix the level of abstraction – but in general the best approach is to figure out what are acceptable thresholds for a given project (e.g., maximum number of lines in a method or maximum number of instance variables) and adjust them as necessary.
+								li
+									h2(id="anchor-4") 4. In technical talent you trust!
+									p There are relatively few areas covered by both <strong class="strong-orange">RuboCop</strong> and <strong class="strong-orange">Reek</strong>; RuboCop is more of a syntax style enforcer, while Reek is an architectural tool. There are some common areas of interest –e.g., RuboCop tries to eradicate long methods because they’re a readability issue, while Reek points them out as potential code smells that mix the level of abstraction – but in general the best approach is to figure out what are acceptable thresholds for a given project (e.g., maximum number of lines in a method or maximum number of instance variables) and adjust them as necessary.
+		//end redactor
+
+		//begin blog-4-section
+		+b.blog-4_white.section_redactor-signature
+			.container
+				+e.row.col__wrap
+					+e.col.col__small
+						+b.share
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large.anim-line
+						.redactor__signature(data-anim='group')
+							.redactor__signature-title by Illya Reznykov, Developer @ Svitla
+							.redactor__signature-date july 04, 2017
+		//end blog-4
+
+		//begin discover
+		+b.SECTION.half_left._with-img-mask._dark._smaller.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H3.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Looking for a dedicated pool of technical resources for your software development?
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Let us assemble a dream team of software engineers, Scrum Masters, and QA specialists just for you.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Learn more',
+								className: 'link-white js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+						//end discover
+		//end discover

@@ -1,0 +1,53 @@
+.dots
+	$parent: &
+	display: flex
+	justify-content: flex-start
+	
+	&__item
+		cursor: pointer
+		padding: 4px
+		width: 16px
+		height: 16px
+		&:not(:first-child)
+			margin-left: 8px
+			+sm
+				margin-left: 2px
+		&.is-active
+			#{$parent}__item-in
+				background-color: $color1
+			.no-touch &:hover
+				#{$parent}__item-in
+					.icon
+						opacity: 0
+						transform: rotate(180deg)
+		.no-touch &:hover
+			#{$parent}__item-in
+				.icon
+					opacity: 1
+					transform: rotate(180deg) translateY(5px)
+	
+	&__item-in
+		position: relative
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		background-color: $color0
+		+trs
+		#{$parent}_turquoise &
+			background-color: $color2
+		.icon
+			pointer-events: none
+			position: absolute
+			top: -4px
+			left: 0
+			width: 8px
+			height: 8px
+			fill: $color0
+			transform: rotate(180deg)
+			opacity: 0
+			+trs
+			#{$parent}_turquoise &
+				fill: $color2
+			svg
+				display: block
+		

@@ -1,0 +1,20 @@
++b.FOOTER.footer
+	+e.container.container
+		+e.top
+			+e.top-nav
+				-navList = ['About us', 'How we work', 'Expertise', 'Portfolio', 'Blog', 'Careers', 'Contacts']
+				ul
+					each el in navList
+						li
+							a(href='' data-hover= el): span= el
+			+e.top-controls
+				-controlsList = ['fb', 'tw', 'linkedin', 'youtube']
+				ul
+					each el in controlsList
+						li
+							a(href=''): +i(el)
+		+e.bot
+			+e.bot-left
+				+e.SPAN.copy © 2017 Svitla
+			+e.bot-right
+				+e.bot-link(href='') Legal and Privacy

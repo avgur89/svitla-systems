@@ -1,0 +1,131 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'About CEO',
+		breadList = ['main', 'about us', 'ceo'];
+
+block main
+	main.content(data-page='about svitla')
+		//begin screen
+		+b.screen_ceo
+			+e.img
+				img(src='static/img/nata.jpg' alt='image')
+			+e.video
+				video(controls playsinline)
+					source(src='empty.mp4' data-load-src="static/video/how-2.mp4" type="video/mp4")
+			+e.CANVAS.canvas_middle#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group' data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.description-top CEO and Founder
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Nataliya Anon 
+		//end screen
+
+		//begin blog-1
+		+b.SECTION.blog-1_default._ceo.section
+			+e.container.container(data-anim='group')
+				+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') My Mission
+				+e.row.col__wrap_without-caption(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large.anim-line
+						+e(data-anim='group').text-collumns
+							p I would compare the role of the CEO to the captain of the ship. Being at the helm of the company, I determine, enable, and implement the company’s strategy - where the ship is going and where to move next. I have to evaluate how revamp our internal processes at inflection growth points, constantly stay ahead of competition, follow industry trends, and implement new technologies. There is never a dull day for me - leading Svitla is always interesting and challenging.
+		//end blog-1
+
+		//begin blog-1
+		+b.SECTION.blog-1_default._ceo.section
+			+e.container.container(data-anim='group')
+				+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') My Philosophy
+				+e.row.col__wrap_without-caption(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large.anim-line
+						+e(data-anim='group').text-collumns.text-collumns_quote
+							p I believe that there are two key ingredients of being a successful entrepreneur: hard work and perseverance. To start a new business you have to work relentlessly and move many barriers. My key principles are to stay humble, strive for full realization of my capabilities, and do good in the process.
+							p My success is my personal professional growth. I have grown tremendously alongside Svitla from all the years of leading the company, interacting with management team, IT experts, and industry leaders. It is wonderful to create a company culture where you can learn from others and grow professionally with them.
+		//end blog-1
+
+		//begin blog-1
+		+b.SECTION.blog-1_default._ceo.section
+			+e.container.container(data-anim='group')
+				+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Life Work Balance
+				+e.row.col__wrap_without-caption(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large.anim-line
+						+e(data-anim='group').text-collumns
+							p Aside from being Svitla's CEO, I'm the mother of three beautiful kids of school and preschool age. How do I balance these two roles? It is a good question, a tough one. Many moms can probably relate to me. It’s very demanding. Just being a mom is very demanding. The key thing is time management. It’s a skill that one acquires. I have to manage my schedule, prioritize what is important, what has to be done today or could be done tomorrow. And I always have to be flexible and multi-task. On the other hand, keeping perspective and valuing time off is equally important. It’s vital to take my mind off things. Every time I recharge myself, I come back and see things from a fresh perspective for both business and my personal life.
+		//end blog-1
+
+		//begin half
+		+b.SECTION.half_turquoise._biography._height-responsive.section
+			+e.bg-w
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/nataliya.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Biography
+						+e.biography(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.H3.biography-title Degrees:
+							+e.biography-content
+								ul.ul-standart
+									li The University of Kansas,  Masters Degree in IT and Accounting
+									li Stanford Graduate School of Business, MBA , 1999-2001
+						+e.biography(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.H3.biography-title Activities:
+							+e.biography-content
+								ul.ul-standart
+									li Co-founder of Ukrainian Stanford Student Association, 2000
+									li Teacher, Ukrainian Sunday School in San Francisco, 2015 - present.
+						+e.biography_two-col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.H3.biography-title Professional Achievements:
+							+e.biography-content
+								ul.ul-standart
+									li Member of the Fourth Class of Growing Entrepreneurs
+									li Mentoring Program administered by the Committee of  200, 2000
+									li Founder and ex-CEO of Lohika Systems (acquired by Altran Solutions Corp.), 2001- 2003
+									li Woman-owned business certification, 2013 - present
+		//end half
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Let's meet Svitla
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p We look forward to sharing our expertise, consulting with you about your product idea, or helping you find the right solution for an existing project.
+					+e.col
+						+b.FORM.form.__form(action='')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text Get in touch
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

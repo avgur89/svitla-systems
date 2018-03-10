@@ -1,0 +1,201 @@
+.cases
+	padding-top: $topOffset
+	+md
+		padding-top: $offsetTab
+	+sm
+		padding-top: $topOffsetMob
+	&__title
+		margin-bottom: 53px
+		+md
+			margin-bottom: 40px
+		+sm
+			font-size: 23px
+			line-height: 24px
+			margin-bottom: 27px
+	&__subtitle
+		line-height: 34px
+		color: $color2
+		position: relative
+		top: -4px
+		margin-bottom: 15px
+		display: block
+		.no-touch &
+			&:hover
+				+trs
+				color: $color3
+		+sm
+			font-size: 23px
+			top: -6px
+			margin-bottom: 14px
+	&__name
+		letter-spacing: 0.8px
+		padding-left: 2px
+		margin-bottom: 5px
+	&__list
+		margin-bottom: 11px
+	&__text
+		padding-top: 7px
+		margin-bottom: 13px
+		letter-spacing: .1px
+	&__date
+		+h6
+		letter-spacing: 1px
+	&__tag
+		position: absolute
+		top: 14px
+		left: 9px
+		background-color: $color5
+		padding: 2px 12px
+		+h6
+		letter-spacing: .5px
+		color: $color0
+		user-select: none
+		cursor: default
+		&::before
+			display: none
+	&__cont
+		width: 900px
+		margin-left: auto
+		margin-right: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		position: relative
+		+md
+			width: 100%
+		+sm
+			justify-content: space-around
+		.all-link
+			position: absolute
+			bottom: 50px
+			left: -278px
+			+md
+				position: static
+				margin-bottom: 50px
+			+sm
+				width: 100%
+	&__item
+		width: 50%
+		max-width: 410px
+		margin-bottom: 50px
+		position: relative
+		+md
+			width: calc(50% - 24px)
+			max-width: 100%
+			&:nth-child(odd)
+				margin-right: 48px
+			margin-bottom: 50px
+		+sm
+			width: 100%
+			margin-bottom: 25px
+			&:nth-child(odd)
+				margin-right: 0
+		+mob-fix
+			width: calc(50% - 15px) !important
+			max-width: 50%
+			&:nth-child(odd)
+				margin-right: 30px !important
+	&__media
+		max-height: 205px
+		background: url('../img/no-image.jpg') center center no-repeat
+		overflow: hidden
+		margin-bottom: 30px
+		height: 205px
+		display: block
+		img
+			transition: transform .6s linear
+			border: none
+			width: 100%
+			height: 100%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+			backface-visibility: hidden
+		.no-touch &
+			&:hover
+				@media only screen and (-ms-high-contrast: active) and (-ms-high-contrast: none)
+					img
+						transform: none
+				img
+					transform: scale(1.1)
+		&:after, &:before
+			display: none
+		+md
+			max-height: 155px
+			height: 155px
+		+tab-fix
+			max-height: 250px !important
+			height: 250px !important
+		+sm
+			max-height: 140px
+			height: 140px
+		+mob-fix
+			max-height: 300px !important
+			height: 300px !important
+	&__info
+		padding-left: 20px
+		padding-right: 10px
+		position: relative
+		&:after
+			display: none
+	&__pagination
+		display: flex
+		padding-top: 20px
+		border-top: 1px solid #2e3a4c
+		max-width: 900px
+		margin-left: auto
+		margin-right: 0
+		justify-content: space-between
+		margin-bottom: 100px
+		+sm
+			margin-bottom: 75px
+		&__prev
+			padding-left: 20px
+			position: relative
+			+sm
+				padding-left: 5px
+				margin-left: 10px
+			a
+				color: $color2
+				font-size: 10px
+			.icons-w
+				transform: rotate(180deg)
+				position: absolute
+				left: -20px
+				.icon
+					stroke: $color2
+					display: none
+					&:nth-child(1)
+						display: block
+		&__next
+			padding-right: 20px
+			position: relative
+			+sm
+				padding-right: 5px
+				margin-right: 13px
+			a
+				color: $color2
+				font-size: 10px
+			.icons-w
+				position: absolute
+				right: -20px
+				.icon
+					stroke: $color2
+					display: none
+					&:nth-child(1)
+						display: block
+		&__page
+			position: relative
+			display: flex
+			justify-content: center
+			&__number
+				font-size: 10px
+				padding-left: 15px
+				padding-right: 15px
+				color: $color2
+				transition: .4s
+				+sm
+					padding-left: 8px
+					padding-right: 8px
+					line-height: 30px
+				&:hover
+					color: $color3

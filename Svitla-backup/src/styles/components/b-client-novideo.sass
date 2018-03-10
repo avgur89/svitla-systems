@@ -1,0 +1,88 @@
+.client
+	padding-top: $topOffset
+	padding-bottom: $botOffset
+	&_job
+		+md
+			.client__item:after
+				display: block
+		+sm
+			.client__item
+				padding-left: 20px
+				padding-right: 20px
+			.client__img
+				width: 100%
+				margin-bottom: 10px
+			.client__title
+				font-size: 18px !important
+	&__item
+		max-width: 900px
+		margin-left: auto
+		margin-right: 0
+		padding-left: 40px
+		padding-right: 30px
+		+md
+			padding: 0 20px
+			&:after
+				display: block
+	&__link
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		white-space: nowrap
+		//display: block
+		//max-width: 200px
+		&:hover span
+			color: $color1
+		span
+			margin-left: 5px
+			white-space: normal
+			transition: .4s
+			color: $color2
+		&:first-child
+			margin-top: 20px
+	&__img
+		width: 232px
+		height: 175px
+		overflow: hidden
+		margin-right: 40px
+		display: inline-block
+		vertical-align: top
+		+sm
+			display: block
+			margin-bottom: 30px
+		+mob-fix
+			height: 330px
+		img
+			height: 100%
+			width: 100%
+			font-family: "object-fit: cover;"
+			object-fit: cover
+	&__content
+		width: calc(100% - 280px)
+		display: inline-block
+		+sm
+			width: 100%
+		.qoute
+			margin-bottom: 30px
+			+sm
+				font-size: 13px
+		.client__title
+			margin-bottom: 10px
+			+sm
+				font-size: 23px
+				line-height: 40px
+				margin-bottom: 5px
+	.h1
+		margin: 0 0 $botOffset
+		&::before
+			display: none
+		+md
+			margin: 0 0 50px
+		+sm
+			font-size: 23px
+			line-height: 24px
+			margin-bottom: 25px
+	+md
+		padding: $offsetTab 0
+	+sm
+		padding: $topOffsetMob 0 $botOffsetMob

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <meta charset="UTF-8">
+  <title>Vintage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+  <style>
+    * {
+      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    header {
+      text-align: center;
+      height: 96px;
+      border-bottom: 2px #ededed solid;
+    }
+
+    header svg {
+      height: 100%;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #a5a5a8;
+      padding: 45px;
+    }
+
+    .logo {
+      float: left;
+    }
+
+    .copyright {
+      float: right;
+    }
+
+    .content {
+      border-top: 2px #fff solid;
+      padding: 45px;
+      background: #ededed;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 65px;
+      border-bottom: 1px #fff solid;
+    }
+
+    .pager {
+      width: 50%;
+    }
+
+    .page {
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+
+    .page .number {
+      float: left;
+      font-size: 13px;
+      color: #a5a5a8;
+    }
+
+    .page .name {
+      padding-left: 30px;
+      font-size: 14px;
+      color: #28292a;
+      margin-bottom: 5px;
+    }
+
+    .page .description {
+      padding-left: 30px;
+      font-size: 12px;
+      color: #636363;
+    }
+
+    .click {
+      font-size: 12px;
+      color: #636363;
+      border: 2px solid #fff;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+
+    .page:hover,
+    .page:hover .number,
+    .page:hover .name,
+    .page:hover .description {
+      color: #a5a5a8;
+    }
+
+    .window {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%) translateX(25%) scale(0.5);
+    }
+
+    .click:after {
+      content: 'показать';
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 4px #fff solid;
+      background: #fff;
+    }
+  </style>
+  <script>
+    var pager = [
+      ['home_without_sector.html', '00', 'Home Without Sector', 'Home Without Sector'],
+      ['home_without_sector_video-2.html', '00', 'Home Without Sector Video 2', 'Home Without Sector Video 2'],
+      ['01_About_us.html', '01', 'About Us', 'About Us'],
+      ['02_About_Svitla.html', '02', 'About Svitla', 'About Svitla'],
+      ['03_About_CEO.html', '03', 'About CEO', 'About CEO'],
+      ['04_Our_team.html', '04', 'Our team', 'Our team'],
+      ['05_Svitla_CSR.html', '05', 'Svitla CSR', 'Svitla CSR'],
+      ['06_Svitla_CSR_project.html', '06', 'Svitla CSR project', 'Svitla CSR project'],
+      ['07_How_we_work.html', '07', 'How we work', 'How we work'],
+      ['08_Managed_team_extension.html', '08', 'Managed team extension', 'Managed team extension'],
+      ['09_Build_to_order.html', '09', 'Build to order', 'Build to order'],
+      ['10_Svitla_Portfolio.html', '10', 'Svitla Portfolio', 'Svitla Portfolio'],
+      ['11_Svitla_Testemonials.html', '11', 'Svitla Testemonials', 'Svitla Testemonials'],
+      ['12_Svitla_Case_Studies.html', '12', 'Svitla Case Studies', 'Svitla Case Studies'],
+      ['13_Svitla_case_page_videoslider.html', '13', 'Svitla case page videoslider', 'Svitla case page videoslider'],
+      ['13_Svitla_case_page_without_video.html', '13', 'Svitla_case_page_without_video', 'Svitla_case_page_without_video'],
+      ['15_Svitla_Expertise.html', '15', 'Svitla Expertise', 'Svitla Expertise'],
+      ['16_Svitla_expertise_page.html', '16', 'Svitla expertise page', 'Svitla expertise page'],
+      ['17_Svitla_Blog.html', '17', 'Svitla Blog', 'Svitla Blog'],
+      ['17_Blog_page.html', '17-0', 'Blog page', 'Blog page'],
+      ['17_Blog_page_1.html', '17-1', 'Blog page 1', 'Blog page 1'],
+      ['17_Blog_page_2.html', '17-2', 'Blog page 2', 'Blog page 2'],
+      ['17_Whitepapers_longread.html', '17-3', 'Whitepapers longread', 'Whitepapers longread'],
+      ['18_Event_page.html', '18', 'Event page', 'Event page'],
+      ['19_Svitla_Whitepapers_subscribe.html', '19', 'Svitla Whitepapers subscribe', 'Svitla Whitepapers subscribe'],
+      ['21_Svitla_Career.html', '21', 'Svitla Career', 'Svitla Career'],
+      ['23_Svitla_Job_Page.html', '23', 'Svitla Job Page', 'Svitla Job Page'],
+      ['24_Contact_us.html', '24', 'Contact Us', 'Contact Us'],
+      ['25_Svitla_Search_Results.html', '25', 'Svitla Search Results', 'Svitla Search Results'],
+      ['404.html', '--', '404', '404']
+    ];
+  </script>
+  <header>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3;" xml:space="preserve">
+      <g>
+        <polygon points="33.2,209.7 0,209.7 7.8,239.8 40.5,239.8 	" />
+        <rect x="148.9" y="209.7" width="33.7" height="175.9" />
+        <polygon points="300.6,314 300.2,314 253.4,209.7 216.6,209.7 216.6,385.6 247.3,385.6 247.3,272.1 247.8,272.1 299.3,385.6
+												331.4,385.6 331.4,209.7 300.6,209.7 	" />
+        <polygon points="465.4,209.7 353.3,209.7 353.3,239.4 392.6,239.4 392.6,385.6 426.1,385.6 426.1,239.4 465.4,239.4 	" />
+        <path d="M508.1,209.7l-43.6,175.9h32.4l9.4-37h46.5l8.5,37h32.1l-42.3-175.9H508.1z M512.5,318.9l16.6-71.1h0.5l16.3,71.1H512.5z" />
+        <path d="M664.5,237c12.2,0,20.4,7.3,20.4,30h33.7c-1.2-39.9-19.6-59.7-54.1-59.7c-32.6,0-55.6,15.5-55.6,58.9v62.9
+												c0,43.4,22.8,58.9,55.6,58.9c12.6,0,22.4-6.9,31.4-17.1l5.2,14.6h17.5v-90.2h-57.3v27.7h23.6v10.7c0,15.1-7.8,24.4-20.4,24.4
+												c-13.4,0-21.9-5.3-21.9-24.8v-71.6C642.5,242.3,651.1,237,664.5,237z" />
+        <polygon points="781,355.9 781,309.6 825.6,309.6 825.6,279.9 781,279.9 781,239.4 839.5,239.4 839.5,209.7 747.3,209.7
+												747.3,385.6 841.9,385.6 841.9,355.9 	" />
+        <polygon points="96.3,209.7 51.3,385.6 83.3,385.6 128.2,209.7 	" /> </g>
+    </svg>
+  </header>
+  <div class="content">
+    <div class="title">Svitla</div>
+    <div class="pager"></div>
+  </div>
+  <div class="window">
+    <iframe src="" width="468" height="60" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe>
+  </div>
+  <footer>
+    <div class="logo">With love
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 84.2 115.5" style="enable-background:new 0 0 84.2 115.5;" xml:space="preserve" height="15">
+        <polygon points="21.8,0 0,0 5.1,19.8 26.6,19.8"></polygon>
+        <polygon points="63.2,0 33.7,115.5 54.7,115.5 84.2,0"></polygon>
+      </svg>
+    </div>
+    <div class="copyright">by Vintage, All Right Reserved. 2017</div>
+  </footer>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $(document).ready(function()
+    {
+      var links = '';
+      for (var i = 0, length = pager.length; i < length; i++)
+      {
+        links += '<a class="page" href="' + pager[i][0] + '"><div class="number">' + pager[i][1] + '</div><div class="name">' + pager[i][2] + '</div><div class="description">' + pager[i][3] + '</div><div class="click"></div> </a>';
+      }
+      $('.pager').append(links);
+      $('.page .click').click(function()
+      {
+        url = $(this).parent().attr('href');
+        $('iframe').attr('src', url);
+        return false
+      });
+    });
+  </script>
+</html>

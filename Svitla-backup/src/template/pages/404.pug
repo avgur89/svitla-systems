@@ -1,0 +1,33 @@
+extends ../extend/default
+
+block variables
+	-
+		title = '404'
+
+block main
+	main.content(data-page='404')
+		//begin screen
+		+b.screen.page-404
+			+e.img
+				img(src='static/img/how-we-work_main.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Page not found
+					+b.btn(href="/")
+						+e.SPAN.bg
+							+e.SPAN.bg-top
+						+e.SPAN.bg
+							+e.SPAN.bg-bot
+						+e.SPAN.text main page
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title 404
+		//end screen

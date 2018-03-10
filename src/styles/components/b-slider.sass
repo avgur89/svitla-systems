@@ -1,0 +1,365 @@
+.slider
+	overflow: hidden
+	$parent: &
+	&_text
+		margin-top: 30px
+	&__container-top
+		position: relative
+		z-index: 1
+		#{$parent}_default &
+			padding-top: $topOffset2
+			+md
+				padding-top: $topOffsetTab2
+			+sm
+				padding-top: $topOffsetMob
+	&__container-bot
+		position: relative
+		z-index: 2
+		margin-bottom: 40px
+		+md
+			margin-bottom: 20px
+		+sm
+			margin-bottom: 30px
+	&__arrow
+		cursor: pointer
+		position: absolute
+		overflow: hidden
+		z-index: 12
+		top: 50%
+		margin-top: -25px
+		background-color: $color0
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		+sm
+			display: none
+		.icon
+			font-size: 9px
+			color: $color1
+			+trs
+		.no-touch &:hover .icon
+			color: $color2
+		&_left
+			left: 20px
+		&_right
+			right: 20px
+	
+	&__controls
+		padding: 44px 0 43px
+		position: relative
+		height: 28px
+		display: flex
+		justify-content: center
+		align-items: center
+		+sm
+			padding-top: 33px
+			justify-content: space-between
+			flex-wrap: wrap
+		&-dots
+			display: flex
+			justify-content: center
+			+sm
+				margin-left: -4px
+		&-link
+			position: absolute
+			top: 30px
+			right: 0
+			+sm
+				position: relative
+				top: auto
+				right: auto
+		
+	&__anim
+		pointer-events: none
+		+ratio-in
+		z-index: 11
+		+md
+			display: none
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			circle
+				fill: none
+				stroke: $color0
+		&.arrow-hidden
+			svg
+				display: none
+	&__bg
+		pointer-events: none
+		+ratio-in
+		z-index: 10
+		+md
+			display: none
+		&-top
+			+ratio-in
+			bottom: auto
+			height: 50px
+			background-color: $color0
+			transition: all 1.2s ease-out
+			#{$parent}__bg.has-anim &
+				transform: translateY(-100%)
+		&-left
+			+ratio-in
+			right: auto
+			width: 50px
+			background-color: $color0
+			transition: all 1.2s ease-out
+			#{$parent}__bg.has-anim &
+				transform: translateX(-100%)
+		&-right
+			+ratio-in
+			left: auto
+			width: 50px
+			background-color: $color0
+			transition: all 1.2s ease-out
+			#{$parent}__bg.has-anim &
+				transform: translateX(100%)
+		&-bottom
+			+ratio-in
+			top: auto
+			height: 50px
+			background-color: $color0
+			transition: all 1.2s ease-out
+			#{$parent}__bg.has-anim &
+				transform: translateY(100%)
+	
+	&__in
+		position: relative
+	
+	&__inner
+		position: relative
+		overflow: hidden
+		height: 392px
+		+md
+			height: 579px
+			background-color: $color1
+			& + .slider-inner
+				padding-top: 80px
+		+sm
+			height: 449px
+	&__item
+		position: relative
+		display: flex
+		height: 100%
+		+md
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			flex-direction: column
+		& + &
+			position: absolute
+			height: 0
+			width: 0
+			overflow: hidden
+			#{$parent}.is-init &
+				position: relative
+				height: 100%
+				width: auto
+				overflow: inherit
+				+md
+					position: absolute
+		
+		&-text
+			position: relative
+			flex: 0 0 409px
+			max-width: 409px
+			padding: 0 0 0 100px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			color: $color0
+			z-index: 2
+			background-color: $color1
+			+md
+				padding-top: 97px
+				padding-right: 150px
+				order: 2
+				margin-top: -257px
+				flex-basis: 349px
+				height: 349px
+				max-width: none
+				background-color: transparent
+				justify-content: flex-start
+			+sm
+				margin-top: -80px
+				padding-top: 77px
+				padding-left: 20px
+				padding-right: 20px
+				height: 298px
+			&:before
+				content: ''
+				position: absolute
+				z-index: -1
+				height: 120%
+				top: -10%
+				right: -75px
+				width: 50%
+				background-color: $color1
+				border-radius: 0 50% 50% 0
+				+desk
+					transform: translateX(-60px)
+					transition: all 1.5s ease
+					#{$parent}__container-top.has-anim &
+						transform: translateX(0)
+				+md
+					top: 0
+					bottom: 0
+					left: -37.5%
+					right: auto
+					width: 150%
+					height: 255%
+					border-radius: 50% 50% 0 0
+				+sm
+					left: -125%
+					width: 300%
+			&-title
+				+h1
+				+sm
+					font-size: 23px
+					line-height: 1.3
+				&:not(:last-child)
+					margin-bottom: 13px
+					+sm
+						margin-bottom: 15px
+			&-paragraph
+				padding-right: 40px
+				max-height: 180px
+				+md
+					padding-right: 0
+					max-height: 90px
+				&:not(:last-child)
+					margin-bottom: 13px
+				p
+					&:not(:last-child)
+						margin-bottom: 16px
+			&-descr
+				+h4
+				margin-bottom: 25px
+			&-link
+				display: table
+			
+		&-img
+			flex: 1 1 auto
+			+cover-img
+			+md
+				order: 1
+				flex: 1 0 auto
+				height: 487px
+				opacity: 0
+				#{$parent}__item:first-child &
+					opacity: 1
+			+sm
+				height: 229px
+		&-row
+			display: flex
+		&-col-large
+			width: 405px
+			min-width: 405px
+			#{$parent}__item-text-title
+				margin-bottom: 45px
+			#{$parent}__item-text-descr
+				margin-bottom: 15px
+			#{$parent}__item-text-paragraph
+				letter-spacing: -.05px
+			+md
+				width: 100%
+				min-width: 100%
+				#{$parent}__item-text-title
+					margin-bottom: 20px
+				#{$parent}__item-text-paragraph
+					max-height: 50px
+		&-col-small
+			width: 100%
+			#{$parent}__item-text-title
+				+h5
+				margin-bottom: 5px
+			#{$parent}__item-text-descr
+				+h6
+				margin-bottom: 12px
+				letter-spacing: 1px
+	&__title
+		padding: 0 0 50px
+		+sm
+			margin-bottom: 0!important
+			padding: 15px 0 25px
+	&__list
+		padding-left: 15px
+		&::before
+			height: 100%
+			background-color: $color0
+	&__client-link
+		display: flex
+		flex-direction: column
+		padding-left: 15px
+		margin-bottom: 70px
+		&::before
+			height: 100%
+			background-color: $color3
+		img
+			margin-bottom: 16px
+			align-self: baseline
+		a
+			+h6
+			color: $color3
+			letter-spacing: 1px
+			text-transform: uppercase
+			transition: color .3s ease
+			.no-touch &:hover
+				color: $color0
+	&_large
+		padding-top: $topOffset
+		#{$parent}__inner
+			height: 540px
+		#{$parent}__item-text
+			flex: 0 0 700px
+			max-width: 700px
+			&::before
+				right: -90px
+		+md
+			padding-top: $offsetTab
+			& + .slider-inner_clients
+				padding-top: $offsetTab
+			#{$parent}__inner
+				height: 580px
+			#{$parent}__row
+				display: block
+			#{$parent}__item-col-small
+				display: none
+			#{$parent}__item-text
+				max-width: 100%
+				padding: 95px 90px 0 100px
+				&::before
+					right: auto
+					height: 160%
+		+sm
+			padding: 35px 0 0
+			& + .slider-inner_clients
+				padding-top: 50px
+			#{$parent}__title
+				font-size: 23px
+				line-height: 30px
+				margin-bottom: 35px
+			#{$parent}__item-text
+				flex: 0 0 300px
+				padding: 77px 20px 0
+			#{$parent}__item-text-descr
+				font-size: 17px
+				line-height: 30px
+			#{$parent}__item-text-paragraph
+				max-height: 60px
+				//overflow: hidden
+	&_grey
+		background-color: $color4
+		#{$parent}__bg-top, #{$parent}__bg-left, #{$parent}__bg-bottom, #{$parent}__bg-right, #{$parent}__arrow_left, #{$parent}__arrow_right
+			background-color: $color4
+		#{$parent}__anim svg circle
+			stroke: $color4
+	&__text
+		margin-top: 30px
+		+md
+			display: none

@@ -1,0 +1,560 @@
+.half
+	$parent: &
+	overflow: hidden
+	position: relative
+	height: 480px
+	background-color: $color2
+	+md
+		height: auto
+	&.no-events
+		pointer-events: none
+	&_small
+		height: 440px
+	&_smaller
+		height: 342px
+	&_white
+		background-color: $color0
+		&-bg
+			background-color: $color0
+		&::before
+			background-color: $color0
+	&_black
+		background-color: $color1
+		.half__title
+			color: $color0
+		.half__text
+			color: $color0
+			margin-top: 15px !important
+		.play-btn__circle-sm
+			stroke: $color2
+		.half__inner-bg,.half__bg
+			background-color: $color1 !important
+		.half__inner
+			&:before
+				display: none
+		.half__container
+			+sm
+				padding-bottom: 0px
+				background: $color1 !important
+		.half__item
+			+sm
+				height: auto !important
+				padding-bottom: 50px
+	&_dark
+		background-color: $color1
+		+md
+			.half__inner-bg
+				border-radius: 0 !important
+			.half__bg
+				display: none
+			#{$parent}__container
+				background-color: $color1
+		+sm
+			.half__inner
+				width: 100%
+		.half__title
+			color: $color0
+		.half__text
+			color: $color0
+		.half__inner
+			&:before
+				display: none
+		.play-btn__circle-sm
+			stroke: $color2
+		.half__inner-bg,.half__bg
+			background-color: $color1 !important
+		.dots__item.is-active .dots__item-in
+			background: $color2
+		#{$parent}__bg-picture
+			&::after
+				background-color: rgba(0,0,0, .5) !important
+	&_height-responsive
+		#{$parent}__inner-bg
+			top: 50%
+			height: 175%
+			transform: translate(100px, -50%)!important
+		.has-anim
+			#{$parent}__inner-bg
+				transform: translate(0, -50%)!important
+	&_with-img-mask
+		padding: 0
+		height: auto
+		#{$parent}__inner
+			padding: 92px 0 64px 2px
+			width: 70%
+		#{$parent}__inner-bg
+			height: 500%
+			width: 500%
+			right: 0
+			left: auto
+			transform: translate(-80px, -40%)!important
+		.has-anim
+			#{$parent}__inner-bg
+				transform: translate(0, -40%)!important
+		#{$parent}__title
+			margin-left: 0
+		#{$parent}__title + #{$parent}__text
+			margin-top: 45px
+		#{$parent}__bg-w.container
+			width: 1200px
+		#{$parent}__bg
+			position: absolute
+			top: 50%
+			right: 12px
+			width: 33%
+			height: 200%
+			background-color: $color0
+			border-radius: 0 50% 50% 0
+			overflow: hidden
+			transform: translateY(-50%)
+		#{$parent}__bg-picture
+			left: 0
+			right: 0
+			top: 50%
+			height: 50%
+			transform: translateY(-50%)
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(255,255,255, .5)
+		#{$parent}__center-container
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			.btn
+				transform: translateX(40px)
+		+md
+			#{$parent}__bg-w
+				display: none
+			#{$parent}__container
+				padding: $offsetTab 50px $offsetTab
+			#{$parent}__inner
+				padding: 0
+				margin-top: 0
+				width: 100%
+			#{$parent}__title + #{$parent}__text
+				margin-top: 35px
+				max-width: 65%
+			#{$parent}__center-container
+				position: static
+				.btn
+					margin-top: 30px
+					transform: translateX(30px)
+		+sm
+			#{$parent}__title
+				line-height: 32px
+			#{$parent}__text
+				letter-spacing: 0
+			#{$parent}__container
+				padding: $topOffsetMob 20px $botOffsetMob
+			#{$parent}__title + #{$parent}__text
+				margin-top: 30px
+				max-width: 100%
+			#{$parent}__center-container
+				.btn
+					transform: translateX(-50%)
+					left: 50%
+	&_md
+		height: 510px
+	&_lg
+		height: 540px
+		#{$parent}__text
+			margin-bottom: 48px
+			max-height: 147px
+			+md
+				max-height: 103px
+			+sm
+				max-height: 180px
+				margin-bottom: 22px
+			+mob-fix
+				max-height: 103px !important
+		#{$parent}__item
+			position: relative
+			height: 300px
+			&_center
+				height: auto
+				display: flex
+				flex-direction: column
+				justify-content: center
+				div:last-child
+					margin-bottom: 0
+				#{$parent}__text
+					max-height: 320px
+			+desk
+				top: -10px
+			+md
+				height: auto
+			+sm
+				height: auto
+			+mob-fix
+				height: 256px !important
+			+ #{$parent}__item
+				display: none
+	&_turquoise
+		#{$parent}__container
+			+sm
+				background-color: $color2
+	&__play-btn
+		position: absolute
+		z-index: 5
+		top: 50%
+		left: 0
+		transform: translate(-50%, -50%)
+		+desk
+			margin-top: 10px
+		+md
+			top: -170px
+			left: 50%
+		+sm
+			top: -57px
+		.play-btn
+			position: relative
+			width: 293px
+			height: 293px
+			+sm
+				width: 102px
+				height: 102px
+	
+	&__video-close
+		+link-close
+		position: absolute
+		z-index: 11
+		top: 20px
+		right: 20px
+		opacity: 0
+		transform: translateY(20px)
+		+sm
+			top: 10px
+			right: 10px
+	
+	&__bg
+		position: relative
+		width: 100%
+		height: 100%
+		background-color: $color2
+		&-picture
+			position: absolute
+			left: 40%
+			top: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+			+md
+				left: 0
+			#{$parent}_video &
+				left: 0
+				right: 40%
+				+md
+					right: 0
+			+md
+				position: relative
+				min-height: 598px
+			+sm
+				min-height: 288px
+		&-video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			video
+				display: block
+			+sm
+				z-index: 2
+		&-w
+			pointer-events: none
+			+ratio-in
+			+gpu
+			+md
+				position: relative
+			&.is-play
+				pointer-events: auto
+				z-index: 10
+				height: 100%
+			.video-js
+				opacity: 0
+				padding: 0!important
+				height: 100vh
+				width: 100%
+				+md
+					height: auto
+				.vjs-control-bar
+					pointer-events: auto
+				.vjs-tech
+					min-height: 100vh
+					pointer-events: none
+					object-fit: cover
+					font-family: 'object-fit: cover;'
+					+md
+						pointer-events: auto
+					+md
+						position: relative
+						min-height: 0
+						height: auto
+				.vjs-big-play-button
+					display: none
+		img
+			position: absolute
+			z-index: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+			+sm
+				min-height: 240px
+	
+	&__biography
+		width: 50%
+		margin-top: 42px
+		&:nth-child(even)
+			padding-right: 20px
+		&:nth-child(odd)
+			padding-left: 12px
+			+md
+				padding-left: 22px
+		#{$parent}__biography-content
+			letter-spacing: 0px
+			li
+				margin-bottom: 22px
+		&_two-col
+			width: 100%
+			margin-top: 24px
+			padding: 0
+			#{$parent}__biography-content
+				column-count: 2
+				column-gap: 40px
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+					column-count: 1
+					li
+						margin-bottom: 14px
+				+md
+					column-gap: 64px
+		&-title
+			width: 100%
+			margin-bottom: 15px
+			+h4
+		+sm
+			padding: 0!important
+			width: 100%
+			margin-top: 5px
+			&-title
+				font-size: 17px
+				margin-bottom: 12px
+			#{$parent}__biography-content
+				column-count: 1
+				li
+					margin-bottom: 18px
+	&__container
+		height: 100%
+		+md
+			padding-bottom: $offsetTab
+		+sm
+			padding-bottom: $botOffsetMob
+			background-color: $color4
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 50%
+		height: 150%
+		z-index: 1
+		top: -25%
+		+md
+			margin-top: -25px
+			top: 0
+			width: auto
+			height: auto
+		+sm
+			margin-top: -10px
+		+tab-fix
+			margin-right: -50px
+			padding-right: 50px
+		&-bg
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: $color4
+			transition: all 1.5s ease 0.1s
+			+md
+				top: -170px
+				bottom: auto
+				height: 105vw
+				left: -20%
+				right: -20%
+				margin-left: -200px
+			+sm
+				top: -60px
+				width: 200vw
+				left: -20%
+			+mob-fix
+				left: -30%
+	&_left &__inner
+		padding-right: 180px
+		+md
+			padding-right: 0
+		&-bg
+			border-radius: 0 50% 50% 0
+			+desk
+				transform: translateX(-60px)
+			+md
+				border-radius: 50% 50% 0 0
+		&:before
+			content: ''
+			position: absolute
+			right: calc(100% - 1px)
+			top: 0
+			bottom: 0
+			width: 100vw
+			background-color: $color4
+			+md
+				display: none
+	&_video &__inner, &_biography &__inner
+		left: 50%
+		padding-left: 180px
+		+md
+			left: 0
+			padding-left: 0
+		&-bg
+			border-radius: 50% 0 0 50%
+			+desk
+				transform: translateX(60px)
+			+md
+				border-radius: 50% 50% 0 0
+		&:before
+			content: ''
+			position: absolute
+			left: calc(100% - 1px)
+			top: 0
+			bottom: 0
+			width: 100vw
+			background-color: $color4
+			+md
+				display: none
+	&_biography
+		height: auto
+		#{$parent}__bg-picture
+			left: 0
+			width: 45%
+			+md
+				width: 100%
+			+tab-land
+				img
+					object-position: 50% 10%
+		#{$parent}__item
+			display: flex
+			flex-wrap: wrap
+			padding: $topOffset 0 $botOffset
+			+md
+				padding: 0 0 $offsetTab
+		#{$parent}__inner
+			left: 35%
+			width: 65%
+			+md
+				width: 100%
+			&-bg
+				+md
+					top: 25%
+					left: -30%
+					right: 0
+					height: 115%
+				+sm
+					left: -42%
+					height: 65%
+		#{$parent}__title
+			width: 100%
+			+md
+				margin-bottom: 0
+		#{$parent}__container
+			padding-bottom: 0
+	&_turquoise &__inner
+		&-bg
+			background-color: $color2
+		&:before
+			background-color: $color2
+	&_white &__inner
+		&-bg
+			background-color: $color0
+		&:before
+			background-color: $color0
+		.play-btn__circle-sm
+			stroke: $color2
+		.play-btn__triangle
+			fill: $color1
+	&_white
+		#{$parent}__container
+			+sm
+				background-color: $color0
+	&__inner
+		&-bg
+			border: none
+			.has-anim &
+				+desk
+					transform: translateX(0)
+	&__title
+		margin-left: -3px
+		margin-bottom: 4px
+		+md
+			margin-bottom: 9px
+		&_white
+			color: $color0
+		+ #{$parent}__text
+			margin-top: 13px
+			+sm
+				margin-top: 8px
+		+sm
+			margin-bottom: 0
+			font-size: 23px
+			line-height: 44px
+	&__subtitle
+		margin-bottom: 22px
+		letter-spacing: 0.1em
+		&_white
+			color: $color0
+		&_dark
+			color: $color1
+		&_uppercase
+			text-transform: uppercase
+		&:last-of-type
+			margin-bottom: 0
+	&__text
+		max-height: 250px
+		margin-bottom: 12px
+		&_italic
+			font-style: italic
+		+sm
+			max-height: 170px
+		p
+			&:not(:last-child)
+				margin-bottom: 16px
+	&__dots
+		position: absolute
+		top: 50%
+		left: 176px
+		margin-top: 170px
+		+md
+			position: relative
+			top: auto
+			left: -4px
+			margin-top: 30px
+			margin-bottom: 10px
+		+sm
+			margin-top: 15px
+			margin-bottom: 0
+	&__outtitle
+		margin-top: $topOffset
+		margin-bottom: 60px
+		+md
+			margin: $offsetTab 0 55px
+		+sm
+			font-size: 23px
+			margin-top: 60px
+			margin-bottom: 35px

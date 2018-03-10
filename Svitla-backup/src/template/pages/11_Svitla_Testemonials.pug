@@ -1,0 +1,187 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Our Expertise',
+		breadList = ['main', 'testemonials'];
+
+block main
+	main.content(data-page='testemonials')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/testbg.jpg' alt='image')
+			+e.CANVAS.canvas_middle#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Stories of Svitla clients who worked with us to create cutting-edge products
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Testimonials
+		//end screen
+
+		//begin testimonals
+		+b.SECTION.testimonals__cont
+			.container(data-anim='group')
+				+b.testimonals_video._turquoise._main
+					+e.bg-w
+						+e.bg
+							+e.bg-item
+								+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									img(src='static/img/half-11.jpg' alt='image')
+								+e.bg-video
+									video(controls playsinline)
+										source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+					+e.container.container(data-anim='group')
+						+e.inner
+							+e.inner-bg
+							+e.item
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									p.qoute Our team in Kyev are personally committed to the success of company. They have great domain knowledge and are familiar with our tools and processes. Critically, the team is aligned to our global purpose and company values – a vital ingredient for an effective, long term collaboration
+								+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Client's name
+								+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Job title, company name
+				+e.small
+					+e.in-cont
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals_video._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+													img(src='static/img/half-11.jpg' alt='image')
+												+e.bg-video
+													video(controls playsinline)
+														source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute We enjoyed working with the Svitla team and hope to have other collaborative projects. They showed keen interest in our need, were patient and helpful as we were working our way through specification, came up with many creative solutions and delivered a great product. The PSI team is very pleased
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'view case study',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+													img(src='static/img/half-11.jpg' alt='image')
+												+e.bg-video
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute The three core principles of Svitla are: bring superb value to clients, be a people-oriented company where our employees grow professionally and remain for many years, and constantly seek to innovate and capture new  technologies. Do our best, keep our clients happy, and look out for new technolgies and trends - this is what our company is all about.
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e(data-anim-stagger='fade-top').disable-link Project under NDA
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+												+e.bg-video
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute We enjoyed working with the Svitla team and hope to have other collaborative projects. They showed keen interest in our need, were patient and helpful as we were working our way through specification, came up with many creative solutions and delivered a great product. The PSI team is very pleased
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'view case study',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals_video._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+													img(src='static/img/half-11.jpg' alt='image')
+												+e.bg-video
+													video(controls preload="auto" loop="loop")
+														source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute The three core principles of Svitla are: bring superb value to clients, be a people-oriented company where our employees grow professionally and remain for many years, and constantly seek to innovate and capture new  technologies. Do our best, keep our clients happy, and look out for new technolgies and trends - this is what our company is all about.
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e(data-anim-stagger='fade-top').disable-link Project under NDA
+						UL.pagination(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							li.pagination__prev.pagination__arrow.disabled
+								div(data-hover= 'Previous')
+									div Previous
+							li.active
+								a(href="") 1
+							li
+								a(href="") 2
+							li
+								a(href="") 3
+							li
+								a(href="") 4
+							li
+								a(href="") 5
+							li.pagination__next.pagination__arrow
+								div(data-hover= 'Next')
+									div Next
+		//end testimonals
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Have a project in mind?
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Briefly describe your project, and we will contact you within a day.
+					+e.col
+						+b.FORM.form.__form(action='')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text get in touch
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

@@ -1,0 +1,130 @@
+.search
+	&__category
+		+h6
+		margin-left: 2px
+		margin-bottom: 8px
+		letter-spacing: 1px
+		+md
+			font-size: 9px
+	&__content
+		flex: 1 1 100%
+		max-width: 100%
+		display: flex
+		flex-direction: column
+	&__item
+		display: flex
+		margin-top: 50px
+		&:last-of-type
+			margin-bottom: 36px
+		&:first-of-type
+			margin-top: 0
+		+ .pagination
+			//margin-top: 36px
+		+md
+			margin-top: 34px
+	&__item-wrap + footer
+		margin-top: 80px
+	&__header
+		height: 127px
+		background: $color1
+		margin-bottom: 82px
+		+md
+			margin-bottom: 70px
+		+sm
+			height: 105px
+			margin-bottom: 50px
+	&__form-2
+		position: relative
+		margin-bottom: 30px
+		border-bottom: 1px solid $color1
+		.form-input
+			color: $color1
+			padding: 7px 75px 12px 35px
+			+sm
+				padding-top: 20px
+		.form-input-label
+			padding: 7px 75px 12px 35px
+			+sm
+				margin-top: 20px
+			&::after, &::before
+				display: none
+		.input-icon
+			position: absolute
+			pointer-events: none
+			z-index: 1
+			top: 10px
+			left: 0
+			font-size: 17px
+			color: $color2
+			.icon
+				display: block
+			+sm
+				top: 22px
+		.form-submit-search
+			+link-dark
+			border: none
+		.form-group_submit
+			margin-top: 0!important
+			position: absolute
+			z-index: 2
+			top: 3px
+			right: 0
+			+sm
+				top: 15px
+	&__main-title
+		+h1
+		margin-bottom: 58px
+		+md
+			margin-bottom: 20px
+		+sm
+			+h3
+			margin-bottom: 10px
+	&__number
+		+h6
+		color: $color3
+		padding-right: 17px
+		letter-spacing: 1px
+		+md
+			font-size: 9px
+	&__result
+		margin-top: 200px
+		.col__small
+			span
+				+h5
+				letter-spacing: .25px
+				+sm
+					font-size: 14px
+		+md
+			margin-top: 165px
+			.col__wrap
+				flex-direction: column
+				.col__small
+					margin-bottom: 25px
+				.col__large
+					width: 100%
+		+sm
+			margin-top: 120px
+			.col__wrap .col__small
+				margin-bottom: 20px
+	&__text
+		letter-spacing: .01px
+		a
+			color: $color2
+			+trs
+			.no-touch &
+				&:hover
+					color: $color3
+	&__title
+		+h4
+		line-height: 36px
+		margin-bottom: 15px
+		letter-spacing: 0.04px
+		a
+			color: $color2
+			+trs
+			.no-touch &
+				&:hover
+					color: $color3
+		+md
+			+h5
+			margin-bottom: 10px

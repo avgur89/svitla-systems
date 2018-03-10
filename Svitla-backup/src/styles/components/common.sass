@@ -1,0 +1,150 @@
+body
+	+paragraph-text
+	color: $color1
+	background-color: $color0
+	&.is-loading
+		//overflow: hidden
+	&.is-overflow
+		overflow: hidden
+	&.menu-active
+		overflow: hidden!important
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		-webkit-font-smoothing: subpixel-antialiased
+main
+	position: relative
+	z-index: 2
+	overflow: hidden
+	background-color: $color0
+	+desk
+		margin-bottom: 199px
+	
+.container
+	position: relative
+	margin: 0 auto
+	padding: 0 10px
+	max-width: 1200px
+	+md
+		padding-left: 50px
+		padding-right: 50px
+	+sm
+		padding-left: 20px
+		padding-right: 20px
+	&_md
+		max-width: 1000px
+	
+*
+	+selection
+		color: $color4
+		background-color: $color2
+
+.section
+	&_gray
+		background-color: $color4
+	&_dark
+		color: $color0
+		background-color: $color1
+
+// Standart columns (left: .col__small && right: col__large)
+.col
+	$parent: &
+	&__wrap
+		display: flex
+		&_without-caption
+			+md
+				#{$parent}__small
+					width: 200px
+				#{$parent}__large
+					width: 100%
+		&_one-col
+			+md
+				#{$parent}__small
+					display: none
+		&_redactor
+			margin-top: 0!important
+			+md
+				flex-direction: column
+				margin-top: 43px!important
+				.col__large
+					width: 100%
+					margin-top: 49px
+			+sm
+				margin-top: 15px!important
+				.col__large
+					margin-top: 27px
+	&__small
+		width: 280px
+		min-width: 280px
+		padding-right: 45px
+		+md
+			padding-right: 0
+	&__large
+		flex-grow: 1
+	+md
+		&__small, &__large
+			width: 50%
+	+sm
+		&__wrap
+			flex-direction: column
+		&__small, &__large
+			width: 100%
+			
+.without-svg
+	svg
+		display: none
+.redactor__signature.full-line
+	&:after
+		display: block
+.section_redactor-signature.job
+	.redactor__signature
+		padding-right: 25px
+	+sm
+		padding-top: 0
+// Standart ul-list with a circle-point:
+.ul-standart
+	margin: 0 0 0 21px
+	li
+		position: relative
+		margin: 0 0 6px 0
+		color: $color6
+		font-size: 13px
+		font-weight: 400
+		line-height: 22px
+		white-space: pre-wrap
+		&::before
+			content: ''
+			position: absolute
+			width: 5px
+			height: 5px
+			border-radius: 50%
+			top: 9px
+			left: -19px
+			background-color: $color1
+			display: block
+		&:last-child
+			margin-bottom: 0
+
+.half__link
+	+md
+		margin-top: 12px
+
+// Quote
+.qoute
+	font-style: italic
+	padding-left: 18px
+	position: relative
+	&:after
+		display: block
+		position: absolute
+		content: ''
+		width: 10px
+		height: 8px
+		left: 0
+		top: 5px
+		background: url('../img/qq.svg') center center no-repeat
+	&-light
+		&:after
+			background: url('../img/qql.svg') center center no-repeat

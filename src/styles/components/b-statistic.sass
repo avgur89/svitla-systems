@@ -1,0 +1,170 @@
+.statistic
+	$parent: &
+	display: flex
+	flex-wrap: nowrap
+	&_four-item
+		#{$parent}__item
+			flex: 1 0 25%
+			width: 25%
+			max-width: 25%
+		+sm
+			#{$parent}__item
+				flex: 1 0 50%
+				width: 50%
+				max-width: 50%
+	&_two-item
+		flex-wrap: wrap
+		#{$parent}__title
+			font-size: 140px
+		#{$parent}__item
+			padding: 0 35px 0 40px
+			flex: 1 0 50%
+			width: 50%
+			max-width: 50%
+			&:nth-child(1n + 3)
+				margin-top: 55px
+		#{$parent}__descr
+			margin-bottom: 35px
+			margin-top: -12px
+		+sm
+			padding-top: 14px
+			#{$parent}__item
+				padding: 0 20px 0 15px
+				flex: 1 0 100%
+				width: 100%
+				min-width: 100%
+			#{$parent}__descr
+				margin: 14px 0 0 0
+			#{$parent}__text
+				margin-top: 14px
+				line-height: 23px
+			ul
+				margin-top: 16px
+				li
+					font-size: 14px
+					line-height: 24px
+	&_text-uppercase
+		#{$parent}__text
+			text-transform: uppercase
+	&_white
+		#{$parent}__item
+			&::before, &::after
+				background-color: $color0
+		#{$parent}__title, #{$parent}__symbol
+			color: $color0
+		#{$parent}__text
+			color: $color1
+	&__item
+		display: flex
+		flex-direction: column
+		flex: 1 0 33.33%
+		max-width: 33.33%
+		position: relative
+		padding: 0 20px
+		& > div:not(.statistic__text):not(.statistic__pretext)
+			display: flex
+			margin-right: 10%
+	&__descr
+		+f('solomon-semibold', 19, 32, 0)
+		letter-spacing: -0.2px
+		margin-bottom: 30px
+	&__title
+		+h0
+		line-height: 170px
+		color: $color2
+		display: block
+		flex-shrink: 0
+		max-width: 100%
+	&__text
+		+paragraph-text
+		text-transform: none
+		margin-top: -23px
+		letter-spacing: 0px
+	&__pretext
+		position: absolute
+		top: 0
+		left: 20px
+		letter-spacing: 1px
+		+h6
+	&__symbol
+		+h1
+		color: $color2
+		font-size: 60px
+		white-space: nowrap
+		position: relative
+		span
+			position: absolute
+			top: 0
+			left: 0
+			transform: translate(-15%, 50%)
+			+sm
+				transform: translate(-15%, 0%)
+	ul
+		margin-top: 20px
+		li
+			margin: 0 0 16px 0
+	&_small
+		#{$parent}__item
+			padding: 0 20px 0 40px
+		#{$parent}__title
+			+h1
+			line-height: 32px
+		#{$parent}__pretext
+			display: none
+		#{$parent}__text
+			+h6
+			letter-spacing: 1px
+			margin-top: 11px
+		#{$parent}__symbol
+			+h5
+			span
+				transform: translate(-15%, -50%)
+			+sm
+				transform: translate(-15%, 0%)
+		+md
+			#{$parent}__item
+				&:nth-child(1n + 3)
+					margin: 0
+				#{$parent}__title
+					font-size: 40px
+		+sm
+			#{$parent}__item
+				padding: 0 20px
+				&:nth-child(1n + 2)
+					margin: 0
+				&:nth-child(1n + 3)
+					margin-top: 40px
+				#{$parent}__text
+					margin-top: 10px
+	+md
+		flex-wrap: wrap
+		&__item
+			flex: 0 0 50%
+			max-width: 50%
+			&::after
+				display: block
+			&:nth-child(1n + 3)
+				margin-top: 60px
+			#{$parent}__title
+				font-size: 120px
+	+sm
+		flex-wrap: wrap
+		&__item
+			flex: 0 0 100%
+			max-width: 100%
+			&::after
+				display: block
+			&:nth-child(1n + 2)
+				margin-top: 40px
+			#{$parent}__pretext
+				margin-bottom: 16px
+				position: static
+			#{$parent}__title
+				font-size: 42px
+				line-height: 40px
+			#{$parent}__text
+				margin-top: 18px
+			#{$parent}__symbol
+				line-height: 14px
+				font-size: 20px
+				top: 0

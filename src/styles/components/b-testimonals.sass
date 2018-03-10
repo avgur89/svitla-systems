@@ -1,0 +1,376 @@
+.testimonals
+	$parent: &
+	overflow: hidden
+	position: relative
+	height: 410px
+	background-color: $color2
+	width: 900px
+	margin-left: auto
+	margin-right: 0
+	&_main
+		margin-bottom: 60px
+		+md
+			margin-bottom: 0
+		+sm
+			margin-bottom: 40px
+	&__cont
+		padding-top: $topOffset2
+		&:last-of-type
+			margin-bottom: 25px
+		.testimonals__title
+			margin-bottom: 50px
+			+md
+				margin-bottom: 33px
+		& > #{$parent}__container
+			+sm
+				padding-bottom: 0
+		+md
+			padding-top: $offsetTab
+		+sm
+			padding-top: $topOffsetMob
+	+md
+		width: 100%
+		height: auto
+	&_lg
+		height: 540px
+		#{$parent}__text
+			margin-bottom: 48px
+			max-height: 147px
+			+md
+				max-height: 103px
+			+sm
+				max-height: 180px
+				margin-bottom: 22px
+			+mob-fix
+				max-height: 103px !important
+		#{$parent}__item
+			position: relative
+			height: 300px
+			&_center
+				height: auto
+				display: flex
+				flex-direction: column
+				justify-content: center
+				div:last-child
+					margin-bottom: 0
+				#{$parent}__text
+					max-height: 320px
+			+desk
+				top: -10px
+			+md
+				height: 256px
+			+sm
+				height: 324px
+			+mob-fix
+				height: 256px !important
+			+ #{$parent}__item
+				display: none
+	&_turquoise
+		#{$parent}__container
+		+sm
+			background-color: $color2
+	&__play-btn
+		position: absolute
+		z-index: 5
+		top: 50%
+		left: 0
+		transform: translate(-50%, -50%)
+		+desk
+			margin-top: -10px
+		+md
+			top: -115px
+			left: 50%
+		+sm
+			top: -57px
+		.play-btn
+			position: relative
+			width: 120px
+			height: 120px
+			+sm
+				width: 102px
+				height: 102px
+	&__video-close
+		+link-close
+		position: absolute
+		z-index: 11
+		top: 20px
+		right: 20px
+		opacity: 0
+		transform: translateY(20px)
+		+sm
+			top: 10px
+			right: 10px
+	&__bg
+		position: relative
+		width: 100%
+		height: 100%
+		background-color: $color2
+		&-picture
+			position: absolute
+			left: 40%
+			top: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+			+md
+				left: 0
+			#{$parent}_video &
+				left: 0
+				right: 40%
+				+md
+					right: 0
+			+md
+				position: relative
+				min-height: 398px
+			+sm
+				min-height: 288px
+		&-video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			video
+				display: block
+			+sm
+				z-index: 2
+		&-w
+			pointer-events: none
+			+ratio-in
+			+gpu
+			+md
+				position: relative
+			&.is-play
+				pointer-events: auto
+				z-index: 10
+				height: 100%
+			.video-js
+				opacity: 0
+				padding: 0!important
+				//height: 410px
+				width: 100%
+				+md
+					height: auto
+				.vjs-control-bar
+					pointer-events: auto
+				.vjs-tech
+					//min-height: 410px
+					pointer-events: none
+					object-fit: cover
+					font-family: 'object-fit: cover;'
+					+md
+						pointer-events: auto
+					+md
+						position: relative
+						min-height: 0
+						height: auto
+				.vjs-big-play-button
+					display: none
+		img
+			position: absolute
+			z-index: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+			+sm
+				min-height: 240px
+	&__container
+		height: 100%
+		+md
+			padding-bottom: 60px
+		+sm
+			padding-bottom: 60px
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 50%
+		height: 150%
+		z-index: 1
+		top: -25%
+		+md
+			margin-top: -25px
+			top: 0
+			width: auto
+			height: auto
+		+sm
+			margin-top: -10px
+		&-bg
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: $color4
+			transition: all 1.5s ease 0.1s
+			+md
+				top: -120px
+				bottom: auto
+				height: 100vw
+				width: 150vw
+				left: -25%
+				margin-left: -200px
+			+sm
+				top: -60px
+				width: 200vw
+				left: -20%
+			+mob-fix
+				left: -35%!important
+	&_left &__inner
+		padding-right: 180px
+		+md
+			padding-right: 0
+		&-bg
+			border-radius: 0 50% 50% 0
+			+desk
+				transform: translateX(-60px)
+			+md
+				border-radius: 50% 50% 0 0
+		&:before
+			content: ''
+			position: absolute
+			right: calc(100% - 1px)
+			top: 0
+			bottom: 0
+			width: 100vw
+			background-color: $color4
+			+md
+				display: none
+	&_video &__inner
+		left: 50%
+		padding-left: 80px
+		padding-right: 60px
+		+md
+			left: 0
+			padding-left: 50px
+		+sm
+			padding: 0
+		&-bg
+			border-radius: 50% 0 0 50%
+			+desk
+				transform: translateX(60px)
+			+md
+				border-radius: 50% 50% 0 0
+		&:before
+			content: ''
+			position: absolute
+			left: calc(100% - 1px)
+			top: 0
+			bottom: 0
+			width: 100vw
+			background-color: $color4
+			+md
+				display: none
+	&_turquoise &__inner
+		&-bg
+			background-color: $color2
+		&:before
+			background-color: $color2
+	&_white &__inner
+		&-bg
+			background-color: $color0
+		&:before
+			background-color: $color0
+		.play-btn__circle-sm
+			stroke: $color2
+		.play-btn__triangle
+			fill: $color1
+	&_white
+		#{$parent}__container
+		+sm
+			background-color: $color0
+	&__inner
+		&-bg
+			border: none
+			.has-anim &
+				+desk
+					transform: translateX(0)
+	&__name
+		margin-bottom: 8px
+	&__title
+		margin-left: -3px
+		margin-bottom: 4px
+		+md
+			margin-bottom: 9px
+		&_white
+			color: $color0
+		+ #{$parent}__text
+			margin-top: 13px
+			+sm
+				margin-top: 8px
+		+sm
+			margin-bottom: 0
+			font-size: 23px
+			line-height: 24px
+	&__subtitle
+		margin-bottom: 18px
+		letter-spacing: 0.1em
+		&_white
+			color: $color0
+		&_dark
+			color: $color1
+		&_uppercase
+			text-transform: uppercase
+	&__text
+		margin-bottom: 8px
+		position: relative
+		top: -7px
+		+sm
+			text-overflow: ellipsis
+			overflow: hidden
+		&_italic
+			font-style: italic
+		p
+			&:not(:last-child)
+				margin-bottom: 16px
+	&__dots
+		position: absolute
+		top: 50%
+		left: 176px
+		margin-top: 170px
+		+md
+			position: relative
+			top: auto
+			left: -4px
+			margin-top: 30px
+			margin-bottom: 10px
+		+sm
+			margin-top: 15px
+	&__outtitle
+		margin-top: 120px
+		margin-bottom: 60px
+		+sm
+			font-size: 23px
+			margin-top: 60px
+			margin-bottom: 35px
+	&_main
+		.testimonals__bg-w .video-js
+			height: 410px
+			+md
+				height: auto
+			.vjs-tech
+				min-height: 410px
+				+md
+					min-height: auto
+	&__small
+		.testimonals__bg-w .video-js
+			height: 205px
+			+md
+				height: auto
+			+sm
+				height: 200px
+		.vjs-tech
+			min-height: 205px!important
+			+md
+				min-height: auto
+			+sm
+				min-height: 200px
+.cases + .testimonals__cont
+	padding-top: 50px
+	+md
+		padding-top: 35px
+	+sm
+		padding-top: 10px

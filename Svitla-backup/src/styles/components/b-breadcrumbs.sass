@@ -1,0 +1,51 @@
+.breadcrumbs
+	position: absolute
+	top: 100px
+	left: 5px
+	display: flex
+	z-index: 99
+	transition: 1s ease-out
+	li
+		margin-right: 14px
+		&.breadcrumbs__active
+			pointer-events: none
+			span
+				color: rgba(255, 255, 255, .6)
+			.icons-w .icon
+				stroke: rgba(255, 255, 255, .6)
+	a
+		+link-breadcrumbs
+		.icons-w
+			margin-right: 3px
+			.icon
+				font-size: 8px
+				stroke: $color0
+				transform: rotate(180deg)
+		span
+			color: $color0
+			+h7
+			text-transform: uppercase
+	&.is-hide
+		display: none
+	+md
+		left: 46px
+	+sm
+		top: 64px
+		left: 12px
+		flex-wrap: wrap
+		span
+			white-space: nowrap
+	&.is-active
+		transform: translateY(-100%)
+		opacity: 0
+		transition: 1s ease-out
+	&_dark
+		a
+			span
+				color: $color1
+			.icon
+				stroke: $color2!important
+		.breadcrumbs__active
+			pointer-events: none
+			span
+				color: rgba(0, 0, 0, .3)!important

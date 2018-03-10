@@ -1,0 +1,248 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Event page',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		sliderImgSource = ['static/img/half-14.jpg', 'static/img/build-to-order_main.png', 'static/img/half15.jpg', 'static/img/np1.png', 'static/img/np3.png', 'static/img/project4.jpg', 'static/img/np3.png', 'static/img/project4.jpg'],
+		programDescr = ['Coffee&Cakes', 'Piotr Szotkowski, Ruby Smells', 'Xavier Noria, Little Snippets', 'Bozhidar Batsov, Ruby 4.0: To Infinity and Beyond', 'Marat Kamenschikov Learning Elixir: gotchas and pitfalls', 'Serdar Dogruyol Crystal (a Ruby-like programming language)', 'Coffee&Cakes', 'Piotr Szotkowski, Ruby Smells', 'Xavier Noria, Little Snippets', 'Bozhidar Batsov, Ruby 4.0: To Infinity and Beyond', 'Marat Kamenschikov Learning Elixir: gotchas and pitfalls', 'Serdar Dogruyol Crystal (a Ruby-like programming language)']
+		programTime = ['09:00-9:30', '09:30-10:00', '10:00-11:30', '12:00-13:00', '13:00-14:00', '14:00-15:00', '15:00-16:00', '16:00-17:00', '17:00-17:30', '18:00-19:00', '19:00-19:30', '20:00-21:30']
+		breadList = ['main', 'blog', 'event page'];
+
+block main
+	main.content(data-page='event_page')
+		//begin screen
+		+b.screen
+			+e.img.without-mask
+				img(src='static/img/build-to-order_main.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description_blog(data-anim='group')
+					+e.H1.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') .NET Framework Day — 19th of December
+					+e.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p by Svitla Team
+					+e.description-date(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') july 04, 2017
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+		//end screen
+
+		//begin sharing
+		+b.SECTION.blog-1_default.section_sharing
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+b.share_top
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large
+		//end sharing
+
+		//begin redactor
+		+b.SECTION.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small
+					+e.col.col__large.anim-line
+						.redactor
+							h2 About
+							p
+								a(href="") .NET Framework Day&nbsp
+								| is a conference with high level reports. Do you want to learn how to design and develop highly loaded systems on the .NET platform? Anton Moldovan, Mayor Boyko and Yevgeny Bobrov answer to this question in their reports. In addition, Sergei Kalynets debunk myths about .NET, that you add interesting questions / answers for discussion. From Andrew Chebukina you know what functional programming, why learning F # and how to start. Denis Reznik tells about the intricacies of working with SQL Server. We have selected for you the most interesting and useful reports on the .NET platform.
+							p Website:
+								a(href="https://frameworksdays.com/event/net-framework-day-2015") https://frameworksdays.com/event/net-framework-day-2015
+		//end redactor
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_blue.section_redactor-incoming
+			.container(data-anim='group')
+				+e.row.col__wrap
+					+e.col.col__small
+					+e.col.col__large.anim-line.anim-line_white
+						h2.redactor__title Program
+						.program(data-mob-anim='group' data-anim-parent-trigger data-anim-stagger='fade-top' data-anim='group' data-mob-anim-stagger='fade-top')
+							h3.program__subtitle Day 1
+							.program__middle-line
+							.program__wrap
+								each descr, index in programDescr
+									.program__item
+										.program__time= programTime[index]
+										h4.program__event= descr
+						.program(data-mob-anim='group' data-anim-parent-trigger data-anim-stagger='fade-top' data-anim='group' data-mob-anim-stagger='fade-top')
+							h3.program__subtitle Day 2
+							.program__middle-line
+							.program__wrap
+								each descr, index in programDescr
+									.program__item
+										.program__time= programTime[index]
+										h4.program__event= descr
+		//end blog-4
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_white.section_redactor-incoming
+			.container(data-anim='group')
+				+e.row.col__wrap
+					+e.col.col__small
+					+e.col.col__large
+						h2.redactor__title Tickets
+						+b.statistic_two-item.anim-line
+							+statistic('', '', '500', '$', 'You need new products but have no one available to build them? Our developers look forward to helping you.', 'Early birds', ['The University of Kansas,  Masters Degree in IT and Accounting'])
+							+statistic('', '', '800', '$', 'Wonder how to best build a new product? We will deliver your project within specific requirements, time, and budget.', 'Safe birds', ['The University of Kansas,  Masters Degree in IT and Accounting', 'Stanford Graduate School of Business, MBA , 1999-2001 '])
+							+statistic('', '', '1150', '$', 'You need new products but have no one available to build them? Our developers look forward to helping you.', 'Ruby birds', ['The University of Kansas,  Masters Degree in IT and Accounting', 'Stanford Graduate School of Business, MBA , 1999-2001 ', 'Stanford Graduate School of Business, MBA , 1999-2001 '])
+						+e.footer-btn(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+b.btn(href='')
+								+e.bg
+									+e.bg-top
+								+e.bg
+									+e.bg-bot
+								+e.SPAN.text register
+		//end blog-4
+
+		//Gallery slider_begin
+		+b.SECTION.slider-inner_gallery.section_redactor-incoming
+			.container
+				h2.redactor__title Photo report
+				+e.preview
+					img(src= '')
+				+e.row.col__wrap
+					+e.col.col__small
+						+e.arrows_gallery
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_gallery.col__large
+						each source in sliderImgSource
+							+e.item
+								img(src= source)
+		//Gallery slider_end
+
+		//begin redactor
+		+b.SECTION.blog-1_default.section_redactor
+			+e.container.container(data-anim='group')
+				+e.row.col__wrap_redactor(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large.anim-line
+						.redactor
+							p
+								| Unity is used as dependency container. As was mentioned above, main window view model keeps view models for child controls, and these properties are expected to be resolved via dependency injection. So, at first we need register necessary types for view models, chart repository and service in dependency injection container. In Wpf applications the initialization of DI container is done in OnStartup method in App.xaml.cs.
+		//end redactor
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_white.section_redactor-incoming
+			.container(data-anim='group')
+				+e.row.col__wrap
+					+e.col.col__small
+					+e.col.col__large
+						h2.redactor__title Presentation name
+						iframe(src='//www.slideshare.net/slideshow/embed_code/key/hJ3x3pTrtGaatQ', width='595', height='485', frameborder='0', marginwidth='0', marginheight='0', scrolling='no' style='border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;', allowfullscreen='')
+						+e.footer-btn(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+b.btn(href='')
+								+e.bg
+									+e.bg-top
+								+e.bg
+									+e.bg-bot
+								+e.SPAN.text download presentation
+		//end blog-4
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_white.section_redactor-signature
+			.container
+				+e.row.col__wrap
+					+e.col.col__small
+						+b.share
+							div Share
+							+e.UL.icon
+								each el in socialIconList
+									li
+										a(href=''): +i(el)
+					+e.col.col__large.anim-line
+						.redactor__signature(data-anim='group')
+							.redactor__signature-title by Svitla Team
+							.redactor__signature-date july 04, 2017
+		//end blog-4
+
+		//begin loop
+		+b.SECTION.loop
+			+e.container(data-anim='group')
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'prev case',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'next case',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end loop
+
+		//SLIDER_begin
+		+b.SECTION.slider-inner_articles.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Related articles
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_articles(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_articles.col__large
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-14.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half15.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag events
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/slider-1.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag art
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag news
+						.cases__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							a(href="").cases__media
+								img(src='static/img/half-2.jpg' alt='image')
+							.cases__info
+								a.cases__subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger) Great hints and practical tips to a project manager
+								.cases__text A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+								.cases__text By John Smith
+								.cases__date March 06, 2017
+							.cases__tag developments
+		//SLIDER_end

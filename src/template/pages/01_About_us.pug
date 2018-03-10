@@ -1,0 +1,137 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'About us',
+		solutionCaption = ['financial_services', 'Big Data ', 'media', 'Data management ', 'Entertainment', 'Telecommunication', 'Human Resources', 'Education', 'Healthcare', 'Travel & Hospitality', 'E-commerce', 'Education', 'Healthcare', 'Travel & Hospitality'],
+		solutionSvgIcon = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '8', '9', '10'],
+		sliderImgSource = ['static/img/clients/ancestry.png', 'static/img/clients/bmc.png', 'static/img/clients/inflection.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png'],
+		breadList = ['main', 'about us'];
+
+block main
+	main.content(data-page='about_us').about
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/np2.png' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Is your conduit to the most cutting-edge technological innovations from Web and Mobile to Big Data to Internet of Things. We deliver unparalleled value to our clients, who rely on our expertise and many years of experience in Managed Team Extension and Build-to-Order Software Applications.
+					+e.link(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'Discover us',
+							className: 'link-white js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Svitla
+		//end screen
+
+		////begin half
+		//+b.SECTION.half_left.section
+		//	+e.bg-w
+		//		+e.bg
+		//			+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+		//				img(src='static/img/half-2.jpg' alt='image')
+		//	+e.container.container(data-anim='group')
+		//		+e.inner
+		//			+e.inner-bg
+		//			+e.item
+		//				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Natalia Anon
+		//				+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') CEO and Founder
+		//				+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+		//					p.qoute Do our best, keep our clients happy, and look out for new technologies and trends - this is what our company is all about.
+		//					p Nataliya Anon - a Stanford Business School graduate, entrepreneur, leader, and strategic implementer - is the Founder and CEO of Svitla Systems. She has spent her career building hi-tech companies, both in Silicon Valley and worldwide.
+		//				+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+		//					-
+		//						link = {
+		//						text: 'Read Nataliya\'s story',
+		//						className: 'link-dark js-link-multiple-circle',
+		//						icons: true
+		//						}
+		//					include ../components/link
+		////end half
+
+		//begin half
+		+b.SECTION.half_video._turquoise._md.section
+			+e.bg-w
+				+e.bg
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/half-14.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item._center.is-active
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Our Team
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p From founding Svitla in 2003 to present day, our Leadership Board combines experience and strategy to ensure that constant growth and an outstanding client experience are always at the core of the business.
+							p To build strong, collaborative relationships with clients, we need deep technology and industry expertise. We employ the finest architects, developers, engineers, analysts, and designers.
+							p The result? We deliver the best, tapping into new technologies and working with cutting-edge solutions.
+					+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'Meet the team',
+							className: 'link-light-circle-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+		//end half
+
+		//begin half
+		+b.SECTION.half_left.section
+			+e.bg-w
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/half15.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Corporate Social Responsibility
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p At Svitla, we believe in making a positive impact in the communities where we work and live. Our mission is to build a business that is not only profitable but also contributes to the well-being of our employees and their families, improves our communities, and makes a lasting difference in the world.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'learn more',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end half
+		//begin half
+		+b.SECTION.half_left._with-img-mask._dark.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Discover How We Work
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla Systems is a proven software development and testing provider. We are experts in delivering Managed Team Extension and Build-To-Order Software Applications.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Learn more',
+								className: 'link-white js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end half

@@ -1,0 +1,74 @@
+.loop
+	border-bottom: 1px solid #00cbd5
+	border-top: 1px solid #00cbd5
+	&__container
+		padding: 0 10px!important
+	&__row
+		display: flex
+	&__col
+		flex: 0 0 50%
+		&:nth-child(1)
+			padding-right: 15px
+			.link-dark::after
+				left: 57px
+			+md
+				padding-right: 50px
+				.link-dark
+					white-space: normal
+					span
+						text-align: right
+			+sm
+				padding-right: 25px
+				justify-content: flex-end
+				.loop__link
+					justify-content: flex-end
+				.link-dark
+					position: relative
+					//left: -24px
+			.icons-w
+				transform: rotate(180deg)
+				order: -1
+				margin-right: 4px
+			&:after
+				display: block
+				content: ''
+				width: 1px
+				height: 100%
+				position: absolute
+				background: $color2
+				right: 0
+				top: 0
+				bottom: 0
+		&:nth-child(2)
+			padding-left: 30px
+			+md
+				padding-left: 50px
+				.link-dark
+					white-space: normal
+			.icons-w
+				margin-left: 3px
+			+sm
+				padding-left: 25px
+				.loop__link
+					justify-content: flex-start
+				.link-dark
+					position: relative
+					//left: 25px
+	&__link
+		padding: 49px 0
+		display: flex
+		justify-content: center
+		+md
+			padding-top: 50px
+			padding-bottom: 50px
+		+sm
+			padding-top: 30px
+			padding-bottom: 30px
+		a
+			color: $color2
+		.link-dark .icons-w .icon
+			stroke: $color2
+			margin-left: 4px
+		&.disabled
+			opacity: .5!important
+			pointer-events: none

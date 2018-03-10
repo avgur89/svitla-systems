@@ -1,0 +1,101 @@
+.blog
+	padding-top: 70px
+	&__cont
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__item
+		width: calc(50% - 40px)
+		margin-bottom: 55px
+		max-width: calc(50% - 40px)
+		&__big
+			width: 100%
+			max-width: 900px
+			+md
+				width: 100% !important
+				max-width: 100% !important
+			.blog__info
+				height: calc(100% - 340px)
+			.blog__picture
+				height: 100%
+			.blog__media
+				height: 315px
+				+sm
+					height: 140px
+			+sm
+				.blog__title
+					font-size: 27px
+					line-height: 36px
+				.blog__info
+					height: calc(100% - 170px)
+		+md
+			width: calc(50% - 25px)
+		+sm
+			max-width: 100%
+			width: 100%
+		+mob-fix
+			max-width: calc(50% - 15px)!important
+			width: calc(50% - 15px)!important
+	&__media
+		position: relative
+		height: 205px
+		overflow: hidden
+		margin-bottom: 30px
+		cursor: pointer
+		display: block
+		&:after, &:before
+			display: none
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+			transition: transform .6s linear
+		.no-touch &
+			&:hover
+				@media only screen and (-ms-high-contrast: active) and (-ms-high-contrast: none)
+					img
+						transform: none
+				img
+					transform: scale(1.1)
+		+md
+			height: 155px
+		+sm
+			height: 140px
+	&__tag
+		position: absolute
+		top: 14px
+		left: 9px
+		background-color: $color5
+		padding: 2px 12px
+		+h6
+		letter-spacing: .5px
+		color: $color0
+		user-select: none
+		cursor: default
+		&::before
+			display: none
+	&__info
+		padding-left: 20px
+		padding-right: 30px
+		height: calc(100% - 235px)
+		&:after
+			display: none
+		+md
+			height: calc(100% - 185px)
+		+sm
+			height: calc(100% - 170px)
+	&__title
+		color: $color2
+		margin-bottom: 20px
+		display: block
+		transition: .4s
+		&:hover
+			color: $color3
+	&__text
+		margin-bottom: 25px
+	&__name
+		margin-bottom: 25px
+	&__data
+		line-height: 10px
+		letter-spacing: 1px

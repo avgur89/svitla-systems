@@ -1,0 +1,84 @@
+.pagination
+	display: inline-flex
+	padding-top: 22px
+	border-top: 1px solid #2e3a4c
+	margin-left: auto
+	margin-right: 0
+	margin-top: 2px
+	justify-content: center
+	margin-bottom: $botOffset
+	position: relative
+	width: 100%
+	+md
+		margin-bottom: $offsetTab
+	+sm
+		margin-bottom: 70px
+	&__arrow
+		cursor: pointer
+		&.disabled
+			pointer-events: none
+			opacity: .4 !important
+		+sm
+			.icons-w
+				top: 6px
+			position: relative
+			top: -1px
+			div:not(.icons-w)
+				display: none
+	&__prev
+		+link-dark
+		position: absolute
+		left: 0
+		top: 16px
+		padding: 10px 0 10px 20px
+		color: $color2
+		&:hover
+			color: $color3
+		.icons-w
+			transform: rotate(180deg)
+			position: absolute
+			left: -7px
+			top: 11px
+			.icon
+				stroke: $color2
+				display: none
+				&:nth-child(1)
+					display: block
+	&__next
+		+link-dark
+		position: absolute
+		right: 0
+		top: 16px
+		padding: 10px 20px 10px 0
+		color: $color2
+		&:hover
+			color: $color3
+		.icons-w
+			position: absolute
+			right: -1px
+			top: 11px
+			.icon
+				stroke: $color2
+				display: none
+				&:nth-child(1)
+					display: block
+	li a
+		font-size: 10px
+		padding-left: 18px
+		padding-right: 17px
+		color: $color2
+		list-style-type: none
+		cursor: pointer
+		transition: .4s
+		+trs-slow
+		+sm
+			padding-left: 10px
+			padding-right: 10px
+		.no-touch &
+			&:hover
+				color: $color3
+	li.active
+		a
+			color: $color1
+		+sm
+			left: auto

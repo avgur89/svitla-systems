@@ -1,0 +1,75 @@
+.blog-3
+	&_default
+		padding: $topOffset 0 $botOffset
+		+md
+			padding: $offsetTab 0 $offsetTab
+		+sm
+			padding: $topOffsetMob 0 $botOffsetMob
+	&__row
+		display: flex
+		&:not(:first-child)
+			margin-top: 104px
+			+sm
+				margin-top: 45px
+		+sm
+			display: block
+		
+	&__col
+		position: relative
+		flex: 1 0 50%
+		&:not(:first-child)
+			padding-left: 17px
+			+md
+				padding-left: 25px
+			+sm
+				padding-left: 0
+		
+	&__item-main
+		max-width: 320px
+		+md
+			max-width: none
+			padding-right: 20px
+		&-title
+			margin-bottom: 12px
+			+sm
+				margin-bottom: 15px
+				font-size: 23px
+				line-height: 30px
+		p
+			+md
+				padding-right: 65px
+			+sm
+				padding-right: 0
+			
+	&__item
+		margin-top: 10px
+		+md
+			margin-top: 3px
+		+sm
+			margin-top: 33px
+		&:not(:first-child)
+			margin-top: 52px
+			+sm
+				margin-top: 32px
+		&-icon
+			margin-bottom: 18px
+			max-width: 55px
+			max-height: 55px
+			width: auto
+			height: auto
+		&-title
+			margin-bottom: 13px
+			max-width: 420px
+			letter-spacing: 0.01em
+			+sm
+				margin-bottom: 18px
+				+h5
+				letter-spacing: 0.01em
+		
+	&__link-main
+		display: table
+		margin: -25px 0 0 0
+		+sm
+			margin-top: 22px
+		a
+			margin-bottom: -7px

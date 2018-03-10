@@ -1,0 +1,104 @@
+.projects
+	$parent: &
+	min-height: 690px
+	padding: $topOffset 0 $botOffset
+	background-color: $color1
+	color: $color0
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: $topOffsetMob 0 $botOffsetMob
+	&__item
+		width: calc(50% - 40px)
+		max-width: 410px
+		padding: 0
+		position: relative
+		display: flex
+		flex-direction: column
+		.no-touch &
+			&:hover
+				#{$parent}__title
+					color: $color3
+		&:nth-child(1n + 3)
+			margin-top: 55px
+		#{$parent}__title
+			margin-bottom: 0px
+			margin-top: 22px
+			color: $color2
+			padding-left: 20px
+			display: block
+			+md
+				margin-bottom: 0 !important
+				position: relative
+			+sm
+				margin-bottom: 0
+		img
+			width: 100%
+			height: 100%
+			max-height: 205px
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+			+md
+				max-height: 142px
+			+tab-land
+				max-height: 250px
+		+md
+			display: block
+			width: calc(50% - 25px)
+			max-width: 50%
+			&::after
+				display: block
+			&:nth-child(1n + 3)
+				margin-top: 55px
+			#{$parent}__title
+				margin-bottom: 16px
+			#{$parent}__text
+				margin: 0
+		+sm
+			width: 100%
+			max-width: 100%
+			#{$parent}__title
+				font-size: 17px
+			&:nth-child(1n + 2)
+				margin-top: 40px
+	&__row
+		+md
+			flex-direction: column
+	&__col
+		&.col__large
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+		+md
+			width: 100%
+			& + #{$parent}__col
+				margin-top: 35px
+		+sm
+			&.col__small
+				padding: 0
+			& + #{$parent}__col
+				margin-top: 20px
+	&__title
+		letter-spacing: .4px
+		margin-bottom: 50px
+		flex-grow: 1
+		&::after
+			display: none
+		+md
+			margin-bottom: -20px
+		+sm
+			font-size: 23px
+			line-height: 30px
+			letter-spacing: 0px
+			margin-bottom: -30px
+	&__text
+		margin-bottom: 45px
+		+md
+			margin-bottom: 20px
+	.col__small
+		+md
+			padding-left: 50%
+		+sm
+			padding-left: 50%
+			margin-bottom: 30px
+			padding-right: 5%

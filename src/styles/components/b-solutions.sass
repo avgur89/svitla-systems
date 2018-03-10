@@ -1,0 +1,169 @@
+.solutions
+	$parent: &
+	padding: $topOffset 0 $botOffset
+	background-color: $color2
+	color: $color1
+	&__item
+		width: 25%
+		max-width: 25%
+		min-height: 100px
+		padding: 0 15px
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		color: $color0
+		svg
+			margin-bottom: 10px
+			width: 35px
+			height: 35px
+			fill: currentColor
+			stroke: initial
+		+tab
+			&:nth-child(1n + 5)
+				margin-top: 55px
+		+trs-slow
+		&_disabled
+			pointer-events: none
+			&::before, &::after
+				display: none
+			+sm
+				&::before, &::after
+					display: block
+		.no-touch &
+			&:hover
+				&::before, &::after
+					background-color: $color1!important
+				.solutions__title
+					+trs-slow
+					color: $color1
+				#{$parent}__toggle-title
+					+trs-slow
+					color: $color0
+				svg
+					+trs-slow
+					fill: $color1
+		+md
+			max-width: 100%
+		+sm
+			margin-bottom: 40px
+	&__col
+		color: $color1
+		p:last-child
+			margin-bottom: 0
+		+md
+			&.col__large, &.col__small
+				width: 100%
+				flex-direction: row
+			&.col__small
+				justify-content: space-between
+				padding-right: 0
+				#{$parent}__text
+					width: 50%
+				#{$parent}__link
+					align-self: flex-end
+			&.col__large
+				margin-top: 50px
+		+sm
+			&.col__small
+				#{$parent}__text
+					width: 100%
+				#{$parent}__link
+					display: none
+	&__row
+		+md
+			flex-direction: column
+	&__row-2
+		display: flex
+		flex-wrap: wrap
+		& #{$parent}__toggle-icon, #{$parent}__toggle-title
+			display: none
+			color: $color1
+			transition: opacity .3s ease
+		&.is-hide
+			#{$parent}__item:nth-child(11)::after
+				display: none
+			#{$parent}__item:nth-child(1n + 13)
+				display: none
+			#{$parent}__item.is-active
+				transition: opacity .3s ease
+				& svg:not(#{$parent}__toggle-icon), #{$parent}__title:not(#{$parent}__toggle-title)
+					display: none
+					opacity: 0
+				&::before, &::after
+					background-color: $color1
+				#{$parent}__toggle-icon, #{$parent}__toggle-title
+					display: block
+		.no-touch &
+			#{$parent}__item.is-active:hover
+				color: $color1
+				+trs-slow
+				&::before, &::after
+					background-color: $color1!important
+				#{$parent}__title, svg
+					+trs-slow
+					fill: $color1
+		&.is-hide
+			.no-touch &
+				#{$parent}__item.is-active:hover
+					color: $color0
+					+trs-slow
+					&::before, &::after
+						background-color: $color0!important
+					#{$parent}__title, svg
+						+trs-slow
+						fill: $color0
+		+sm
+			#{$parent}__item
+				width: 50%
+				#{$parent}__title
+					font-size: 10px
+					line-height: 16px
+	&__title
+		+sm
+			font-size: 23px
+			line-height: 30px
+		& + #{$parent}__row
+			margin-top: 50px
+			+md
+				margin: 30px 0 0
+	&__toggle-icon
+		fill: $color1
+	&__wrap-hidden
+		width: 100%
+		display: none
+		&::before, &::after
+			display: none!important
+		& > div
+			display: flex
+			flex-wrap: wrap
+			#{$parent}__toggle-icon
+				display: flex
+			#{$parent}__toggle-title
+				display: block
+		#{$parent}__item
+			border: none
+			margin-top: 55px
+			&.is-active
+				&::before, &::after
+					background-color: $color1
+			+sm
+				margin-top: 0
+		.no-touch &
+			#{$parent}__item.is-active:hover
+				color: $color0
+				+trs-slow
+				&::before, &::after
+					background-color: $color0!important
+				#{$parent}__title, svg
+					+trs-slow
+					fill: $color0
+	.col__small
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.icon-circle
+			stroke: $color1
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: 50px 0 40px

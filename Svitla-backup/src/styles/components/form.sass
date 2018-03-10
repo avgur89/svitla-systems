@@ -1,0 +1,261 @@
+.form
+	position: relative
+	input::-webkit-contacts-auto-fill-button
+		visibility: hidden
+		display: none !important
+		pointer-events: none
+		position: absolute
+		right: 0
+	input::-ms-clear
+		display: none
+	input[type='search']::-webkit-search-cancel-button
+		display: none
+	+sm
+		max-width: 320px
+	.help-block
+		position: absolute
+		left: 0
+		top: 100%
+		margin-top: 7px
+		color: $color7
+		font-size: 11px
+		line-height: 15px
+		opacity: 0
+		+trs
+	.has-error .help-block
+		opacity: 1
+	&-group
+		position: relative
+		& + &
+			margin-top: 21px
+			+sm
+				margin-top: 11px
+		& + &_submit-textarea
+			margin-top: 0
+			+sm
+				margin-top: 30px
+		&_half
+			display: flex
+			justify-content: space-between
+			+sm
+				display: block
+		&_half &
+			flex: 0 0 50%
+			max-width: calc(50% - 25px)
+			+sm
+				max-width: none
+		&_half & + &
+			margin-top: 0
+			+sm
+				margin-top: 11px
+		&_submit-textarea
+			margin-top: 0
+			position: absolute
+			z-index: 3
+			right: 34px
+			bottom: -20px
+			+md
+				right: 25px
+			+sm
+				position: relative
+				bottom: auto
+				right: auto
+			.btn
+				margin-left: auto
+				margin-right: auto
+		&_with-btn
+			+tab
+				input
+					padding-right: 190px
+		&.get_file
+			position: relative
+			cursor: pointer
+			height: 50px
+			label
+				position: relative
+				cursor: pointer
+			.loader
+				transform: translateX(30px)
+				visibility: hidden
+				opacity: 0
+				position: absolute
+				color: $color2
+				cursor: pointer
+			input
+				position: absolute
+				opacity: 0
+				cursor: pointer
+				&.not-empty + label span:not(.loader)
+					visibility: hidden
+					opacity: 0
+				&:focus + label span
+					transform: translateX(0)
+					opacity: 1
+				&.not-empty + label .loader
+					transform: translateX(0px)
+					visibility: visible
+					opacity: 1
+				&.not-empty + label .attach
+					background: url('../img/cli.png') right center no-repeat
+			label span
+				transition: 0s
+			label:after,label:before
+				display: none
+			.attach
+				text-transform: uppercase
+				color: $color2
+				+f('helvetica-bold', 10, 14, 22)
+				margin-bottom: 8px
+				cursor: pointer
+				padding-right: 20px
+				display: inline-block
+				+sm
+					width: 100%
+	
+	&-input
+		display: block
+		padding: 14px 20px
+		width: 100%
+		+paragraph-text
+		color: $color0
+		line-height: 22px
+		border: none
+		background-color: transparent
+		+sm
+			font-size: 16px !important
+		+md
+			font-size: 16px !important
+	&-input-label
+		overflow: hidden
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		padding: 14px 20px
+		width: 100%
+		+paragraph-text
+		color: $color0
+		line-height: 22px
+		span
+			display: block
+			+trs
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-color: $color2
+			transition: transform 0.6s ease 0.25s
+		&:after
+			content: ''
+			position: absolute
+			z-index: 2
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-color: $color0
+			transform: translateX(-101%)
+			transition: transform 0.6s ease, background-color 0.3s ease
+	&-input.is-fill + &-input-label,
+	&-input:focus + &-input-label
+		span
+			opacity: 0
+			transform: translateY(20px)
+		&:after
+			transform: translateX(0)
+	.no-touch &
+		.form-group:hover
+			& > .form-input-label span
+				color: $color2
+	.has-error &-input-label
+		&:after
+			background-color: $color7
+			transform: translateX(0)
+			transition: transform 0.6s ease
+	[data-prepare-anim] &-input-label:before,
+	[data-prepare-anim] &-input-label:after
+		+desk
+			transform: translateX(-101%)
+	&-textarea
+		display: block
+		padding: 14px 20px
+		width: 100%
+		height: 50px
+		+paragraph-text
+		color: $color0
+		line-height: 22px
+		border: none
+		background-color: transparent
+		resize: none
+		+sm
+			font-size: 16px !important
+		+md
+			font-size: 16px !important
+		.form-group_textarea-submit &
+			padding-bottom: 30px
+			height: 110px
+	&-textarea-label
+		overflow: hidden
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		display: block
+		padding: 14px 20px
+		width: 100%
+		+paragraph-text
+		color: $color0
+		line-height: 22px
+		span
+			display: block
+			+trs
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-color: $color2
+			transition: transform 0.6s ease 0.25s
+		&:after
+			content: ''
+			position: absolute
+			z-index: 2
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-color: $color0
+			transform: translateX(-101%)
+			transition: transform 0.6s ease, background-color 0.3s ease
+	&-textarea.is-fill ~ &-textarea-label,
+	&-textarea:focus ~ &-textarea-label
+		span
+			opacity: 0
+			transform: translateY(20px)
+		&:after
+			transform: translateX(0)
+	&-textarea:hover + &-textarea-label
+		span
+			color: $color2
+	.has-error &-textarea-label
+		&:after
+			background-color: $color7
+			transform: translateX(0)
+			transition: transform 0.6s ease
+	[data-prepare-anim] &-textarea-label:before,
+	[data-prepare-anim] &-textarea-label:after
+		+desk
+			transform: translateX(-101%)
+
+.search__form
+	.js-dropper
+		pointer-events: none

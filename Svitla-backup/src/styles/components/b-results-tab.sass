@@ -1,0 +1,138 @@
+.results-tab
+	+md
+		display: none
+
+.search__results__cont
+	max-width: 904px
+	margin-left: auto
+	margin-right: 0
+	+sm
+		.cases__item:last-child, .cases__cont, .solutions.our_expertise.fix, .solutions.our_expertise.fix .solutions__cont
+			padding-bottom: 0
+			margin-bottom: 0
+		.blog__item:last-child, .solutions.our_expertise.fix .solutions__cont .solutions__item:last-child, .testimonals__small .testimonals__item:last-child
+			margin-bottom: 0
+		.blog
+			margin-bottom: 0
+			padding-top: 0
+
+.results
+	&__search-info
+		padding-bottom: 77px
+		+sm
+			padding-bottom: 1px
+	&__title
+		margin-bottom: 12px
+		+sm
+			font-size: 30px
+			margin-bottom: 0
+	&__count
+		margin-bottom: 53px
+		+sm
+			margin-bottom: 33px
+	&__name
+		margin-bottom: 15px
+		+sm
+			font-size: 23px
+			margin-bottom: 3px
+	&__loadmore
+		+link-dark
+		border-top: 1px solid $color1
+		padding: 36px 0 10px 0
+		text-align: center
+		color: $color2
+		+helvetica-bold
+		font-size: 10px
+		text-transform: uppercase
+		margin-bottom: 10px
+		cursor: pointer
+		display: flex
+		justify-content: center
+		&:hover
+			color: $color3
+		.icons-w .icon
+			stroke: $color2
+		+sm
+			padding-top: 27px
+			margin-top: 40px
+			margin-bottom: 60px
+	&__form
+		display: block
+		flex: 1 1 auto
+		margin: -11px 0
+		margin-top: 33px
+		margin-bottom: 33px
+		+md
+			flex: 0
+			padding: 0
+			margin-bottom: 100px
+		+sm
+			margin-top: 20px
+			margin-bottom: 30px
+		.form-input
+			padding-left: 35px
+			color: $color1
+			padding-bottom: 40px
+		.form-input-label
+			padding-left: 35px
+			padding-bottom: 40px
+			span
+				color: $color1
+			&:before, &:after
+				background-color: $color1
+			+sm
+				padding-bottom: 19px
+		.form-group + .form-group
+			margin-top: 0
+		.form-group_submit
+			position: absolute
+			z-index: 2
+			top: 18px
+			right: 2px
+			+md
+				right: 0
+			+sm
+				top: 8px
+		.input-icon
+			position: absolute
+			pointer-events: none
+			z-index: 1
+			top: 17px
+			left: 0
+			font-size: 17px
+			color: $color2
+			.icon
+				display: block
+		.form-submit-search
+			right: 0
+			+link-dark
+			border: none
+			font-size: 8px
+
+.results-tab
+	&.pt
+		margin-top: $topOffset
+		+md
+			margin-top: $offsetTab
+		+sm
+			margin-top: $topOffsetMob
+	&__cont
+		display: flex
+		justify-content: space-between
+		position: relative
+		margin-bottom: 65px
+	&__item
+		text-transform: uppercase
+		font-size: 10px
+		color: $color1
+		letter-spacing: 1px
+		padding: 12px 0 16px 40px
+		+helvetica-bold
+		cursor: pointer
+		transition: color 0.4s
+		position: relative
+		width: 20%
+		&:after, &:before
+			height: 100%
+		&:hover, &.active
+			color: $color2

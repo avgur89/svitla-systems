@@ -1,0 +1,28 @@
+include ../components/b_person
+
+//- SVG (include from sprite)
+mixin svg(icon, className)
+	svg(class = `icon-${icon} ${className || ''}`)
+		use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href=`#icon-${icon}`)
+
+mixin i(icon)
+	svg(class= `icon icon-${icon}`)
+		use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href=`#icon-${icon}`)
+
+mixin statistic(className, pretext, title, symbol, text, descr, ulList)
+	.statistic__item(data-mob-anim='group' data-mob-anim-stagger='fade-top' class = className || '')
+		if pretext
+			.statistic__pretext(data-anim-stagger='fade-top' data-anim-parent-trigger)= pretext
+		div
+			span.statistic__title(data-anim-stagger='fade-top' data-anim-parent-trigger)= title
+			if symbol
+				span.statistic__symbol(data-anim-stagger='fade-top' data-anim-parent-trigger)
+					span= symbol
+		if descr !== null
+			h3.statistic__descr= descr
+		if text !== null
+			.statistic__text(data-anim-stagger='fade-top' data-anim-parent-trigger)= text
+		if ulList !== null
+			ul.ul-standart
+				each li in ulList
+					li= li

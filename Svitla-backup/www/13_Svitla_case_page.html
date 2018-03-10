@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case_Page</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body class="is-loading">
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="a">
+            <path d="M365 3522v-16a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" />
+          </clipPath>
+        </defs>
+        <symbol id="icon-1" viewBox="0 0 35 35">
+          <path d="M20 0v16h15v-1c0-8.3-6.7-15-15-15zm-2.9 3H16C7.2 3 0 10.2 0 19s7.2 16 16 16 16-7.2 16-16H17.1V3z" />
+        </symbol>
+        <symbol id="icon-10" viewBox="0 0 38 29">
+          <title>10</title>
+          <path d="M24 0H14v3h10zM0 6v23h38V6z" />
+        </symbol>
+        <symbol id="icon-11" viewBox="0 0 38 36">
+          <path d="M19 30a3 3 0 1 0 3 3 3 3 0 0 0-3-3zM3 30a3 3 0 1 0 3 3 3 3 0 0 0-3-3zM0 0v24h26L38 0z" />
+        </symbol>
+        <symbol id="icon-2" viewBox="0 0 38 36">
+          <path d="M0 36h38V26H0v10zm9-6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-4 0c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5-7h38V13H0v10zm5-6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zM0 0v10h38V0H0z" />
+        </symbol>
+        <symbol id="icon-3" viewBox="0 0 34 36">
+          <path d="M34 18L0 0v36l34-18z" />
+        </symbol>
+        <symbol id="icon-4" viewBox="0 0 39.21 36.68">
+          <path d="M26.61 9.77v4.95H12.59V9.77H0v26.91h39.21V9.77h-12.6z" />
+          <path d="M2.47 3.97h34.28v3.75H2.47z" />
+          <path d="M4.46 0h30.3v2.31H4.46z" />
+        </symbol>
+        <symbol id="icon-5" viewBox="0 0 36 36">
+          <path d="M18 0v18h18V0H18zm4 15c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm0-10c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm5 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm5 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm0-10c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM0 36h18V18H0v18zm14-15c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5 5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5 5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"
+          />
+        </symbol>
+        <symbol id="icon-6" viewBox="0 0 50.5 50.5">
+          <path d="M25.3 50.5C11.3 50.5 0 39.2 0 25.3h13c0 6.8 5.5 12.3 12.3 12.3v12.9z" />
+          <path d="M50.5 25.3h-13C37.5 18.5 32 13 25.3 13V0c13.9 0 25.2 11.3 25.2 25.3z" />
+          <circle cx="25.3" cy="25.3" r="7.6" />
+        </symbol>
+        <symbol id="icon-7" viewBox="0 0 30 36">
+          <path d="M15 20c4.42 0 8-7.39 8-11.88a8 8 0 1 0-16 0C7 12.61 10.58 20 15 20zm4.84 2L15 29.72 10.16 22 0 23.93V36h30V23.93z" />
+        </symbol>
+        <symbol id="icon-8" viewBox="0 0 38 36">
+          <path d="M5 10h30V9a5 5 0 0 1 0-8V0H5a5 5 0 0 0 0 10zm33 4v-1H8a5 5 0 0 0 0 10h30v-1a5 5 0 0 1 0-8zM0 31a5 5 0 0 0 5 5h30v-1a5 5 0 0 1 0-8v-1H5a5 5 0 0 0-5 5z" />
+        </symbol>
+        <symbol id="icon-9" viewBox="0 0 36 36">
+          <path d="M36 13H23V0H13v13H0v10h13v13h10V23h13V13z" />
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 5 8.5">
+          <style>
+            .st0 {
+              fill: #020202
+            }
+          </style>
+          <path d="M5 7.8L1.4 4.3 5 .7 4.3 0 0 4.3l4.3 4.2z" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 5 8.5">
+          <style>
+            .st0 {
+              fill: #020202
+            }
+          </style>
+          <path d="M0 7.8l3.5-3.5L0 .7.7 0 5 4.3.7 8.5z" />
+        </symbol>
+        <symbol id="icon-beam" viewBox="0 0 3 8">
+          <path d="M3 4c0 1.6-.5 3-1.4 4L0 6.1C.5 5.6.7 4.8.7 4S.5 2.4 0 1.9L1.6 0C2.5 1 3 2.4 3 4z" />
+        </symbol>
+        <symbol id="icon-circle" viewBox="0 0 12 12">
+          <path d="M6 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4" />
+        </symbol>
+        <symbol id="icon-confa" viewBox="0 0 54.3 52">
+          <style>
+            .st0 {
+              opacity: .3
+            }
+
+            .st1 {
+              fill: #2e3a4d
+            }
+          </style>
+          <path d="M5.7 44.6c-.2 0-.3 0-.5-.1-.6-.1-1.1-.6-1.4-1.2-.9-1.7-1.7-3-1.7-3l-.3-.5c-.3-.5-.8-1.4-1.4-2.5-.4-.6-.5-1.3-.3-1.9.3-.9 1.2-1.4 1.2-1.4s1.7-.9 8.9-5c7.1-4 11.9-15.1 11.9-15.3l.4-.9 6.7 12.1 6.9 11.8-1-.1c-.1 0-12.1-1.6-19.2 2.5C8.7 43.2 7 44.2 7 44.2s-.6.4-1.3.4zM3 39.8c.2.3.8 1.4 1.7 3 .2.4.5.6.8.7.5.1 1-.2 1.1-.2.1 0 1.7-1 8.9-5.1 6.2-3.5 15.7-3 18.9-2.7l-5.9-10.1-5.7-10.3c-1.3 2.8-5.7 11.3-12 14.8-7.2 4.1-8.9 5-8.9 5s-.6.3-.7.8c-.1.3 0 .7.2 1.1.7 1.5 1.4 2.7 1.6 3z"
+          />
+          <path d="M16.4 52l-8.8-8.6.7-.7 8.2 8.1 4.5-2.3-7.2-8.7.7-.6 8 9.6z" />
+          <path d="M42.2 17.9c-2-3.4-5.3-5.7-8.8-6.6l-1.7 6.6c1.9.5 3.6 1.7 4.6 3.5 1.1 1.8 1.3 3.9.8 5.7l6.6 1.7c.9-3.5.5-7.5-1.5-10.9" />
+          <path d="M53.4 31.8l-1-.3c1.7-6.5.8-13.3-2.6-19l.9-.5c3.5 6 4.5 13 2.7 19.8z" />
+          <path d="M49.8 12.5C46.4 6.7 41 2.6 34.4 1l.2-1c6.8 1.7 12.5 6 16 12l-.8.5z" />
+          <path transform="rotate(-29.585 13.048 34.08)" d="M12.5 28.8h1v10.5h-1z" />
+          <path transform="rotate(-29.585 25.992 26.98)" d="M25.5 16.8h1v20.4h-1z" />
+        </symbol>
+        <symbol id="icon-fb" viewBox="0 0 5.8 12">
+          <style>
+            .st0 {
+              fill: #1d1d1c
+            }
+          </style>
+          <path d="M0 4h1.2V2.8c0-.5 0-1.4.4-1.9s1-.9 2-.9c1.6 0 2.2.2 2.2.2l-.3 1.9S5 2 4.5 2c-.5-.1-.9.1-.9.6V4h2l-.2 1.8H3.6V12H1.2V5.8H0V4z" />
+        </symbol>
+        <symbol id="icon-financial_services" viewBox="0 0 35 35">
+          <path d="M17.07 19H32A16 16 0 1 1 16 3h1.07z" />
+          <path d="M20 16V0a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" />
+          <path d="M365 3522v-16a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" clip-path="url(&quot;#a&quot;)" transform="translate(-345 -3506)" />
+        </symbol>
+        <symbol id="icon-hide-icon" viewBox="0 0 36 36">
+          <path d="M18 0a18 18 0 1 1 0 36 18 18 0 0 1 0-36z" />
+          <path d="M18 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2zm10 0a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2zM8 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2z" />
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 100 100">
+          <path d="M95 59.727V93H75.71V61.955c0-7.799-2.79-13.121-9.771-13.121-5.331 0-8.503 3.587-9.898 7.057-.509 1.24-.64 2.967-.64 4.703V93H36.104s.26-52.58 0-58.028h19.294v8.225c-.039.062-.09.128-.127.188h.127v-.188c2.563-3.948 7.142-9.588 17.389-9.588C85.482 33.609 95 41.903 95 59.727M15.919 7C9.318 7 5 11.33 5 17.024c0 5.57 4.193 10.031 10.663 10.031h.129c6.729 0 10.914-4.46 10.914-10.031C26.579 11.33 22.521 7 15.919 7M6.146 93h19.289V34.972H6.146V93z"
+          />
+        </symbol>
+        <symbol id="icon-marker" viewBox="0 0 54 23">
+          <path d="M27 0C16.5 0 6.9 4.1 0 10.7L12.8 23c3.6-3.5 8.6-5.7 14.2-5.7 5.5 0 10.5 2.2 14.2 5.6L54 10.7C47.1 4.1 37.5 0 27 0z" />
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 17 17">
+          <style>
+            .opacity {
+              opacity: .3
+            }
+          </style>
+          <path d="M12.699 14.085l1.414-1.414 2.828 2.83-1.414 1.413z" class="opacity" />
+          <path d="M7.1 14.1c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.2 7-7 7zm0-12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.3-5-5-5z" class="opacity" />
+          <path d="M.1 7.1c0 1.9.8 3.7 2.1 5l1.4-1.4c-1-1-1.5-2.2-1.5-3.6s.6-2.6 1.5-3.5L2.1 2.2c-1.2 1.2-2 3-2 4.9z" />
+          <path d="M14.1 7.1c0 1.9-.8 3.7-2.1 5l-1.4-1.4c.9-.9 1.5-2.2 1.5-3.5 0-1.4-.6-2.6-1.5-3.5L12 2.2c1.3 1.2 2.1 3 2.1 4.9z" />
+        </symbol>
+        <symbol id="icon-search2" viewBox="0 0 17 17">
+          <path d="M12.699 14.085l1.414-1.414 2.828 2.83-1.414 1.413z" />
+          <path d="M7.1 14.1c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.2 7-7 7zm0-12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.3-5-5-5z" />
+        </symbol>
+        <symbol id="icon-sertify" viewBox="0 0 51.2 51.5">
+          <style>
+            .st0 {
+              opacity: .3
+            }
+
+            .st1 {
+              fill: #2e3a4d
+            }
+          </style>
+          <path d="M33 41.1H0V.1h33v41zm-32-1h31v-39H1v39z" />
+          <path d="M33.8 51.1L3.9 37.2 21.3 0l29.9 13.9-17.4 37.2zM5.3 36.7l28.1 13.1 16.5-35.4L21.7 1.3 5.3 36.7z" />
+          <circle cx="29.6" cy="40.9" r="4.4" />
+          <path d="M26.1 42l-3.7 7.1 3.6-.8 1.2 3.2 3.6-7.1z" />
+          <path transform="rotate(-65.014 28.97 22.523)" d="M28.5 13h1v19h-1z" />
+          <path transform="rotate(-65.014 30.878 18.196)" d="M30.4 8.7h1v19h-1z" />
+          <path transform="rotate(-65.014 26.97 26.523)" d="M26.5 17h1v19h-1z" />
+          <path transform="rotate(-65.019 21.511 28.912)" d="M21 23.2h1v11.4h-1z" />
+        </symbol>
+        <symbol id="icon-show-icon" viewBox="0 0 36 36">
+          <path d="M18 0a18 18 0 1 1 0 36 18 18 0 0 1 0-36z" />
+          <path d="M18 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2z" />
+        </symbol>
+        <symbol id="icon-tw" viewBox="0 0 13.8 12">
+          <style>
+            .st0 {
+              fill: #2faae1
+            }
+          </style>
+          <path d="M13.6.3c-.6.3-1.2.6-1.9.7-.5-.6-1.3-1-2.1-1-1.5 0-2.8 1.3-2.8 3 0 .3 0 .4.1.7C4.5 3.7 2.4 2.4 1 .6c-.3.4-.4 1-.4 1.5 0 1 .5 2 1.3 2.5-.4 0-.9-.2-1.3-.3 0 1.5 1 2.7 2.3 3h-.8c-.2 0-.3 0-.5-.1.3 1.2 1.4 2.1 2.7 2.1-1 .8-2.2 1.3-3.6 1.3H0c1.3.9 2.8 1.4 4.3 1.4 5.2 0 8.1-4.6 8.1-8.5v-.3c.5-.4 1-1 1.4-1.6-.5.3-1 .4-1.7.4.8-.4 1.2-1 1.5-1.7z"
+          />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Preloader-->
+    <!-- Header-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top-bg"></div>
+        <div class="header__mobile-bg"></div>
+        <div class="header__mobile-nav">
+          <div class="header__mobile-nav-scroll"></div>
+        </div>
+        <div class="header__mobile-subnav">
+          <div class="header__mobile-subnav-scroll"></div>
+        </div>
+        <div class="header__container container">
+          <div class="header__logo">
+            <a class="header__logo-icon" href="index.html">
+              <svg class="icon" viewbox="0 0 90 30">
+                <path d="M13.9,7.9c-1.1-2-2.6-2.5-4-2.5c-1.6,0-3.3,0.8-3.4,3c-0.1,2.1,2.4,3.1,4.1,3.6c4.4,1.1,9,3.3,8.7,9.8c-0.2,5.7-5.2,8.3-9.7,8.3c-3.2,0-7.3-1.4-9.6-6.9l4.4-2.6c1.4,3,3.7,4.2,5.4,4.2c2.2,0,3.8-1.4,3.8-3.3c0.2-2.7-2.4-3.9-4.4-4.4c-2.9-0.7-8.4-2.7-8.3-8.6C1,2.5,5.6,0,10,0c3.4,0,6.4,1.6,8.2,5.3L13.9,7.9z"></path>
+                <rect x="42.3" y="8.6" width="5.5" height="20.8"></rect>
+                <path d="M60.3,29.4c-4.9,0.9-9.2-1.1-9-6.7V8.6l5.3-5.4v5.4h3.7v4.5h-3.7v9.5c0,1.4,1.4,2.4,3.7,2.1V29.4z"></path>
+                <path d="M70.7,29.4c-4.6,0.8-8.3-0.9-8.3-6.7V0.7h5.5v22.1c0,1.1,0.5,2.3,2.8,2.1V29.4z"></path>
+                <path d="M85,29.4l0-1.8c-1.3,1.6-3.2,2.3-4.8,2.3c-5.3,0-8.1-3.2-8.1-7.2c0-4.7,4.4-7,8.7-7c1.3,0,2.7,0.3,3.8,0.8c-0.1-2.9-1.9-3.9-4-4c-2,0-4.3,0.7-5.5,1.7l-2.1-3.6c2.6-2,5.3-2.5,8.1-2.5c4.6,0,8.9,2.5,8.9,8.5v12.7H85z M84.7,23.8v-3.3c-1-0.4-2.3-0.7-3.5-0.7c-2.1,0-4,0.8-4,2.7C77,26.3,82.6,26,84.7,23.8"></path>
+                <polygon points="34.2,8.6 39.9,8.6 32.9,29.4 26,29.4 19.1,8.6 24.8,8.6 29.5,23.8 "></polygon>
+                <path class="logo-rect" d="M45,0c-3.1,0-5.9,1.3-7.9,3.3l3.8,3.8c1.1-1.1,2.5-1.8,4.2-1.8c1.6,0,3.1,0.7,4.2,1.8L53,3.3C50.9,1.3,48.1,0,45,0"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="header__controls">
+            <nav class="header__nav nav">
+              <ul>
+                <li>
+                  <a href="index.html" data-hover="About Us">
+                    <span>About Us</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more">
+                    <li>
+                      <a href="#!" data-hover="Svitla">
+                        <span>Svitla</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="CEO">
+                        <span>CEO</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Our team">
+                        <span>Our team</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="CSR">
+                        <span>CSR</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Career">
+                        <span>Career</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="How We Work">
+                    <span>How We Work</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more">
+                    <li>
+                      <a href="#!" data-hover="Managed Team Extension">
+                        <span>Managed Team Extension</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Build-to-Order Software Applications">
+                        <span>Build-to-Order Software Applications</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Expertise">
+                    <span>Expertise</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more">
+                    <li>
+                      <a href="#!" data-hover="web">
+                        <span>web</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="front-end">
+                        <span>front-end</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="back-end">
+                        <span>back-end</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="ecommers">
+                        <span>ecommers</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Mobile">
+                        <span>Mobile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Quality Assurance">
+                        <span>Quality Assurance</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Design">
+                        <span>Design</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Internet of Things">
+                        <span>Internet of Things</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Big Data">
+                        <span>Big Data</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Dev Ops">
+                        <span>Dev Ops</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Tech Support">
+                        <span>Tech Support</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Database">
+                        <span>Database</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="web 2">
+                        <span>web 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="front-end 2">
+                        <span>front-end 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="back-end 2">
+                        <span>back-end 2</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Portfolio">
+                    <span>Portfolio</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more">
+                    <li>
+                      <a href="#!" data-hover="Testimonials">
+                        <span>Testimonials</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" data-hover="Case studies">
+                        <span>Case studies</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Blog">
+                    <span>Blog</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Contacts">
+                    <span>Contacts</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__search-btn">
+              <svg class="icon icon-search" data-anim-parent-trigger="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+              </svg>
+            </div>
+            <form class="header__form form" action="#">
+              <div class="form-group">
+                <div class="input-icon">
+                  <svg class="icon icon-search2" data-anim-parent-trigger="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search2"></use>
+                  </svg>
+                </div>
+                <input class="form-input" type="text" id="formSearch" autocomplete="off" required>
+                <label class="form-input-label" for="formSearch">
+                  <span>&nbsp;</span>
+                </label>
+              </div>
+              <div class="form-group form-group_submit">
+                <button class="form-submit-search" type="submit" data-hover="search">
+                  <span>search</span>
+                </button>
+              </div>
+            </form>
+            <div class="header__search-close">
+              <span>Close</span>
+            </div>
+            <div class="header__menu">
+              <span>menu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Breadcrumbs-->
+    <div class="container">
+      <ul class="breadcrumbs" data-anim="group">
+        <li data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="#!" data-hover="main">
+            <span>main</span>
+          </a>
+        </li>
+        <li data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="#!" data-hover="portfolio">
+            <span>portfolio</span>
+          </a>
+        </li>
+        <li data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="#!" data-hover="case studies">
+            <span>case studies</span>
+          </a>
+        </li>
+        <li class="breadcrumbs__active" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="#!" data-hover="igenico group">
+            <span>igenico group</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Main content-->
+    <main class="content expertise_page" data-page="expertise">
+      <!--begin screen-->
+      <div class="screen">
+        <div class="screen__img">
+          <img src="static/img/casebg.jpg" alt="image">
+        </div>
+        <canvas class="screen__canvas screen__canvas_center" id="screenCanvas"></canvas>
+        <div class="screen__container container">
+          <div class="screen__description" data-anim="group">
+            <div class="screen__description-top" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">Automated testing</div>
+          </div>
+          <div class="screen__svg-line">
+            <svg viewBox="0 0 600 600">
+              <path d="M600,0 0,600"></path>
+            </svg>
+          </div>
+          <div class="screen__svg-circle">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="30"></circle>
+            </svg>
+          </div>
+          <div class="screen__content">
+            <div class="screen__scroll is-active" data-hover="scroll">
+              <span>scroll</span>
+            </div>
+            <h1 class="screen__title-w">
+              <span class="screen__title-top">
+                <span class="screen__title">Ingenico</span>
+              </span>
+              <span class="screen__title-bot">
+                <span class="screen__title">Group</span>
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!--end screen-->
+      <!--begin blog-4-section-->
+      <section class="blog-4 section blog-4 blog-4_white">
+        <div class="container" data-anim="group">
+          <div class="blog-4__row col__wrap" data-anim="group">
+            <div class="blog-4__col col__small" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger"></div>
+            </div>
+            <div class="blog-4__col col__large">
+              <div class="blog-4__row-2 anim-line">
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Services</div>
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Back-end, Front-end, Design, DevOps</div>
+                </div>
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">industry</div>
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">E-commerce</div>
+                </div>
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Technologies</div>
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Node.js, SQL, React, HTML5, Amazon AWS</div>
+                </div>
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">platform</div>
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Magento</div>
+                </div>
+                <div class="blog-4__full blog-4__full_item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Client:</div>
+                    <div class="blog-4__text">Ingenico Group</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Team:</div>
+                    <div class="blog-4__text">over 3,600 employees</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Geography:</div>
+                    <div class="blog-4__text">125 countries, with headquarters in Paris, France</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Industry:</div>
+                    <div class="blog-4__text">Payment and related services</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Project Duration:</div>
+                    <div class="blog-4__text">–––</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Business Challenge</div>
+                    <div class="blog-4__text">The client needed Svitla to create an automated testing tool to efficiently cover all testing scenarios for different types of Ingenico solutions under different stress loads.</div>
+                  </div>
+                  <div class="blog-4__item__part" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                    <div class="blog-4__title h4">Solution:</div>
+                    <div class="blog-4__text">The Svitla team suggested and Ingenico accepted to use the Cucumber framework. Once Ingenico provided initial training on their solution to Svitla's core team, our specialists used Ruby on Rails to write the necessary code for automated
+                      testing. </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end blog-4-->
+      <!--begin blog-4-section-->
+      <section class="blog-4 section blog-4 blog-4_blue">
+        <div class="container" data-anim="group">
+          <div class="blog-4__title h1" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">Value delivered</div>
+          <div class="blog-4__row col__wrap" data-anim="group">
+            <div class="blog-4__col col__small" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <div class="blog-4__text" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger"></div>
+            </div>
+            <div class="blog-4__col col__large">
+              <div class="blog-4__row-2 anim-line anim-line_white">
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Reduced time of getting reports from data aggregation site</div>
+                </div>
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Well-balanced and simplified workflow for testing new point-of-sale applications</div>
+                </div>
+                <div class="blog-4__item" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <div class="blog-4__title h4" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger">Manual testing process reduced in half by using automation testing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end blog-4-->
+      <!--begin half-->
+      <section class="half half_video half_turquoise half_lg section half half_dark">
+        <div class="half__bg-w">
+          <div class="half__bg">
+            <div class="half__bg-item">
+              <div class="half__bg-picture" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <img src="static/img/half-11.jpg" alt="image">
+              </div>
+              <div class="half__bg-video">
+                <video controls playsinline>
+                  <source src="./static/video/main-1.mp4" data-load-src="./static/video/main-2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="half__bg-item">
+              <div class="half__bg-picture" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <img src="static/img/scr-1.png" alt="image">
+              </div>
+              <div class="half__bg-video">
+                <video controls playsinline>
+                  <source src="./static/video/main-1.mp4" data-load-src="./static/video/main-1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="half__bg-item">
+              <div class="half__bg-picture" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <img src="static/img/scr-2.png" alt="image">
+              </div>
+              <div class="half__bg-video">
+                <video controls playsinline>
+                  <source src="./static/video/main-1.mp4" data-load-src="./static/video/main-3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half__container container" data-anim="group">
+          <div class="half__inner">
+            <div class="half__inner-bg"></div>
+            <div class="half__item">
+              <div class="half__text" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <p class="qoute qoute-light">Inflection selected Svitla Systems as its development partner partly because the two companies share similar cultures and the Silicon Valley vibe. For more than 10 years now, Svitla has delivered exceptional value to Inflection, providing
+                  a large development team closely integrated into Inflection’s development process.</p>
+              </div>
+              <div class="half__title half__title_white h1" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Newsha Makooi</div>
+              <div class="half__subtitle half__subtitle_white h6" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Division Chief, Technology Services at Statline</div>
+            </div>
+            <div class="half__item">
+              <div class="half__title h1" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">The Rainmaker Group</div>
+              <div class="half__text" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <p>The Rainmaker Group provides software that helps hotels and apartment buildings price and manage revenue. Usually it takes several months to find someone in the US to join their team. With Svitla the company can get a right person with
+                  the necessary expertise within a week or two. The advantage that works in Svitla’s favor is a vast number of technologies that Svitla covers. Svitla can provide professionals of any level, from junior to middle to senior and enables
+                  its clients to get things done faster and more cost effectively.</p>
+              </div>
+              <div class="half__title half__title_white h1" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Douglas LaPointe</div>
+              <div class="half__subtitle half__subtitle_white h6" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Sr. Director Product Management, The Rainmaker Group</div>
+            </div>
+            <div class="half__item">
+              <div class="half__title h1" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Cordial</div>
+              <div class="half__text" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                <p>Svitla helped the US-based Cordial to build the major portion of their platform functionality. While Cordial had a good understanding of what they want to build, they needed a development partner to provide additional resources. This is
+                  when Svitla’s professionalism and expertise became a huge asset to Cordial’s reaching their milestones and goals.</p>
+              </div>
+              <div class="half__title half__title_white h1" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">Adam Gillespie</div>
+              <div class="half__subtitle half__subtitle_white h6" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">CTO, Cordial</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end half-->
+      <!--begin big-link-->
+      <section class="big-link">
+        <div class="big-link__container container" data-anim="group" data-anim-delay="0.4">
+          <div class="big-link__row">
+            <div class="big-link__col" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <div class="big-link__link" data-anim-stagger="fade-top">
+                <a class="link-dark js-link-multiple-circle" href="#!" data-hover="Discover Managed Team Extentsion Model">
+                  <span>Discover Managed Team Extentsion Model</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end big-link-->
+      <!--begin loop-->
+      <section class="loop">
+        <div class="loop__container container" data-anim="group" data-anim-delay="0.4">
+          <div class="loop__row">
+            <div class="loop__col" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <div class="loop__link" data-anim-stagger="fade-top">
+                <a class="link-dark js-link-multiple-circle" href="#!" data-hover="web">
+                  <span>web</span>
+                </a>
+              </div>
+            </div>
+            <div class="loop__col" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <div class="loop__link" data-anim-stagger="fade-top">
+                <a class="link-dark js-link-multiple-circle" href="#!" data-hover="mobile">
+                  <span>mobile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end loop-->
+      <!--begin meet-->
+      <section class="meet meet_default section section_dark">
+        <div class="meet__container container" data-anim="group" data-anim-delay="0.4">
+          <div class="meet__title">Have a project in mind?</div>
+          <!--+e.title Let's meet We look forward to sharing our expertise, consulting you about your product idea, or helping you find the right solution for an existing project-->
+          <div class="meet__row">
+            <div class="meet__col" data-anim-stagger="fade-top" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <p> Briefly describe your project, and we will contact you within a day.</p>
+            </div>
+            <div class="meet__col">
+              <form class="form meet__form" action="#">
+                <div class="form-group form-group_half">
+                  <div class="form-group" data-anim-stagger="fade-top" data-prepare-anim data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                    <input class="form-input" type="text" id="formName" autocomplete="off" required>
+                    <label class="form-input-label" for="formName">
+                      <span>Your Name</span>
+                    </label>
+                    <div class="help-block">Error</div>
+                  </div>
+                  <div class="form-group has-error" data-anim-stagger="fade-top" data-prepare-anim data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                    <input class="form-input" type="email" id="formMail" autocomplete="off" required>
+                    <label class="form-input-label" for="formMail">
+                      <span>Your Email</span>
+                    </label>
+                    <div class="help-block">Error</div>
+                  </div>
+                </div>
+                <div class="form-group form-group_textarea-submit" data-anim-stagger="fade-top" data-prepare-anim data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <textarea class="form-textarea"></textarea>
+                  <div class="form-textarea-label">
+                    <span>Type your message here</span>
+                  </div>
+                  <div class="help-block">Error</div>
+                </div>
+                <div class="form-group form-group_submit-textarea" data-anim-stagger data-prepare-anim data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <button class="btn" type="submit">
+                    <span class="btn__bg">
+                      <span class="btn__bg-top"></span>
+                    </span>
+                    <span class="btn__bg">
+                      <span class="btn__bg-bot"></span>
+                    </span>
+                    <span class="btn__text">get in touch</span>
+                  </button>
+                </div>
+              </form>
+              <div class="meet__form-ty">
+                <div class="meet__form-ty-title h4">Thank you!
+                  <br>We will contact very shortly.</div>
+                <p>Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end meet-->
+    </main>
+    <!-- FooterBlock-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__top">
+          <div class="footer__top-nav">
+            <ul>
+              <li>
+                <a href="#!" data-hover="About us">
+                  <span>About us</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="How we work">
+                  <span>How we work</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="Expertise">
+                  <span>Expertise</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="Portfolio">
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="Blog">
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="Careers">
+                  <span>Careers</span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" data-hover="Contacts">
+                  <span>Contacts</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top-controls">
+            <ul>
+              <li>
+                <a href="#!">
+                  <svg class="icon icon-fb" data-anim-parent-trigger="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <svg class="icon icon-tw" data-anim-parent-trigger="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tw"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <svg class="icon icon-linkedin" data-anim-parent-trigger="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <div class="footer__bot-left">
+            <span class="footer__copy">© 2017 Svitla</span>
+          </div>
+          <div class="footer__bot-right">
+            <a class="footer__bot-link" href="#!">Legal and Privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts-->
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

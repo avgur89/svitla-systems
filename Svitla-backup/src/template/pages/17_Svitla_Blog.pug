@@ -1,0 +1,174 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Svitla Blog',
+		socialIconList = ['fb', 'tw', 'linkedin'],
+		breadList = ['main', 'blog'];
+
+block main
+	main.content(data-page='svitla blog')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/blog1.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-bot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Here you'll find all the most recent and useful information about software technology, development trends, topical news, and events.
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Blog
+		//end screen
+
+		// wrap for back-end
+		div
+			//begin tabs
+			+b.SECTION.results-tab.pt
+				+e.container.container(data-anim='group')
+					+e.cont.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.A.item.active(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') all
+						+e.A.item(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') news
+						+e.A.item(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') events
+						+e.A.item(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Whitepapers
+						+e.A.item(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Articles
+			//end tabs
+
+			//SLIDER_begin
+			+b.SECTION.section.blog__page
+				.container(data-anim='group')
+					+e.row.col__wrap(data-anim='group' data-anim-delay='.1' data-anim-duration='.6')
+						+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+b.tags
+								+e.title TAGS:
+								+e.cont(data-open-title="more tags" data-close-title="hide tags" data-max-tags="2")
+									+e(href="").item.active technologies
+									+e(href="").A.item languages
+									+e(href="").A.item php
+									+e(href="").A.item development
+									+e(href="").A.item team
+									+e(href="").A.item conference
+									+e(href="").A.item project manager
+									+e(href="").A.item project manager
+									+e(href="").A.item.active company
+									+e(href="").A.item technologies
+									+e(href="").A.item languages
+									+e(href="").A.item php
+									+e(href="").A.item development
+									+e(href="").A.item team
+									+e(href="").A.item conference
+									+e(href="").A.item project manager
+									+e(href="").A.item project manager
+									+e(href="").A.item company
+								+e(href="").A.btn.js-link-single-circle
+									span
+						+e.col.col__large
+							.blog__cont
+								.blog__item.blog__item__big.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									a.blog__media(href="" data-mob-anim='group' data-anim-stagger='fade-top')
+										img(src='static/img/blogb.jpg' alt='image')
+										.blog__tag whitepapers
+									.blog__info(data-anim-stagger='fade-top' data-mob-anim='group' data-anim='group' data-mob-anim-stagger='fade-top')
+										a.blog__title.h1(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+											h2 Great hints and practical tips to a project manager
+										.blog__text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+											p A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+										.blog__name(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') By John Smith
+										.blog__data.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') March 06, 2017
+								.blog__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									a.blog__media(href="" data-anim-stagger='fade-top' data-mob-anim='group')
+										img(src='static/img/blog1.jpg' alt='image')
+										.blog__tag news
+									.blog__info(data-anim-stagger='fade-top' data-anim='group')
+										a.blog__title.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+											h2 Great hints and practical tips to a project manager
+										.blog__text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+											p A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+										.blog__name(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') By John Smith
+										.blog__data.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') March 06, 2017
+								.blog__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									a.blog__media(href="" data-anim-stagger='fade-top' data-mob-anim='group' )
+										img(src='static/img/blog2.jpg' alt='image')
+										.blog__tag events
+									.blog__info(data-anim-stagger='fade-top' data-anim='group')
+										a.blog__title.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+											h2 Svitla Systems recognized as top company for customer references by IAOP
+										.blog__text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+											p SAN FRANCISCO, CA - APRIL 28, 2017 – Svitla Systems is proud to receive a special distinction from IAOP® as a Top Company for Customer References. As the global, standard-setting association and advocate for outsourcing professionals and the organizations they support, IAOP annually produces lists that are essential references for...
+										.blog__name(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') By John Smith
+										.blog__data.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') March 06, 2017
+								.blog__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									a.blog__media(href="" data-anim-stagger='fade-top' data-mob-anim='group' )
+										img(src='static/img/blog1.jpg' alt='image')
+										.blog__tag news
+									.blog__info(data-anim-stagger='fade-top' data-anim='group')
+										a.blog__title.h4(href="" data-anim-parent-trigger data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+											h2 Great hints and practical tips to a project manager
+										.blog__text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+											p A Project Manager is an engaging, electrifying, and consuming job, isn’t it? It requires constant self-education and professional seminars and conferences become valuable educational tools as well as sources of new ideas and experience exchange for a PM.
+										.blog__name(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') By John Smith
+										.blog__data.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') March 06, 2017
+								.blog__item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									a.blog__media(href="" data-anim-stagger='fade-top' data-mob-anim='group')
+										img(src='static/img/blog2.jpg' alt='image')
+										.blog__tag events
+									.blog__info(data-anim-stagger='fade-top' data-anim='group')
+										a.blog__title.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+											h2 Svitla Systems recognized as top company for customer references by IAOP
+										.blog__text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+											p SAN FRANCISCO, CA - APRIL 28, 2017 – Svitla Systems is proud to receive a special distinction from IAOP® as a Top Company for Customer References. As the global, standard-setting association and advocate for outsourcing professionals and the organizations they support, IAOP annually produces lists that are essential references for...
+										.blog__name(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') By John Smith
+										.blog__data.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') March 06, 2017
+							UL.pagination(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								li.pagination__prev.pagination__arrow.disabled
+									div(data-hover= 'Previous')
+										div Previous
+								li.active
+									a(href="") 1
+								li
+									a(href="") 2
+								li
+									a(href="") 3
+								li
+									a(href="") 4
+								li
+									a(href="") 5
+								li.pagination__next.pagination__arrow
+									div(data-hover= 'Next')
+										div Next
+			//SLIDER_end
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Stay informed - subscribe
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Join our newsletter and get the latest content right in your inbox once or twice per week.
+					+e.col
+						+b.FORM.form.__form(action='')
+							.form-group.form-group_with-btn(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								input.form-input(type='text' id='formName' autocomplete='off' required)
+								label.form-input-label(for='formName'): span Your Email
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text sing up
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

@@ -1,0 +1,94 @@
+.footer
+	padding: 47px 0 58px
+	background-color: $color2
+	+desk
+		overflow: hidden
+		position: fixed
+		z-index: 1
+		bottom: 0
+		left: 0
+		right: 0
+		height: 200px
+	+md
+		padding: 47px 0 53px
+	+sm
+		padding: 33px 0
+		
+	&__top
+		position: relative
+		display: flex
+		justify-content: space-between
+		+md
+			margin-right: -18px
+		+sm
+			margin-right: 0
+			justify-content: center
+		&-nav
+			flex: 1 0 auto
+			+h6
+			color: $color5
+			letter-spacing: 0.1em
+			+sm
+				display: none
+			ul
+				display: flex
+				justify-content: space-between
+				li
+					flex: 0 1 auto
+					a
+						display: block
+						+link-dark-light
+		&-controls
+			flex: 0 0 auto
+			padding-left: 75px
+			+md
+				position: absolute
+				top: 70px
+				right: 18px
+				padding-left: 0
+			+sm
+				position: static
+			ul
+				display: flex
+				justify-content: space-between
+				li
+					+ li
+						margin-left: 30px
+					a
+						+link-dark-light-circle-light
+						> .icon
+							font-size: 12px
+							color: $color1
+							+trs
+						> .icon-youtube
+							font-size: 16px
+						.no-touch &:hover
+							> .icon
+								color: $color0
+						.icon-linkedin
+							font-size: 14px
+			
+	&__bot
+		position: relative
+		margin-top: 45px
+		display: flex
+		justify-content: space-between
+		+md
+			justify-content: flex-start
+		+sm
+			justify-content: space-between
+			margin-top: 28px
+		&-right
+			+md
+				margin-left: 60px
+			+sm
+				margin-left: 0
+		&-link
+			+trs
+			.no-touch &:hover
+				color: $color0
+			&:not(:first-child)
+				margin-left: 50px
+				+sm
+					margin-left: 20px
+		

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,target-densityDpi=device-dpi">
+    <title>Search Results</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body class="is-loading">
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #000;
+              stroke-miterlimit: 10;
+              stroke-width: 2px
+            }
+          </style>
+          <clipPath id="a">
+            <path d="M365 3522v-16a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" />
+          </clipPath>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #000;
+              stroke-miterlimit: 10;
+              stroke-width: 2px
+            }
+          </style>
+          <style>
+            .cls-1 {
+              fill-rule: evenodd
+            }
+          </style>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #000;
+              stroke-miterlimit: 10;
+              stroke-width: 3px
+            }
+          </style>
+        </defs>
+        <symbol id="icon-1" viewBox="0 0 35 35">
+          <path d="M20 0v16h15v-1c0-8.3-6.7-15-15-15zm-2.9 3H16C7.2 3 0 10.2 0 19s7.2 16 16 16 16-7.2 16-16H17.1V3z" />
+        </symbol>
+        <symbol id="icon-10" viewBox="0 0 38 29">
+          <title>10</title>
+          <path d="M24 0H14v3h10zM0 6v23h38V6z" />
+        </symbol>
+        <symbol id="icon-11" viewBox="0 0 38 36">
+          <path d="M19 30a3 3 0 1 0 3 3 3 3 0 0 0-3-3zM3 30a3 3 0 1 0 3 3 3 3 0 0 0-3-3zM0 0v24h26L38 0z" />
+        </symbol>
+        <symbol id="icon-2" viewBox="0 0 38 36">
+          <path d="M0 36h38V26H0v10zm9-6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-4 0c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5-7h38V13H0v10zm5-6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zM0 0v10h38V0H0z" />
+        </symbol>
+        <symbol id="icon-3" viewBox="0 0 34 36">
+          <path d="M34 18L0 0v36l34-18z" />
+        </symbol>
+        <symbol id="icon-4" viewBox="0 0 39.21 36.68">
+          <path d="M26.61 9.77v4.95H12.59V9.77H0v26.91h39.21V9.77h-12.6z" />
+          <path d="M2.47 3.97h34.28v3.75H2.47z" />
+          <path d="M4.46 0h30.3v2.31H4.46z" />
+        </symbol>
+        <symbol id="icon-5" viewBox="0 0 36 36">
+          <path d="M18 0v18h18V0H18zm4 15c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm0-10c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm5 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm5 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm0-10c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM0 36h18V18H0v18zm14-15c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5 5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-5 5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"
+          />
+        </symbol>
+        <symbol id="icon-6" viewBox="0 0 50.5 50.5">
+          <path d="M25.3 50.5C11.3 50.5 0 39.2 0 25.3h13c0 6.8 5.5 12.3 12.3 12.3v12.9z" />
+          <path d="M50.5 25.3h-13C37.5 18.5 32 13 25.3 13V0c13.9 0 25.2 11.3 25.2 25.3z" />
+          <circle cx="25.3" cy="25.3" r="7.6" />
+        </symbol>
+        <symbol id="icon-7" viewBox="0 0 30 36">
+          <path d="M15 20c4.42 0 8-7.39 8-11.88a8 8 0 1 0-16 0C7 12.61 10.58 20 15 20zm4.84 2L15 29.72 10.16 22 0 23.93V36h30V23.93z" />
+        </symbol>
+        <symbol id="icon-8" viewBox="0 0 38 36">
+          <path d="M5 10h30V9a5 5 0 0 1 0-8V0H5a5 5 0 0 0 0 10zm33 4v-1H8a5 5 0 0 0 0 10h30v-1a5 5 0 0 1 0-8zM0 31a5 5 0 0 0 5 5h30v-1a5 5 0 0 1 0-8v-1H5a5 5 0 0 0-5 5z" />
+        </symbol>
+        <symbol id="icon-9" viewBox="0 0 36 36">
+          <path d="M36 13H23V0H13v13H0v10h13v13h10V23h13V13z" />
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 5 8.5">
+          <style>
+            .st0 {
+              fill: #020202
+            }
+          </style>
+          <path d="M5 7.8L1.4 4.3 5 .7 4.3 0 0 4.3l4.3 4.2z" />
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 5 8.5">
+          <style>
+            .st0 {
+              fill: #020202
+            }
+          </style>
+          <path d="M0 7.8l3.5-3.5L0 .7.7 0 5 4.3.7 8.5z" />
+        </symbol>
+        <symbol id="icon-Aviation" viewBox="0 0 41.29 40.61">
+          <title>Aviation</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M41.29 37.95L29.58 30.7V19.04l11.71 7.25v11.66z" />
+              <path d="M0 36.97l11.71-6.27V19.04L0 25.3v11.67z" />
+              <path d="M26.56 8.24C26.36 3.64 23.79 0 20.65 0s-5.71 3.64-5.92 8.24v32.37h11.85V8.26z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-beam" viewBox="0 0 3 8">
+          <path d="M3 4c0 1.6-.5 3-1.4 4L0 6.1C.5 5.6.7 4.8.7 4S.5 2.4 0 1.9L1.6 0C2.5 1 3 2.4 3 4z" />
+        </symbol>
+        <symbol id="icon-BPA" viewBox="0 0 36.73 40.37">
+          <title>BPA</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M36.31 34.53l.42-3.71-2.63-1.26.34-.54 1-2-2.64-2.64-2.57 1.22-.31-.6-1-2-3.71.42-.63 2.78-.58-.1-2.16-.5-2 3.16 1.49 2.14-1.93 1.86 1.23 3.53 2.62.31.22 2.54L27 40.37l1.76-2.22.51.38 1.73 1.4 3.16-2-.64-2.8.63-.12zm-8.24-1.3a1.52 1.52 0 1 1 1.52-1.52 1.52 1.52 0 0 1-1.52 1.52z"
+              />
+              <path d="M13.94 7.4a6.24 6.24 0 1 0 6.24 6.24 6.25 6.25 0 0 0-6.24-6.24zm.1 8.16a1.88 1.88 0 1 1 1.88-1.88A1.88 1.88 0 0 1 14 15.56z" />
+              <path d="M25 15.43l3-1.89-1.27-5.87-4.5-.5.05-1 .41-3.54L17.27 0 14 3.25l-.72-.73L10.8 0 5.38 2.61l.21 4.2-4.25.87L0 13.54l3.31 2.66-1.87 3.65 3.75 4.7L9.49 23l.36 1L11 27.37h6L18.56 23l1 .38 3.36 1.18 3.75-4.7-2.51-4zm-11.06 6.21a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+              />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Business_licensing " viewBox="0 0 41.87 39.91">
+          <title>Business licensing</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M17.81 0h6.24v10.62h-6.24z" />
+              <path d="M26.69 10.92v2.74H14.88v-2.74H0v28.99h41.87V10.92H26.69z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-circle" viewBox="0 0 12 12">
+          <path d="M6 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4" />
+        </symbol>
+        <symbol id="icon-CMS" viewBox="0 0 41.96 39.45">
+          <title>CMS</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M27.42 37.41h8.23v2.04h-8.23z" />
+              <path d="M0 0h20.32v15.5H0z" />
+              <path d="M5.78 17.54h8.23v2.04H5.78z" />
+              <path d="M21.64 19.87h20.32v15.5H21.64z" />
+              <path class="cls-1" d="M23.41 8.05A8.58 8.58 0 0 1 32 16.63" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-CMS_1" viewBox="0 0 41.96 39.45">
+          <title>CMS_1</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M27.42 37.41h8.23v2.04h-8.23z" />
+              <path d="M0 0h20.32v15.5H0z" />
+              <path d="M5.78 17.54h8.23v2.04H5.78z" />
+              <path d="M21.64 19.87h20.32v15.5H21.64z" />
+              <path d="M33 16.63h-2a7.58 7.58 0 0 0-7.58-7.58v-2A9.59 9.59 0 0 1 33 16.63z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Computer_and mobile_accessories" viewBox="0 0 25.52 40.64">
+          <title>Computer and mobile accessories</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M.01 12.61v.04H0v2.25h.01v25.74H25.52V12.61H.01z" />
+              <path d="M3.35 0v9.61h18.82V0zm6.17 6.72h-2V2.89h2zm8 0h-2V2.89h2z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Computer_Software" viewBox="0 0 41.86 31.9">
+          <title>Computer Software</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M0 6.98h41.86V31.9H0z" />
+              <path d="M0 0v4.8h41.86V0zm2.85 3.49A1.09 1.09 0 1 1 3.94 2.4a1.09 1.09 0 0 1-1.09 1.09zm4 0A1.09 1.09 0 1 1 7.92 2.4a1.09 1.09 0 0 1-1.09 1.09zm4 0a1.09 1.09 0 1 1 1.07-1.09 1.09 1.09 0 0 1-1.09 1.09z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-CRM" viewBox="0 0 41.76 31.16">
+          <title>CRM</title>
+          <g data-name="Layer 2">
+            <path d="M0 0v26.64h28.26l5.62 4.53v-4.53h7.88V0zm7.58 14.77v-2h27v2zm27 2.81v2h-27v-2zm-27.2-10h27v2h-27z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Cybersecurity" viewBox="0 0 33.83 40.92">
+          <title>Cybersecurity</title>
+          <g data-name="Layer 2">
+            <path d="M30.29 1.51a13.07 13.07 0 0 1-10.66-.22L16.92 0l-2.61 1.25a13.07 13.07 0 0 1-10.67.27L0 0v26a9.84 9.84 0 0 0 5.3 8.62l11.7 6.3 11.58-6.27A9.83 9.83 0 0 0 33.83 26V0z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Design" viewBox="0 0 41.04 40.59">
+          <path d="M39.21 38.87s-.27-.81-1.38-4.48a5 5 0 0 0-4.61 4.48 36 36 0 0 0 4.61 1.65c1.94.48 1.38-1.65 1.38-1.65z" />
+          <path d="M41.04 7.37L33.66 0 20.98 12.68l-.01-.01-8.86 8.85.02.02L.45 33.22l7.37 7.37L19.42 29l8.73 8.93 1.15-3.77 3.23-1.18.92-2.83 3.46-1.18-8.64-8.83L41.04 7.37z" />
+          <path d="M18.87 10.52L8.79.22S5.64-.33 2.57 2.81A7.9 7.9 0 0 0 0 9.17l10 10.21z" />
+        </symbol>
+        <symbol id="icon-Desktop" viewBox="0 0 41.65 37.4">
+          <title>Desktop</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M26.01 37.4H15.63l1.49-8.1h7.41l1.48 8.1z" />
+              <path d="M0 0v26.3h41.65V0zm20.82 23.3a1.09 1.09 0 1 1 1.09-1.09 1.09 1.09 0 0 1-1.09 1.09z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Digital_marketing" viewBox="0 0 41.81 40.1">
+          <title>Digital marketing</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M0 20.05h11.67V40.1H0z" />
+              <path d="M15.07 9.82h11.67v30.29H15.07z" />
+              <path d="M30.15 0h11.67v40.1H30.15z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Diversity" viewBox="0 0 40.38 39">
+          <title>Diversity</title>
+          <g data-name="Layer 2">
+            <path d="M30.63 0a9.76 9.76 0 0 0-9.54 7.73l-11-1.17A5.1 5.1 0 1 0 6 12l5.41 13.4a7.29 7.29 0 1 0 8.61 1l5.8-8.17A9.75 9.75 0 1 0 30.63 0zM18.4 25.25a7.19 7.19 0 0 0-5.13-.6L7.88 11.27a5.08 5.08 0 0 0 2-2.73l11 1.17a9.72 9.72 0 0 0 3.33 7.33z"
+              data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-E-commers_1" viewBox="0 0 40.79 38.65">
+          <circle cx="20.4" cy="35.43" r="3.22" />
+          <circle cx="3.22" cy="35.43" r="3.22" />
+          <path d="M0 0v25.76h27.91L40.79 0H0z" />
+        </symbol>
+        <symbol id="icon-Education" viewBox="0 0 40.79 38.65">
+          <path d="M37.57 0H5.37a5.37 5.37 0 0 0 0 10.73h32.2a6.21 6.21 0 0 1 0-10.73z" />
+          <path d="M37.57 28H5.37a5.37 5.37 0 0 0 0 10.73h32.2a6.21 6.21 0 0 1 0-10.64z" />
+          <path d="M40.79 14H8.59a5.37 5.37 0 1 0 0 10.73h32.2a6.21 6.21 0 0 1 0-10.64z" />
+        </symbol>
+        <symbol id="icon-Embedded" viewBox="0 0 40.64 40.64">
+          <title>Embedded</title>
+          <g data-name="Layer 2">
+            <path d="M25.92 0v18.11h2.99l-4.3 5.06-4.29 5.06-4.29-5.06-4.3-5.06h2.74V0H0v40.64h40.64V0H25.92z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Entertainment" viewBox="0 0 41.13 39.15">
+          <title>Entertainment</title>
+          <g data-name="Layer 2">
+            <path d="M10.25 24.93L0 14.88l14.21-2.02L20.61 0l6.31 12.89L41.13 15l-10.31 9.99 2.38 14.16-12.69-6.72-12.72 6.65 2.46-14.15z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Farming" viewBox="0 0 22.08 40.64">
+          <title>Farming</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M9.41 0h3.27v40.64H9.41z" />
+              <path d="M0 25.46l6.44 5.7v9.26L0 34.73v-9.27z" />
+              <path d="M22.08 25.46l-6.45 5.7v9.26l6.45-5.69v-9.27z" />
+              <path d="M0 13.24l6.44 5.7v9.26L0 22.51v-9.27z" />
+              <path d="M22.08 13.24l-6.45 5.7v9.26l6.45-5.69v-9.27z" />
+              <path d="M0 1.03l6.44 5.69v9.27L0 10.29V1.03z" />
+              <path d="M22.08 1.03l-6.45 5.69v9.27l6.45-5.7V1.03z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-fb" viewBox="0 0 5.8 12">
+          <style>
+            .st0 {
+              fill: #1d1d1c
+            }
+          </style>
+          <path d="M0 4h1.2V2.8c0-.5 0-1.4.4-1.9s1-.9 2-.9c1.6 0 2.2.2 2.2.2l-.3 1.9S5 2 4.5 2c-.5-.1-.9.1-.9.6V4h2l-.2 1.8H3.6V12H1.2V5.8H0V4z" />
+        </symbol>
+        <symbol id="icon-Financial serv" viewBox="0 0 39.46 39.46">
+          <path d="M22.55 0v18H39.4c0-.37.06-.75.06-1.13A16.91 16.91 0 0 0 22.55 0z" />
+          <path d="M19.24 21.42v-18H18a18 18 0 1 0 18 18z" />
+        </symbol>
+        <symbol id="icon-financial_services" viewBox="0 0 35 35">
+          <path d="M17.07 19H32A16 16 0 1 1 16 3h1.07z" />
+          <path d="M20 16V0a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" />
+          <path d="M365 3522v-16a15 15 0 0 1 15 15c0 .34-.03.67-.05 1z" clip-path="url(&quot;#a&quot;)" transform="translate(-345 -3506)" />
+        </symbol>
+        <symbol id="icon-Gambling" viewBox="0 0 39.27 39.27">
+          <title>Gambling</title>
+          <g data-name="Layer 2">
+            <path d="M19.63 0v19.63h19.64V0zM24 16.36a1.09 1.09 0 1 1 1.09-1.09A1.09 1.09 0 0 1 24 16.36zm0-10.91a1.09 1.09 0 1 1 1.09-1.09A1.09 1.09 0 0 1 24 5.45zm5.45 5.45a1.09 1.09 0 1 1 1.09-1.09 1.09 1.09 0 0 1-1.09 1.09zm5.45 5.45a1.09 1.09 0 1 1 1.1-1.08 1.09 1.09 0 0 1-1.1 1.08zm0-10.91A1.09 1.09 0 1 1 36 4.36a1.09 1.09 0 0 1-1.1 1.08zM0 39.27h19.63V19.63H0zm15.27-16.36A1.09 1.09 0 1 1 14.18 24a1.09 1.09 0 0 1 1.09-1.09zm-5.45 5.45a1.09 1.09 0 1 1-1.09 1.09 1.09 1.09 0 0 1 1.09-1.09zm-5.46 5.45a1.09 1.09 0 1 1-1.09 1.09 1.09 1.09 0 0 1 1.09-1.09z"
+              data-name="Layer 1" />
+          </g>
+        </symbol>
+        <symbol id="icon-Helthcare" viewBox="0 0 40.34 40.34">
+          <title>Helthcare</title>
+          <g data-name="Layer 2">
+            <path d="M40.34 14.42H25.92V0h-11.5v14.42H0v11.5h14.42v14.42h11.5V25.92h14.42v-11.5z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-hide-icon" viewBox="0 0 36 36">
+          <path d="M18 0a18 18 0 1 1 0 36 18 18 0 0 1 0-36z" />
+          <path d="M18 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2zm10 0a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2zM8 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2z" />
+        </symbol>
+        <symbol id="icon-Home" viewBox="0 0 42.18 39.95">
+          <title>Home</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 1">
+              <path d="M42.18 12.96H0L6.75 0h28.68l6.75 12.96z" />
+              <path d="M2.73 15.96V39.95h37.04V15.96H2.73z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Hospitality" viewBox="0 0 38.46 40.64">
+          <path d="M8.9 0v3.14h21.97v34.42h7.59V0H8.9z" />
+          <path d="M0 6.43v34.21h27.72V6.43zm7.16 26.09H4.87v-2.28h2.29zm0-5.23H4.87V25h2.29zm0-5.23H4.87v-2.28h2.29zm0-5.23H4.87v-2.28h2.29zm5.23 15.69H10.1v-2.28h2.28zm0-5.23H10.1V25h2.28zm0-5.23H10.1v-2.28h2.28zm0-5.23H10.1v-2.28h2.28zm5.23 15.69h-2.28v-2.28h2.28zm0-5.23h-2.28V25h2.28zm0-5.23h-2.28v-2.28h2.28zm0-5.23h-2.28v-2.28h2.28zm5.23 15.69h-2.28v-2.28h2.28zm0-5.23h-2.28V25h2.28zm0-5.23h-2.28v-2.28h2.28zm0-5.23h-2.28v-2.28h2.28z"
+          />
+        </symbol>
+        <symbol id="icon-Human Resourses" viewBox="0 0 33.87 40.64">
+          <path d="M16.93 0a9.1 9.1 0 0 0-9 9.17c0 5.07 4 13.41 9 13.41s9-8.34 9-13.41a9.1 9.1 0 0 0-9-9.17z" />
+          <path d="M22.4 24.84l-5.47 8.72-5.46-8.72L0 27.02v13.62H33.87V27.02L22.4 24.84z" />
+        </symbol>
+        <symbol id="icon-Insurance" viewBox="0 0 40.04 38.96">
+          <title>Insurance</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M20 0A20.31 20.31 0 0 0 0 17a7.55 7.55 0 0 1 4.78-1.73 7.54 7.54 0 0 1 3.81 1.03 7.4 7.4 0 0 1 7.62 0A7.54 7.54 0 0 1 20 15.24a8.86 8.86 0 0 1 2.54.48 8.1 8.1 0 0 1 1.27.58 7.39 7.39 0 0 1 7.62 0A7.44 7.44 0 0 1 40 17 20.31 20.31 0 0 0 20 0z"
+              />
+              <path d="M28.66 30.84v1.52a3.56 3.56 0 0 1-7.12 0V20h-3v12.36a6.6 6.6 0 0 0 13.2 0v-1.52z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-IoT" viewBox="0 0 40.15 40.16">
+          <title>IoT</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M32.41 18h7.74A20.18 20.18 0 0 0 22.36 0v7.87A12.61 12.61 0 0 1 32.41 18z" />
+              <path d="M32.46 22.16a12.6 12.6 0 0 1-10.1 10.46v7.5a20.18 20.18 0 0 0 17.79-18z" />
+              <path d="M7.55 22H0a20.18 20.18 0 0 0 18.17 18.16v-7.47A12.59 12.59 0 0 1 7.55 22z" />
+              <path d="M0 17.84h7.6A12.61 12.61 0 0 1 18.17 7.79V0A20.17 20.17 0 0 0 0 17.84z" />
+              <circle cx="20.07" cy="20.08" r="2.75" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-IoT_1" viewBox="0 0 42.91 26.82">
+          <title>IoT_1</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <g data-name="Icons with numbers">
+                <path data-name="Rectangle 169" d="M0 18.77a8.06 8.06 0 0 1 5.71-7.69 8.06 8.06 0 0 1 9.07-5.6 10.73 10.73 0 0 1 20.09 5.25 8 8 0 1 1 0 16.09H8.07A8 8 0 0 1 0 18.77z" />
+              </g>
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Law" viewBox="0 0 42.94 40.97">
+          <title>Law</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M39.92 35.72v-4.19H20.68v4.19h-3.02v5.25h25.28v-5.25h-3.02z" />
+              <path d="M32.45 17.543l2.241 2.242-8.676 8.676-2.242-2.241z" />
+              <path d="M14.903-.01l2.241 2.242-8.676 8.677-2.242-2.242z" />
+              <path d="M18.497 5.355l10.825 10.826-6.915 6.916L11.58 12.27z" />
+              <path d="M17.189 14.866l2.623 2.623-17.19 17.19L0 32.056z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 100 100">
+          <path d="M95 59.727V93H75.71V61.955c0-7.799-2.79-13.121-9.771-13.121-5.331 0-8.503 3.587-9.898 7.057-.509 1.24-.64 2.967-.64 4.703V93H36.104s.26-52.58 0-58.028h19.294v8.225c-.039.062-.09.128-.127.188h.127v-.188c2.563-3.948 7.142-9.588 17.389-9.588C85.482 33.609 95 41.903 95 59.727M15.919 7C9.318 7 5 11.33 5 17.024c0 5.57 4.193 10.031 10.663 10.031h.129c6.729 0 10.914-4.46 10.914-10.031C26.579 11.33 22.521 7 15.919 7M6.146 93h19.289V34.972H6.146V93z"
+          />
+        </symbol>
+        <symbol id="icon-Machine_Learning" viewBox="0 0 41.48 30.19">
+          <title>Machine Learning</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <circle cx="6.99" cy="15.09" r="6.99" />
+              <path d="M29.28 8.99h12.2v12.2h-12.2z" />
+              <path class="cls-1" d="M7.19 1h28.19v28.19H7.19z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-marker" viewBox="0 0 54 23">
+          <path d="M27 0C16.5 0 6.9 4.1 0 10.7L12.8 23c3.6-3.5 8.6-5.7 14.2-5.7 5.5 0 10.5 2.2 14.2 5.6L54 10.7C47.1 4.1 37.5 0 27 0z" />
+        </symbol>
+        <symbol id="icon-Media" viewBox="0 0 38.37 40.62">
+          <title>Media</title>
+          <path d="M38.37 20.31L0 0v40.62z" />
+        </symbol>
+        <symbol id="icon-Military" viewBox="0 0 17.5 40.86">
+          <title>Military</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <circle cx="8.75" cy="32.11" r="8.75" />
+              <path d="M0 0v15l8.75 5.4L17.5 15V0zm14.38 13.68H12.5V3.06h1.88z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Mobile" viewBox="0 0 41.77 40.01">
+          <title>Mobile</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 1">
+              <path d="M29.29 13.72h12.48v26.29H29.29z" />
+              <path d="M0 39.94h26.29V0H0zm13.14-5.06a1.06 1.06 0 0 1 1.06 1.06V36a1.06 1.06 0 1 1-1.06-1.12z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Mobile_1" viewBox="0 0 41.77 40">
+          <title>Mobile_1</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M41.77 13.72v26.29H29.29V13.72z" />
+              <path class="cls-1" d="M0 0v39.94h26.29V0zm13.14 37a1.06 1.06 0 1 1 1.06-1 1.06 1.06 0 0 1-1.06 1z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-QA" viewBox="0 0 42.52 38.31">
+          <title>QA</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M28.56 7.31a7.31 7.31 0 1 0-14.63 0z" />
+              <path d="M9.67 10.24v16.49a11.58 11.58 0 1 0 23.16 0V10.24z" />
+              <path d="M35.85 14.837l4.603-4.604 2.071 2.072-4.603 4.604z" />
+              <path d="M35.85 22.05h6.51v2.93h-6.51z" />
+              <path d="M37.916 30.117l4.603 4.603-2.072 2.072-4.603-4.603z" />
+              <path d="M4.606 16.91L.003 12.307l2.072-2.072 4.603 4.604z" />
+              <path d="M6.67 24.97H.16v-2.93h6.51z" />
+              <path d="M6.673 32.186L2.07 36.79l-2.072-2.071 4.603-4.604z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-QA_1" viewBox="0 0 38.17 40.54">
+          <title>QA_1</title>
+          <g data-name="Layer 2">
+            <path d="M29.2 28.67l-.88.88-3.21-3.21a14.75 14.75 0 1 0-1.58 1.25L26.9 31l-.6.6 9 9 2.9-2.9zM3 15.09a12.09 12.09 0 1 1 12.09 12.09A12.1 12.1 0 0 1 3 15.09z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Real Estate" viewBox="0 0 38.74 38.81">
+          <title>Real Estate</title>
+          <g data-name="Layer 2">
+            <path d="M35.18 20.83a12.21 12.21 0 1 0-19.91-3.9L10.21 22l1.39 4.13-4.15-1.36-.79.79L8 29.7l-4.09-1.37L0 32.24l.66 5.92 5.92.64 15.27-15.31a12.21 12.21 0 0 0 13.33-2.66zM23.79 15a3.88 3.88 0 1 1 5.49 0 3.88 3.88 0 0 1-5.49 0z" data-name="Layer 5"
+            />
+          </g>
+        </symbol>
+        <symbol id="icon-Restaurants" viewBox="0 0 40.64 38.59">
+          <title>Restaurants</title>
+          <g data-name="Layer 2">
+            <path d="M11.38 21.69l6-6L2.49.77a8.5 8.5 0 0 0 0 12zm14.42-3.85c3.24 1.52 7.82.45 11.2-2.93 4.07-4.07 4.85-9.88 1.73-13s-8.95-2.34-13 1.73c-3.38 3.38-4.44 8-2.93 11.2L2 35.58l3 3L19.67 24l14.62 14.59 3-3L22.68 21z" data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 17 17">
+          <style>
+            .opacity {
+              opacity: .3
+            }
+          </style>
+          <path d="M12.699 14.085l1.414-1.414 2.828 2.83-1.414 1.413z" class="opacity" />
+          <path d="M7.1 14.1c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.2 7-7 7zm0-12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.3-5-5-5z" class="opacity" />
+          <path d="M.1 7.1c0 1.9.8 3.7 2.1 5l1.4-1.4c-1-1-1.5-2.2-1.5-3.6s.6-2.6 1.5-3.5L2.1 2.2c-1.2 1.2-2 3-2 4.9z" />
+          <path d="M14.1 7.1c0 1.9-.8 3.7-2.1 5l-1.4-1.4c.9-.9 1.5-2.2 1.5-3.5 0-1.4-.6-2.6-1.5-3.5L12 2.2c1.3 1.2 2.1 3 2.1 4.9z" />
+        </symbol>
+        <symbol id="icon-search2" viewBox="0 0 17 17">
+          <path d="M12.699 14.085l1.414-1.414 2.828 2.83-1.414 1.413z" />
+          <path d="M7.1 14.1c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.2 7-7 7zm0-12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.3-5-5-5z" />
+        </symbol>
+        <symbol id="icon-show-icon" viewBox="0 0 36 36">
+          <path d="M18 0a18 18 0 1 1 0 36 18 18 0 0 1 0-36z" />
+          <path d="M18 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2z" />
+        </symbol>
+        <symbol id="icon-Social project" viewBox="0 0 35.39 40.5">
+          <title>Social project</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M0 0h35.39v24.74H0z" />
+              <path d="M21.36 30.85h3.79V28H10.01v2.85h3.78l-7.52 7.53 2.12 2.12 9.19-9.19 9.19 9.19 2.12-2.12-7.53-7.53z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Social" viewBox="0 0 35.39 40.5">
+          <title>Social</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 1">
+              <path d="M0 0h35.39v24.74H0z" />
+              <path d="M25.15 30.85V28H10.01v2.85h3.78l-7.52 7.53 2.12 2.12 9.19-9.19 9.19 9.19 2.12-2.12-7.53-7.53h3.79z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Social_project" viewBox="0 0 35.39 40.5">
+          <title>Social project</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M0 0h35.39v24.74H0z" />
+              <path class="cls-1" d="M7.33 39.44l9.29-9.29a1.35 1.35 0 0 1 1.91 0l9.29 9.29" />
+              <path d="M10.01 28h15.14v2.85H10.01z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Social_project_1" viewBox="0 0 35.2 38.91">
+          <title>Social project_1</title>
+          <g data-name="Layer 2">
+            <path d="M17.8 36.91l-.14.17-.14.17a.65.65 0 0 1-.28.23l-.14.17c-1 .87-1.51 1.64-2.53 1.08a3.57 3.57 0 0 1-1.39-.67l-9.46-7.65h-.06A3.48 3.48 0 0 1 2 27.74L0 9.21c-.21-2 .4-3.45 2.37-3.61a3.55 3.55 0 0 1 4 3.2L7.94 17l12.2-15.11C21.4.33 22.67-.67 24.17.54s.57 2.49-.69 4l-5.94 7.35 1.11.9 7.74-9.58c1.26-1.56 2.47-2.6 4-1.34s.62 2.53-.64 4.09l-7.74 9.58 1.11.9 5.94-7.35C30.37 7.57 31.47 6.44 33 7.7s.12 2.13-1.14 3.68l-5.94 7.35 1.11.9c.06 0 4.5-5.57 4.5-5.57a2.11 2.11 0 0 1 3.11-.43c1.06.86.32 1.54-.42 2.79-.17.32-5 6.18-5.22 6.46L17.79 36.81a.07.07 0 0 1 .01.1z"
+              data-name="Layer 5" />
+          </g>
+        </symbol>
+        <symbol id="icon-Software_development" viewBox="0 0 41.69 31.44">
+          <title>Software development</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M0 28.12h41.69v3.32H0z" />
+              <path d="M1.46 0h38.78v24.91H1.46z" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Sport" viewBox="0 0 31.87 40.8">
+          <title>Sport</title>
+          <g data-name="Layer 2">
+            <g data-name="Layer 5">
+              <path d="M4.35 40.8l5.45-5.5-.7-.38a8.18 8.18 0 0 1-3.26-3.24L5.45 31 0 36.47z" />
+              <circle cx="18.78" cy="22.07" r="13.1" transform="rotate(-82.5 18.82 22.114)" />
+              <circle cx="4.9" cy="2.75" r="2.75" />
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-Telecommunication" viewBox="0 0 39.85 39.85">
+          <circle cx="19.92" cy="19.92" r="5.53" />
+          <path d="M10 19.92H0a19.92 19.92 0 0 0 19.92 19.93v-10A10 10 0 0 1 10 19.92z" />
+          <path d="M19.92 0v10a10 10 0 0 1 10 10h10a19.92 19.92 0 0 0-20-20z" />
+        </symbol>
+        <symbol id="icon-Transport" viewBox="0 0 41.73 34.5">
+          <title>Transport</title>
+          <g data-name="Layer 1">
+            <path d="M34.4 8.14h-6.43V0H0v26l41.73-.01L34.4 8.14z" />
+            <circle cx="9.3" cy="31.75" r="2.75" />
+            <circle cx="33.11" cy="31.75" r="2.75" />
+          </g>
+        </symbol>
+        <symbol id="icon-Traveling" viewBox="0 0 41.9 31.9">
+          <path d="M26.4 0h-11v3.3h11V0zM0 6.6v25.3h41.9V6.6H0z" />
+        </symbol>
+        <symbol id="icon-tw" viewBox="0 0 13.8 12">
+          <style>
+            .st0 {
+              fill: #2faae1
+            }
+          </style>
+          <path d="M13.6.3c-.6.3-1.2.6-1.9.7-.5-.6-1.3-1-2.1-1-1.5 0-2.8 1.3-2.8 3 0 .3 0 .4.1.7C4.5 3.7 2.4 2.4 1 .6c-.3.4-.4 1-.4 1.5 0 1 .5 2 1.3 2.5-.4 0-.9-.2-1.3-.3 0 1.5 1 2.7 2.3 3h-.8c-.2 0-.3 0-.5-.1.3 1.2 1.4 2.1 2.7 2.1-1 .8-2.2 1.3-3.6 1.3H0c1.3.9 2.8 1.4 4.3 1.4 5.2 0 8.1-4.6 8.1-8.5v-.3c.5-.4 1-1 1.4-1.6-.5.3-1 .4-1.7.4.8-.4 1.2-1 1.5-1.7z"
+          />
+        </symbol>
+        <symbol id="icon-youtube" viewBox="0 0 100 100">
+          <path d="M92.6 29.8c-1.1-4.4-4.8-7.7-9.3-8.2-22.1-2.8-44.5-2.8-66.6 0-4.5.6-8.2 3.9-9.3 8.2-2.2 8.9-2.2 31.6 0 40.5 1.1 4.4 4.8 7.7 9.3 8.2 11.1 1.4 22.2 2.1 33.3 2.1s22.3-.7 33.3-2.1c4.5-.6 8.2-3.9 9.3-8.2 2.3-8.9 2.3-31.7 0-40.5zM65.5 50.9l-25 15c-.1.1-.3.1-.5.1s-.3 0-.5-.1c-.3-.2-.5-.5-.5-.9V35c0-.4.2-.7.5-.9.3-.2.7-.2 1 0l25 15c.3.2.5.5.5.9s-.2.7-.5.9z"
+          />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Preloader-->
+    <!-- Header-->
+    <header class="header header header_dark">
+      <div class="header__top">
+        <div class="header__top-bg"></div>
+        <div class="header__mobile-bg"></div>
+        <div class="header__mobile-nav">
+          <div class="header__mobile-nav-scroll"></div>
+        </div>
+        <div class="header__mobile-subnav">
+          <div class="header__mobile-subnav-scroll"></div>
+        </div>
+        <div class="header__container container">
+          <div class="header__logo">
+            <a class="header__logo-icon" href="index.html">
+              <svg class="icon" viewbox="0 0 90 30">
+                <path d="M13.9,7.9c-1.1-2-2.6-2.5-4-2.5c-1.6,0-3.3,0.8-3.4,3c-0.1,2.1,2.4,3.1,4.1,3.6c4.4,1.1,9,3.3,8.7,9.8c-0.2,5.7-5.2,8.3-9.7,8.3c-3.2,0-7.3-1.4-9.6-6.9l4.4-2.6c1.4,3,3.7,4.2,5.4,4.2c2.2,0,3.8-1.4,3.8-3.3c0.2-2.7-2.4-3.9-4.4-4.4c-2.9-0.7-8.4-2.7-8.3-8.6C1,2.5,5.6,0,10,0c3.4,0,6.4,1.6,8.2,5.3L13.9,7.9z"></path>
+                <rect x="42.3" y="8.6" width="5.5" height="20.8"></rect>
+                <path d="M60.3,29.4c-4.9,0.9-9.2-1.1-9-6.7V8.6l5.3-5.4v5.4h3.7v4.5h-3.7v9.5c0,1.4,1.4,2.4,3.7,2.1V29.4z"></path>
+                <path d="M70.7,29.4c-4.6,0.8-8.3-0.9-8.3-6.7V0.7h5.5v22.1c0,1.1,0.5,2.3,2.8,2.1V29.4z"></path>
+                <path d="M85,29.4l0-1.8c-1.3,1.6-3.2,2.3-4.8,2.3c-5.3,0-8.1-3.2-8.1-7.2c0-4.7,4.4-7,8.7-7c1.3,0,2.7,0.3,3.8,0.8c-0.1-2.9-1.9-3.9-4-4c-2,0-4.3,0.7-5.5,1.7l-2.1-3.6c2.6-2,5.3-2.5,8.1-2.5c4.6,0,8.9,2.5,8.9,8.5v12.7H85z M84.7,23.8v-3.3c-1-0.4-2.3-0.7-3.5-0.7c-2.1,0-4,0.8-4,2.7C77,26.3,82.6,26,84.7,23.8"></path>
+                <polygon points="34.2,8.6 39.9,8.6 32.9,29.4 26,29.4 19.1,8.6 24.8,8.6 29.5,23.8 "></polygon>
+                <path class="logo-rect" d="M45,0c-3.1,0-5.9,1.3-7.9,3.3l3.8,3.8c1.1-1.1,2.5-1.8,4.2-1.8c1.6,0,3.1,0.7,4.2,1.8L53,3.3C50.9,1.3,48.1,0,45,0"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="header__controls">
+            <nav class="header__nav nav">
+              <ul>
+                <li>
+                  <a href="index.html" data-hover="About Us">
+                    <span>About Us</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more" data-hide-index="6">
+                    <li>
+                      <a href="" data-hover="Svitla">
+                        <span>Svitla</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="CEO">
+                        <span>CEO</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Our team">
+                        <span>Our team</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="CSR">
+                        <span>CSR</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Career">
+                        <span>Career</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="How We Work">
+                    <span>How We Work</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more" data-hide-index="6">
+                    <li>
+                      <a href="" data-hover="Managed Team Extension">
+                        <span>Managed Team Extension</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Build-to-Order Software Applications">
+                        <span>Build-to-Order Software Applications</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Expertise">
+                    <span>Expertise</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more" data-hide-index="6">
+                    <li>
+                      <a href="" data-hover="web">
+                        <span>web</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="front-end">
+                        <span>front-end</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="back-end">
+                        <span>back-end</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="ecommers">
+                        <span>ecommers</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Mobile">
+                        <span>Mobile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Quality Assurance">
+                        <span>Quality Assurance</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Design">
+                        <span>Design</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Internet of Things">
+                        <span>Internet of Things</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Big Data">
+                        <span>Big Data</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Dev Ops">
+                        <span>Dev Ops</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Tech Support">
+                        <span>Tech Support</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Database">
+                        <span>Database</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="web 2">
+                        <span>web 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="front-end 2">
+                        <span>front-end 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="back-end 2">
+                        <span>back-end 2</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html" data-hover="Portfolio">
+                    <span>Portfolio</span>
+                  </a>
+                  <ul data-more-url="#!more" data-more-text="more" data-hide-index="6">
+                    <li>
+                      <a href="" data-hover="Testimonials">
+                        <span>Testimonials</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" data-hover="Case studies">
+                        <span>Case studies</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="disabled" href="https://www.google.com.ua" data-hover="Blog">
+                    <span>Blog</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="disabled" href="https://www.google.com.ua" data-hover="Contacts">
+                    <span>Contacts</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__search-btn">
+              <svg class="icon icon-search2">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search2"></use>
+              </svg>
+            </div>
+            <form class="header__form form" action="">
+              <div class="form-group">
+                <div class="input-icon">
+                  <svg class="icon icon-search2">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search2"></use>
+                  </svg>
+                </div>
+                <input class="form-input" type="text" id="formSearch" autocomplete="off" required>
+                <label class="form-input-label" for="formSearch">
+                  <span>&nbsp;</span>
+                </label>
+              </div>
+              <div class="form-group form-group_submit">
+                <button class="form-submit-search" type="submit" data-hover="search">
+                  <span>search</span>
+                </button>
+              </div>
+            </form>
+            <div class="header__search-close">
+              <span>Close</span>
+            </div>
+            <div class="header__menu">
+              <span>menu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Breadcrumbs-->
+    <div class="container">
+      <ul class="breadcrumbs breadcrumbs breadcrumbs_dark" data-anim="group">
+        <li data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="" data-hover="main">
+            <span>main</span>
+          </a>
+        </li>
+        <li class="breadcrumbs__active" data-anim-stagger="fade-top" data-anim-parent-trigger="data-anim-parent-trigger" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+          <a class="link-breadcrumbs" href="" data-hover="Search Results">
+            <span>Search Results</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Main content-->
+    <main class="content" data-page="search">
+      <section class="search__result" data-anim="group">
+        <div class="container">
+          <div class="col__wrap" data-anim="group" data-anim-delay="0.15" data-anim-duration="1">
+            <div class="col__small" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <h1 class="search__main-title">Search results</h1>
+              <span>Found 145 results</span>
+            </div>
+            <div class="col__large" data-mob-anim="group" data-mob-anim-stagger="fade-top">
+              <form class="search__form-2" action="" data-anim-parent-trigger data-anim-stagger="fade-top">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <svg class="icon icon-search2">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search2"></use>
+                    </svg>
+                  </div>
+                  <input class="form-input" type="text" id="formSearch" autocomplete="off" required>
+                  <label class="form-input-label" for="formSearch">
+                    <span>&nbsp;</span>
+                  </label>
+                </div>
+                <div class="form-group form-group_submit">
+                  <button class="form-submit-search js-link-single-circle" type="submit" data-hover="search">
+                    <span>search</span>
+                  </button>
+                </div>
+              </form>
+              <div class="tags tags_search" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                <div class="tags__cont" data-open-title="more tags" data-close-title="hide tags" data-max-tags="10">
+                  <div class="tags__item active" href="">all</div>
+                  <a class="tags__item" href="">expertise</a>
+                  <a class="tags__item" href="">case study</a>
+                  <a class="tags__item" href="">testimonials</a>
+                  <a class="tags__item" href="">blog entry</a>
+                  <a class="tags__item" href="">site page</a>
+                </div>
+              </div>
+              <div class="search__item-wrap">
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">01</div>
+                  <div class="search__content">
+                    <div class="search__category">Case study</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful
+                      <a href="">information about software technology</a>, development trends, topical news and events.</h2>
+                    <div class="search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum
+                      <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">02</div>
+                  <div class="search__content">
+                    <div class="search__category">testimonials</div>
+                    <div class="search__title">Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">03</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Here you'll find front-end and useful information.</h2>
+                    <div class="search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum
+                      <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">04</div>
+                  <div class="search__content">
+                    <div class="search__category">Case study</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.</h2>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">05</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful
+                      <a href="">information about software technology</a>, development trends, topical news and events.</h2>
+                    <div class="search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum
+                      <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">06</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Useful front-end information about software technology, development trends, topical news and events.</h2>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">07</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful information about software technology, development trends, topical news and events.</h2>
+                    <div class="search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum
+                      <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">08</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful front-end information about software technology, development trends, topical news and events.</h2>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">09</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Here you'll find all the most recent and useful information about software technology, development trends, topical news and events.</h2>
+                    <div class="search__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum
+                      <a href="">front-end</a> sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                  </div>
+                </div>
+                <div class="search__item" data-anim-parent-trigger="data-anim-parent-trigger" data-anim-stagger="fade-top">
+                  <div class="search__number">10</div>
+                  <div class="search__content">
+                    <div class="search__category">Expertise</div>
+                    <h2 class="search__title">Useful front-end information about software technology, development trends, topical news and events.</h2>
+                  </div>
+                </div>
+                <UL class="pagination" data-anim-stagger="fade-top" data-anim-parent-trigger data-mob-anim="group" data-mob-anim-stagger="fade-top">
+                  <li class="pagination__prev pagination__arrow disabled">
+                    <div data-hover="Previous">
+                      <div>Previous</div>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <a href="">1</a>
+                  </li>
+                  <li>
+                    <a href="">2</a>
+                  </li>
+                  <li>
+                    <a href="">3</a>
+                  </li>
+                  <li>
+                    <a href="">4</a>
+                  </li>
+                  <li>
+                    <a href="">5</a>
+                  </li>
+                  <li class="pagination__next pagination__arrow">
+                    <div data-hover="Next">
+                      <div>Next</div>
+                    </div>
+                  </li>
+                </UL>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FooterBlock-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__top">
+          <div class="footer__top-nav">
+            <ul>
+              <li>
+                <a href="" data-hover="About us">
+                  <span>About us</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="How we work">
+                  <span>How we work</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="Expertise">
+                  <span>Expertise</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="Portfolio">
+                  <span>Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="Blog">
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="Careers">
+                  <span>Careers</span>
+                </a>
+              </li>
+              <li>
+                <a href="" data-hover="Contacts">
+                  <span>Contacts</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top-controls">
+            <ul>
+              <li>
+                <a href="">
+                  <svg class="icon icon-fb">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon icon-tw">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tw"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon icon-linkedin">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon icon-youtube">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <div class="footer__bot-left">
+            <span class="footer__copy">© 2017 Svitla</span>
+          </div>
+          <div class="footer__bot-right">
+            <div class="footer__bot-link" href="">Legal and Privacy</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts-->
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

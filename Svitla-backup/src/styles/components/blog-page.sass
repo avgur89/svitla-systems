@@ -1,0 +1,39 @@
+.blog__page
+	+md
+		.col__wrap
+			flex-wrap: wrap
+		.col__small
+			width: 100%
+			margin-bottom: 60px
+		.tags__title
+			margin-bottom: 15px
+
+.results-tab.pt
+	display: block
+	margin-bottom: 30px
+	+md
+		margin-bottom: 0
+		.results-tab__cont
+			margin-bottom: 30px
+			+sm
+				flex-wrap: wrap
+		.results-tab__item
+			padding-left: 20px
+			&:after
+				display: block
+			+sm
+				padding-top: 5px
+				padding-bottom: 5px
+				margin-bottom: 18px
+				flex: 1 1 50%
+				max-width: 50%
+				&:first-child
+					flex: 1 1 50%
+					margin-right: 50%
+			+mob-fix
+				flex: 1 1 25%
+				max-width: 25%
+				&:first-child
+					margin-right: 0
+	+sm
+		margin-top: 80px

@@ -1,0 +1,69 @@
+.preloader-inner {
+  position: relative;
+  & > * {
+    opacity: .2;
+    pointer-events: none;
+  }
+  &__wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__squares {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    .square {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      opacity: 1;
+      background: rgba(23, 41, 122, 0);
+      animation: focusfade 1.4s infinite;
+      &:nth-child(2) {
+        animation-delay: .35s;
+      }
+      &:nth-child(3) {
+        animation-delay: 1.05s;
+      }
+      &:nth-child(4) {
+        animation-delay: .7s;
+      }
+    }
+  }
+
+  @keyframes focusfade {
+    0% {
+      opacity: 1;
+      background: rgba(255, 120, 0, 1);
+    }
+    30% {
+      opacity: 1;
+      background: rgba(255, 120, 0, .5);
+    }
+    60% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      background: rgba(255, 120, 0, 1);
+    }
+  }
+  .preloader-inner__wrap {
+    display: flex;
+    opacity: 1;
+  }
+}

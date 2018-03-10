@@ -1,0 +1,186 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Case_Page',
+		breadList = ['main', 'portfolio', 'case studies', 'igenico group'];
+
+block main
+	main.content(data-page='expertise').expertise_page
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/casebg.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.H2.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Automated testing
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Ingenico Group
+		//end screen
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_flexibility.section.blog-4_white
+			.container(data-anim='group')
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+					+e.col.col__large
+						+e.row-2_full.anim-line
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H2.subtitle(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Services
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Back-end, Front-end, Design, DevOps
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H2.subtitle(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| industry
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) E-commerce
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H2.subtitle(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Technologies
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Node.js, SQL, React, HTML5, Amazon AWS
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H2.subtitle(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| platform
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Magento
+							+e.full_item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Client:
+									+e.text
+										| Ingenico Group
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Team:
+									+e.text
+										| over 3,600 employees
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Geography:
+									+e.text
+										| 125 countries, with headquarters in Paris, France
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Industry:
+									+e.text
+										| Payment and related services
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Project Duration:
+									+e.text
+										| –––
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Business Challenge
+									+e.text
+										| The client needed Svitla to create an automated testing tool to efficiently cover all testing scenarios for different types of Ingenico solutions under different stress loads.
+								+e.item__part(data-anim-parent-trigger data-anim-stagger='fade-top')
+									+e.H3.title.h4 Solution:
+									+e.text
+										| The Svitla team suggested and Ingenico accepted to use the Cucumber framework. Once Ingenico provided initial training on their solution to Svitla's core team, our specialists used Ruby on Rails to write the necessary code for automated testing.
+		//end blog-4
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_flexibility.section.blog-4_blue
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Value delivered
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Reduced time of getting reports from data aggregation site
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Well-balanced and simplified workflow for testing new point-of-sale applications
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Manual testing process reduced in half by using automation testing
+		//end blog-4
+
+		//begin half
+		+b.SECTION.client_novideo
+			+e.container.container(data-anim='group').anim-line
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') What the client says
+				+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.img(data-anim-stagger='fade-top' data-anim-parent-trigger)
+						img(src="./static/img/client1.jpg")
+					+e.content(data-anim-stagger='fade-top' data-anim-parent-trigger)
+						+e.text
+							p.qoute Svitla has provided us with staff-augmentation services in software development and testing. Their service is very prompt, attentive and of high quality. Their work resulted in increase of our service delivery capacity and quality. Our Svitla Team understands our mission and work diligently with our Team to achieve our goals together. Together we are now working on exciting new features that will make it much easier for users to use our product.
+						+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Newsha Makooi
+						+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Division Chief, Technology Services at Statline
+		//end half
+		//begin big-link
+		+b.SECTION.big-link
+			+e.container.container(data-anim='group')
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Discover Managed Team Extentsion Model',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end big-link
+		//begin loop
+		+b.SECTION.loop
+			+e.container.container(data-anim='group')
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'prev case',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'next case',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end loop
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title_smaller Have a project in mind?
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p  Briefly describe your project, and we will contact you within a day.
+					+e.col
+						+b.FORM.form.__form(action='')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text get in touch
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

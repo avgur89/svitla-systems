@@ -1,0 +1,361 @@
+extends ../extend/default
+
+block variables
+	- var title = 'Home page';
+	- var preloaderExist = true;
+
+block main
+	main.content(data-page='home')
+		//begin screen
+		+b.screen.screen_no-sector
+			+e.img
+				img(src='static/img/video-preview.png' alt='image')
+			+e.video
+				video(src='empty.mp4' data-lazy-src='static/video/main.mp4' poster='static/img/video-preview.png' loop muted autoplay)
+			+e.CANVAS.canvas#screenCanvas
+			+e.container.container
+				+e.slider
+					+e.slider-item Managed Team Extension
+					+e.slider-item Build-to-Order Software Applications
+					+e.slider-item Best Engineering Teams
+					+e.slider-item High Code Quality
+					+e.slider-item Strong Client Satisfaction
+					+e.slider-item Build-to-Order Software Applications
+					+e.slider-item IT Solutions
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w.without-svg
+						+e.SPAN.title-wrap
+							+e.title We Deliver
+					+e.btn(data-prepare-anim='')
+						+b.btn(href='')
+							+e.bg
+								+e.bg-top
+							+e.bg
+								+e.bg-bot
+							+e.SPAN.text Discover how we work
+		//end screen
+
+		//begin blog-1
+		+b.SECTION.blog-1_default.section
+			+e.container.container(data-anim='group')
+				+e.H1.text.h4(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Svitla is a proven software development and testing provider headquartered in Silicon Valley.
+				+e.H4.text.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We are your conduit to the most cutting-edge technological innovations. We deliver unparalleled value to our clients, who rely on our expertise and many years of experience in Managed Team Extension and Build-to-Order Software Applications.
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small
+						+e.H2.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We Deliver
+					+e.col.col__large
+						+e.row-2.anim-line
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Managed Team Extension
+								p(data-anim-stagger='fade-top') Our team becomes an extension of your team. Works on your project only.
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'Learn more',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Build-to-Order Software Applications
+								p(data-anim-stagger='fade-top') Hand off your next software challenge to the team with a proven track record. You define your product concept. We deliver it.
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'Learn more',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+		//end blog-1
+
+		//begin expertise
+		+b.SECTION.expertise_default.section
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title Expertise
+				+e.left
+					+e.H3.subtitle(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver expertise for industries
+					+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Svitla is your conduit to the cutting-edge technological innovations within emerging industries, from Web and Mobile to Big Data to Internet of Things.
+						p Our development process revolves entirely around your needs. If you want software products, systems, solutions, and services that improve the way you do business, stop searching. We approach every project – big or small – with the same level of care and professionalism. And we work alongside you every step of the way.
+					+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'View all expertise',
+							className: 'link-white js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+				+b.expertise-nav
+					+e.list
+						-navList = ['Web', 'Front End', 'Back End', 'Mobile', 'Quality Assurance', 'Design', 'Internet of Things', 'Big Data', 'Dev Ops', 'Tech Support', 'Ecommers', 'Database']
+						-
+							navInnerList = [
+							['Angular JS', 'ASP .NET', 'JQuery', 'JS', 'Magento', 'Node.js', 'PHP', 'Python', 'React', 'Ruby'],
+							['Angular JS', 'JQuery', 'JS', 'React', 'CSS, SAAS', 'HTML5', 'VisualStudio'],
+							['Mongo DB', 'MySQL', 'VisualStudio', 'Oracle', 'Redis', 'SQLite', 'SQL server', 'C#', '.Net', 'Ruby on Rails', 'Ruby', 'Node.js', 'PHP', 'Python', 'Django'],
+							['Android', 'Android Studio', 'IOs', 'Swift', 'Titanium', 'VisualStudio', 'Java', 'C#', '.Net'],
+							['Hewlett Packard', 'Jira', 'Jmeter', 'QA', 'Selenium'],
+							['HTML5', 'UI\\UX'],
+							['Python', 'Linux', 'Embedded C'],
+							['Hadoop', 'Spark', 'Kafka', 'Amazon RedShift', 'Java', 'Python', '.Net'],
+							['Amazon AWS', 'Microsoft Azure', 'Cheff', 'Puttet', 'Ansible'],
+							['Windows', 'Linux', 'Jira', 'Mac OSX'],
+							['Magento', 'SAP', 'Shopify', 'OpenCart'],
+							['Mongo DB', 'MySQL', 'VisualStudio', 'Oracle', 'Redis', 'SQLite', 'SQL server']
+							]
+						ul
+							each el, index in navList
+								li
+									h4= el
+									ul
+										each el2 in navInnerList[index]
+											li: h5= el2
+					+e.sublist
+					+e.nav-circle
+						+e.nav-circle-in
+							+e.nav-circle-top
+								+e.nav-circle-icon_top
+									+i('arrow-left')
+							+e.nav-circle-bot
+								+e.nav-circle-icon_bot
+									+i('arrow-right')
+					+e.svg
+						svg(viewBox='0 0 2150 2000')
+							g.line
+								line(x1='1075' y1='0' x2='1075' y2='2000')
+							g.circle
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+								circle(cx='1075' cy='1000' r='0')
+							g.sector
+								circle(cx='1075' cy='1000' r='102')
+								circle(cx='1075' cy='1000' r='102')
+		//end expertise
+
+		//begin slider
+		+b.SECTION.slider_default.section
+			+e.container-top.container(data-anim='group' data-anim-delay='0.25' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+				+e.in
+					+e.anim
+						svg(viewBox='0 0 1180 392')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+					+e.bg
+						+e.bg-top
+						+e.bg-left
+						+e.bg-right
+						+e.bg-bottom
+					+e.inner
+						-
+							sliderList = [
+							{
+							title: 'Circle Media',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p>'
+							},{
+							title: 'Circle Media',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p><p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p><p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p>'
+							},
+							{
+							title: 'Circle Media Large Title',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too!</p>'
+							}
+							]
+						each el, index in sliderList
+							+e.item
+								+e.item-text
+									+e.item-text-title(data-anim-stagger='fade-top')= el.title
+									+e.item-text-paragraph(data-anim-stagger='fade-top') !{el.text}
+									+e.item-text-link(data-anim-stagger='fade-top')
+										-
+											link = {
+											text: 'read case',
+											className: 'link-white js-link-multiple-circle',
+											icons: true
+											}
+										include ../components/link
+								+e.item-img
+									img(src=`static/img/slider-1.jpg` alt='image')
+			+e.container-bot.container(data-anim='group')
+				+e.controls
+					+e.controls-dots(data-anim-stagger='fade-top')
+					+e.controls-link(data-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'View all cases',
+							className: 'link-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+		//end slider
+
+		//begin half
+		+b.SECTION.half_video._turquoise._lg.section
+			+e.bg-w
+				+e.bg
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.bg-video
+							video(controls playsinline)
+								source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/scr-1.png' alt='image')
+						+e.bg-video
+							video(controls playsinline)
+								source(src='empty.mp4' data-load-src="static/video/main-1.mp4" type="video/mp4")
+					+e.bg-item
+						+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							img(src='static/img/scr-2.png' alt='image')
+						+e.bg-video
+							video(controls playsinline)
+								source(src='empty.mp4' data-load-src="static/video/main-3.mp4" type="video/mp4")
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Inflection
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Inflection selected Svitla Systems as its development partner partly because the two companies share similar cultures and the Silicon Valley vibe.  For more than 10 years now, Svitla has delivered exceptional value to Inflection, providing a large development team closely integrated into Inflection’s development process.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Nachi Sendowski
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') chief architect, Inflection
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') The Rainmaker Group
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p The Rainmaker Group provides software that helps hotels and apartment buildings price and manage revenue. Usually it takes several months to find someone in the US to join their team. With Svitla the company can get a right person with the necessary expertise within a week or two.  The advantage that works in Svitla’s favor is a vast number of technologies that Svitla covers. Svitla can provide professionals of any level, from junior to middle to senior and enables its clients to get things done faster and more cost effectively.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Douglas LaPointe
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Sr. Director Product Management, The Rainmaker Group
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Cordial
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Svitla helped the US-based Cordial to build the major portion of their platform functionality. While Cordial had a good understanding of what they want to build, they needed a development partner to provide additional resources. This is when Svitla’s professionalism and expertise became a huge asset to Cordial’s reaching their milestones and goals.
+						+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Adam Gillespie
+						+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') CTO, Cordial
+		//end half
+
+		//begin half
+		+b.SECTION.half_left.section
+			+e.bg-w
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/half-2.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Natalia Anon
+						+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') CEO and Founder
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p The three core principles of Svitla are: bring superb value to clients, be a people-oriented company where our people grow professionally and remain for many years, and constantly seek to innovate and capture new  technologies.We strive for and deliver excellence in all we do, and client satisfaction is the ultimate measurement tool of our success.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Watch our CEO sharing her values and experience',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end half
+
+		//begin blog-3
+		+b.SECTION.blog-3_default.section
+			+e.container.container_md(data-anim='group')
+				+e.row
+					+e.col
+						+e.item-main
+							+e.H2.item-main-title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Our main value - to deliver the best
+							p(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Over the years, we have grown our talented team of engineers, and managers to deliver on our goals, tapping into new technologies and working with cutting-edge solutions. We are proud of the awards and certificates we have received for our work, as well as being invited to and organizing our own industry events.
+					+e.col
+						+e.item
+							+e.IMG.item-icon(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' src="static/img/sertify.svg" alt="")
+							+e.H3.item-title.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Your certified partner
+							p(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We take pride in being  continually recognized as a world-class software development and testing company. For us, it is an indication of success.
+						+e.item
+							+e.IMG.item-icon(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' src="static/img/confa.svg" alt="")
+							+e.H3.item-title.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Regular conference participant and organizer
+							p(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We love participating in and hosting industry events, forums, conferences, workshops, both locally and internationally. This way we support the software development industry and always stay on top of the latest trends.
+				+e.link-main(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					-
+						link = {
+						text: 'Learn more about Svitla',
+						className: 'link-dark js-link-multiple-circle',
+						icons: true
+						}
+					include ../components/link
+		//end blog-3
+
+		//begin blog-2
+		+b.SECTION.blog-2_default.section_gray
+			+e.container.container(data-anim='group')
+				+e.row
+					+e.col
+						+e.H2.title_dark.h1(data-anim-stagger='fade-in' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Blog
+						p(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') We like to share our experience to help others create amazing projects. In our blog, you can read about digital software technology, development trends and much more.
+					+e.col
+						+e.row-2.anim-line
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger): a(href='') The Aesthetic Of Non-Opinionated Content Management: A Beginner’s Guide To ProcessWire
+								p(data-anim-stagger='fade-top') Systems for managing content are more often than not rather opinionated.
+								+e.SPAN.date.h6(data-anim-stagger='fade-top') March 06, 2017
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger): a(href='') A Comprehensive Guide To HTTP/2 Server Push
+								p(data-anim-stagger='fade-top') The landscape for the performance-minded developer has changed significantly in the last year or so, with the emergence of HTTP/2 being perhaps the most significant of all. No longer is HTTP/2 a feature we pine for.
+								+e.SPAN.date.h6(data-anim-stagger='fade-top') March 06, 2017
+				+e.link-main(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					-
+						link = {
+						text: 'read our blog',
+						className: 'link-dark js-link-multiple-circle',
+						icons: true
+						}
+					include ../components/link
+		//end blog-2
+
+		//begin meet
+		+b.SECTION.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.title.without-svg Let's meet
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p We look forward to sharing our expertise, consulting with you about your product idea, or helping you find the right solution for an existing project.
+					+e.col
+						+b.FORM.form.__form(action='')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									//label.form-input-label(for='formName'): span Your Name
+									//.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									//label.form-input-label(for='formMail'): span Your Email
+									//.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								//.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text Send
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//end meet

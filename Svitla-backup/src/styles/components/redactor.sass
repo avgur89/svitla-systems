@@ -1,0 +1,588 @@
+.redactor
+	$parent: &
+	font-size: 19px
+	line-height: 30px
+	letter-spacing: -0.2px
+	+desk
+		padding-right: 100px
+	&__title
+		color: $color1
+		margin-bottom: 48px
+		+h2
+		&::before, &::after
+			display: none
+		+sm
+			+h4
+			margin-bottom: 26px
+	&__anchor
+		.no-touch &
+			&:hover
+				+trs
+				color: $color3
+		+sm
+			font-size: 23px!important
+	&__signature
+		padding-left: 42px
+		&-title
+			+h3
+			margin-bottom: 20px
+		&-date
+			+h6
+			margin-top: 6px
+			letter-spacing: 1.2px
+		&::after
+			display: none
+		+md
+			padding-left: 20px
+		+sm
+			&-title
+				+h5
+				margin-bottom: 10px
+	&__quote
+		color: inherit!important
+		margin: 45px 0 45px 42px!important
+		font-style: italic
+		position: relative
+		line-height: 31px
+		letter-spacing: -0.19px
+		&::before
+			content: ''
+			position: absolute
+			left: -42px
+			top: -20px
+			width: 32px
+			height: 25px
+			background: url('../img/quotes.svg') center center no-repeat
+		&_with-title p:first-child
+			+h3
+			color: $color2
+			letter-spacing: -0.24px
+			margin-bottom: 24px
+			+sm
+				+h5
+				margin-bottom: 16px
+		+sm
+			width: calc(100% - 36px)
+			margin: 52px 0 52px 36px
+			line-height: 24px
+			&::before
+				left: -37px
+				top: -3px
+				transform: scale(.64)
+	&__img-wrap
+		display: flex
+		height: 300px
+		span
+			width: 50%
+			img
+				width: 100%
+				height: 100%
+				min-height: 100%
+				object-fit: cover
+				font-family: 'object-fit: cover;'
+				+cover-img
+		+md
+			height: 150px
+	&__img
+		padding-top: 3px
+		width: inherit!important
+	&::before
+		display: none
+	+sm
+		font-size: 15px
+		line-height: 24px
+		letter-spacing: -0.15px
+		
+	// Basic html5 text tags:
+	h1
+		+h1
+	h2
+		+h2
+		letter-spacing: -.2px
+		margin-bottom: 25px
+		line-height: 42px
+		&:not(:first-of-type)
+			margin-top: 62px
+		+md
+			&:not(:first-of-type)
+				margin-top: 50px
+		+sm
+			+h4
+			margin-bottom: 14px
+			&:not(:first-of-type)
+				margin-top: 46px
+	h3
+		+h4
+		line-height: 40px
+		letter-spacing: -.275px
+		margin-bottom: 12px
+		+md
+			line-height: 42px
+		+sm
+			font-size: 20px
+			line-height: 26px
+			margin-bottom: 18px
+	h4
+		+h3
+		margin-bottom: 18px
+		+md
+			letter-spacing: -.5px
+		+sm
+			letter-spacing: 0px
+			font-size: 20px
+	h5
+		+f('solomon-semibold', 19, 24, 0)
+		letter-spacing: -.15px
+		margin-bottom: 26px
+		+sm
+			font-size: 15px
+			margin-bottom: 16px
+	h6
+		+h4
+	a
+		color: $color2
+		text-decoration: underline
+		.no-touch &
+			&:hover
+				+trs
+				color: $color3
+	p
+		margin-bottom: 45px
+		img
+			display: inline
+		+md
+			margin-bottom: 35px
+	strong:not(.strong-orange)
+		+f('solomon-semibold', 19, 28, 0)
+		+sm
+			font-size: 15px
+			line-height: 24px
+			letter-spacing: -0.15px
+	strong.strong-orange
+		color: $color3
+	blockquote
+		color: $color3
+		margin: 43px 0 43px 43px
+		+md
+			margin: 43px 0 48px 22px
+		+sm
+			margin: 36px 0 26px 22px
+
+	// Media tags
+	img
+		width: 100%
+		display: block
+		margin: 0 auto
+		margin-bottom: 70px
+		+md
+			margin-bottom: 50px
+	iframe
+		width: 100%
+		height: 500px
+		margin-bottom: 45px
+		+md
+			height: 380px
+			margin-bottom: 35px
+		+tab-land
+			height: 525px
+		+sm
+			height: 200px
+		+mob-fix
+			height: 380px!important
+	video
+		width: 100%
+		height: auto
+		margin-bottom: 45px
+		+md
+			margin-bottom: 35px
+	.testimonals
+		padding-bottom: 0
+		margin: 0
+		&__bg-picture
+			+md
+			min-height: 410px
+			+sm
+				min-height: 180px
+		& + h4
+			margin-top: 54px
+	// Table
+	& > table
+		position: relative
+		text-align: left
+		font-size: 14px
+		line-height: 22px
+		border-spacing: 0 7px
+		td, th
+			padding: 15px 15px
+			position: relative
+			border: 1px solid $color2
+		th
+			font-size: 16px
+			padding: 20px 15px
+		&:not(:last-child)
+			margin-bottom: 45px
+		
+	// Lists:
+	p + ul
+		margin-top: -25px
+		+md
+			margin-top: -22px
+		+sm
+			margin-top: -20px
+	ul
+		margin: 0 0 32px 70px
+		li
+			position: relative
+			&:before
+				content: ''
+				background-color: $color2
+				border-radius: 50%
+				display: inline-block
+				width: 8px
+				height: 8px
+				position: absolute
+				left: -28px
+				top: 12px
+			ul
+				margin: 23px 0 27px 24px
+				li
+					&:before
+						width: 5px
+						height: 5px
+						left: -24px
+						top: 14px
+					&:after
+						content: ''
+						position: absolute
+						top: 15px
+						left: -23px
+						border-radius: 50%
+						background-color: $color0
+						width: 3px
+						height: 3px
+						z-index: 1
+			&:not(:first-of-type)
+				margin-top: 12px
+		+md
+			margin: 0 0 32px 50px
+		+sm
+			margin: 0 0 32px 39px
+			li
+				&::before
+					left: -19px
+					top: 9px
+					width: 6px
+					height: 6px
+				&:not(:first-of-type)
+					margin-top: 16px
+				ul
+					margin: 16px 0 16px 29px
+					li
+						&::before
+							left: -20px
+							top: 10px
+						&::after
+							top: 11px
+							left: -19px
+						&:not(:first-of-type)
+							margin-top: 8px
+	ol
+		margin: 0 0 32px 70px
+		counter-reset: list 0
+		& > li
+			position: relative
+			counter-increment: list
+			&:before
+				+f('solomon-semibold', 19, 24, 0)
+				color: $color2
+				content: counter(list)'.'
+				position: absolute
+				top: 3px
+				left: -30px
+				
+			&:not(:first-of-type)
+				margin-top: 14px
+		+md
+			margin: 0 0 26px 50px
+		+sm
+			margin: 0 0 32px 38px
+			li
+				&::before
+					font-size: 15px
+					top: 0
+					left: -20px
+
+		// Custom ol:
+		&.ol-orange
+			margin: 0 0 32px 83px
+			counter-reset: list 0
+			& > li
+				counter-increment: list
+				&::before
+					content: counter(list)
+					color: $color0
+					z-index: 1
+					font-size: 16px
+					top: 10px
+					left: -52px
+					transform: translateX(-50%)
+				&::after
+					content: ''
+					width: 38px
+					height: 24px
+					transform: skew(-45deg)
+					background-color: $color3
+					position: absolute
+					top: 9px
+					left: -71px
+					z-index: 0
+				&:not(:first-of-type)
+					margin-top: 62px
+				#{$parent}__quote
+					left: -82px
+					width: calc(100% + 40px)
+				ul
+					margin: 0 0 0 57px
+					li
+						&::before
+							display: none
+						&::after
+							content: ''
+							width: 21px
+							height: 19px
+							transform: skew(-45deg)
+							background-color: $color3
+							position: absolute
+							top: 9px
+							left: -50px
+							z-index: 0
+						p:last-of-type
+							margin-bottom: 0
+						&:not(:first-of-type)
+							margin-top: 21px
+					#{$parent}__quote
+						left: -140px
+						width: calc(100% + 98px)
+						+sm
+							left: -10px
+							width: calc(100% - 30px)
+					+sm
+						margin: 64px 0 0 0
+						li
+							&::after
+								width: 21px
+								height: 19px
+								top: -32px
+								left: 50%
+								transform: translateX(-50%) scale(.9) skew(-45deg)
+							&:not(:first-of-type)
+								margin-top: 64px
+			+sm
+				margin: 76px 0 32px 0
+				li
+					p
+						margin-bottom: 26px
+					h2
+						+medium-text
+						letter-spacing: -.2px
+						margin-bottom: 16px
+					&:not(:first-of-type)
+						margin-top: 100px
+					&::before
+						top: -47px
+						left: 50%
+						transform: translateX(-50%)
+					&::after
+						top: -47px
+						left: 50%
+						transform: translateX(-50%) skew(-45deg)
+
+	// Code block:
+	$tdPaddingTopBottom: 2px
+	p + pre
+		margin-top: -12px
+	pre
+		margin: 0
+		font-size: 14px
+		line-height: 16px
+		margin-bottom: 54px
+		letter-spacing: 0px
+		code
+			white-space: pre-wrap
+			overflow: auto
+			table
+				width: inherit
+				white-space: nowrap
+				td
+					&.hljs-ln-numbers
+						text-align: center
+						color: #ccc
+						border-right: 1px solid #999
+						vertical-align: top
+						padding: $tdPaddingTopBottom 5px $tdPaddingTopBottom 0
+						-webkit-touch-callout: none
+						-webkit-user-select: none
+						-khtml-user-select: none
+						-moz-user-select: none
+						-ms-user-select: none
+						user-select: none
+						max-width: 22px
+					&.hljs-ln-code
+						padding: $tdPaddingTopBottom 0 $tdPaddingTopBottom 10px
+				+sm
+					width: 100%
+	.testimonals
+		width: 800px
+		+md
+			width: 100%
+
+.section_sharing
+	padding: 0
+	height: 0
+	position: relative
+	z-index: 1
+	top: 92px
+	.share__icon a
+		color: inherit
+		.no-touch &
+			&:hover
+				color: $color2
+	+md
+		padding-bottom: 20px
+		position: static
+		height: auto
+		.col__wrap
+			margin-top: 0!important
+		.col__large
+			display: none
+		& + section
+			padding-top: 0
+			.col__large
+				margin-top: 0
+		& + .blog-1 .col__wrap_redactor
+			margin-top: 0!important
+	+sm
+		padding: $topOffsetMob 0 10px
+
+.section_redactor
+	padding-bottom: 0!important
+	&-signature
+		min-height: 0
+		padding: 50px 0 $botOffset 0
+		+md
+			padding: 10px 0 $offsetTab 0
+			.col__small
+				order: 1
+		+sm
+			padding: 25px 0 $botOffsetMob 0
+			.col__small
+				margin-top: 20px
+			.h5
+				line-height: 24px
+				font-size: 16px
+				letter-spacing: -.5px
+	+sm
+		padding-top: 40px
+.section_redactor-incoming
+	position: relative
+	z-index: 0
+	.blog-4__footer-btn
+		margin-top: 46px
+	&.slider-inner
+		padding: 0
+		margin-bottom: 0
+	&.blog-4_white
+		& + .section_redactor-signature
+			margin-top: -$botOffset
+			+md
+				margin-top: -87px
+			+sm
+				margin-top: -50px
+		& + .slider-inner_gallery
+			margin-top: -22px
+			+md
+				margin-top: -16px
+		& + .blog-4_white:not(.section_redactor-signature)
+			padding-top: 0
+			+md
+				margin-top: -80px
+			+sm
+				margin-top: -50px
+		& + .section_redactor
+			padding-top: 0
+			+md
+				margin-top: -100px
+			+sm
+				margin-top: -70px
+		+md
+			padding-top: 80px
+		+sm
+			padding-top: 30px
+	+md
+		.blog-4__footer-btn
+			margin-top: 60px
+	+sm
+		iframe
+			height: 320px
+		.blog-4__footer-btn
+			margin-top: 30px
+		
+.section_redactor + .section_redactor-incoming
+	padding: $topOffset 0 $botOffset
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: $topOffsetMob 0 $botOffsetMob
+	&.slider-inner
+		+md
+			margin-top: 20px
+		+sm
+			margin-top: -13px
+	&.meet
+		z-index: 3
+		margin-top: 45px
+		padding: 90px 0 100px
+		+md
+			margin-bottom: 0
+			padding: 62px 0 125px
+		+sm
+			padding: 45px 0 72px
+	&.blog-4
+		min-height: 0
+		margin-top: 47px
+		margin-bottom: 0
+		padding: $topOffset 0 $botOffset
+		+md
+			padding: $offsetTab 0 $offsetTab
+		+sm
+			margin-top: 40px
+			padding: $topOffsetMob 0 $botOffsetMob
+	&.blog-4_white
+		padding-top: 18px
+		+md
+			padding-top: 28px
+			margin-top: 0
+		+sm
+			padding-top: 24px
+			margin-top: 0
+			
+.section_redactor-incoming.slider-inner + .section_redactor
+	padding-top: 30px
+	+md
+		padding-top: 0
+		margin-top: -40px
+	+sm
+		margin-top: -9px
+	
+.section_redactor-incoming.meet + .section_redactor
+	+md
+		padding-top: 0
+		margin-top: -20px
+	+sm
+		padding-top: 10px
+		margin-top: 0
+
+* + .ol-orange
+	margin-top: 62px!important
+	+sm
+		margin-top: 100px!important

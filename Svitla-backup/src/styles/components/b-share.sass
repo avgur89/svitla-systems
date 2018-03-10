@@ -1,0 +1,62 @@
+.share
+	width: 100%
+	margin-top: 6px
+	display: inline-flex
+	.section_redactor-signature &
+		opacity: 0
+		+md
+			left: 0
+			opacity: 1
+			display: flex
+			margin-top: 35px
+			&::before
+				display: none
+		+sm
+			margin-top: 25px
+	.share-fixed &
+		&.share_top
+			position: fixed
+			bottom: 100px
+			width: 235px
+			z-index: 2
+	.share-fixed.share-bottom &
+		position: static
+		opacity: 1
+		.share_top
+			display: none
+	& > div
+		+h6
+		letter-spacing: 1px
+	&__icon
+		display: flex
+		justify-content: center
+		flex-wrap: nowrap
+		flex: 1 0
+		li
+			margin-left: 19px
+			.icon
+				font-size: 13px
+			a
+				+link-breadcrumbs
+				color: $color1
+				padding: 0
+				.icons-w
+					margin-right: 6px
+					.icon
+						font-size: 12px
+						stroke: $color3
+				span
+					color: $color0
+					+h7
+					text-transform: uppercase
+			.no-touch &
+				&:hover
+					a
+						color: $color2
+			.no-touch.share-white-hover &
+				&:hover
+					a
+						color: $color0
+	+md
+		width: 235px
+	

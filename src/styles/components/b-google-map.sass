@@ -1,0 +1,82 @@
+.google-map
+	$parent: &
+	height: 370px
+	width: 100%
+	margin-bottom: $botOffset
+	& > div
+		background-color: transparent!important
+	&__tooltip
+		width: 187px
+		color: $color1
+		position: relative
+		padding: 12px 0 18px 12px
+	.gm-style
+		*
+			background-repeat: no-repeat
+	.gm-style-iw + div
+		display: none
+	.gm-style-iw
+		+sm
+			min-height: 200px
+	&__tooltip-title
+		+h4
+		letter-spacing: 0.5px
+		margin-bottom: 7px
+		font-size: 22px
+		line-height: 26px
+	&__tooltip-descr
+		+h6
+		letter-spacing: 0.5px
+		text-transform: uppercase
+	&__tooltip-text
+		+paragraph-text
+		line-height: 20px
+		margin-top: 18px
+		margin-bottom: 5px
+	&__tooltip-link
+		+paragraph-text
+		color: $color2
+		display: block
+		+trs-slow
+		.no-touch &
+			&:hover
+				color: $color1
+	&__tooltip-close
+		position: absolute
+		right: -7px
+		top: 0
+		width: 12px
+		height: 12px
+		padding: 15px
+		cursor: pointer
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icon-close.png')
+		+trs
+		.no-touch &
+			&:hover
+				opacity: .6
+	&_large
+		height: 400px
+	+md
+		width: calc(100% + 100px)
+		margin: 0 -50px $offsetTab -50px
+	+sm
+		height: 210px
+		width: calc(100% + 40px)
+		margin: 0 -20px $botOffsetMob -20px
+
+// Remove default gmap elements (not all):
+.gmnoprint:not(.gm-bundled-control), .gm-svpc
+	visibility: hidden
+.gm-bundled-control > .gmnoprint
+		visibility: visible
+.gm-style a img
+	visibility: hidden
+.gm-style-cc
+	visibility: hidden
+
+.statistic + .google-map
+	margin-top: 60px
+	+sm
+		//margin-top: 0

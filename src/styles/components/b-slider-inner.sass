@@ -1,0 +1,541 @@
+.slider-inner
+	$parent: &
+	padding: $topOffset 0 $botOffset
+	background-color: $color0
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: $topOffsetMob 0 $botOffsetMob
+	&__arrows
+		width: 120px
+		display: flex
+		justify-content: space-between
+		&_country
+			&.is-hide
+				visibility: hidden
+			#{$parent}__prev, #{$parent}__next
+				border-color: $color0
+				.icon
+					color: $color2
+				.no-touch &
+					&:hover
+						.icon
+							color: $color0
+		+sm
+			width: 95px
+			&_sectors
+				position: absolute
+				top: 65px
+				right: 20px
+				display: flex!important
+				z-index: 1
+				background-color: $color2
+				.slick-arrow
+					border-color: $color0
+	&__item
+		width: 25%
+		height: 100px
+		padding: 10px 15px
+		display: flex!important
+		align-items: center
+		+sm
+			width: 50%
+		img
+			max-width: 100%
+			max-height: 100%
+	&__col
+		margin-top: 55px
+		+md
+			padding-right: 50px
+			margin-top: 10px
+			position: absolute
+			right: 0
+			top: 0
+			width: initial!important
+			min-width: auto
+		+sm
+			margin-top: 15px
+			padding-right: 20px
+	&__title
+		+md
+			margin-right: 150px
+		+sm
+			font-size: 23px
+			margin-right: 100px
+	&__prev, &__next
+		cursor: pointer
+		background: transparent
+		width: 50px
+		height: 50px
+		border: 1px solid $color2
+		border-radius: 50%
+		display: flex!important
+		justify-content: center
+		align-items: center
+		svg
+			pointer-events: none
+			color: $color1
+			font-size: 9px
+			+trs
+		.no-touch &
+			&:hover
+				svg
+					color: $color2
+		+sm
+			width: 40px
+			height: 40px
+	&__slides
+		display: flex
+		color: $color1
+		width: 900px
+		margin-top: 25px
+		&::after
+			display: none
+		+md
+			margin-top: 75px
+		+sm
+			margin-top: 50px
+	&__slides_clients
+		.slick-slide
+			& > div:first-child
+				margin-bottom: 53px
+			+sm
+				& > div:nth-child(3)
+					margin-bottom: 0
+	&__slides_articles
+		flex-wrap: nowrap
+		margin: 55px -40px 0
+		.cases__item
+			min-width: 410px
+			margin: 0 40px
+		.cases__info
+			+desk
+				&:before
+					height: 100%
+		+only-tab
+			margin: 75px -25px 0
+			.cases__item
+				min-width: 0
+				max-width: 800px!important
+				margin: 0 25px!important
+		+sm
+			.slick-list
+				margin: 0 -20px
+			margin: 50px 0 0
+			.cases__item
+				width: 100%
+				min-width: 0!important
+				margin: 0 20px
+				&:nth-child(odd)
+					margin-right: 20px!important
+		+mob-fix
+			.cases__item
+				width: calc(100vw - 40px)!important
+	&__slides_country
+		margin: 0 0 60px
+	&_articles
+		padding: $topOffset 0
+		+md
+			padding: $offsetTab 0 $offsetTab
+			.col__small
+				width: 100%!important
+				display: flex
+				justify-content: flex-end
+		+sm
+			.cases__info
+				margin-bottom: 0!important
+	&_gallery
+		$redactorWidth: 800px
+		#{$parent}__title
+			margin-bottom: 32px
+			margin-right: 0
+			+sm
+				margin-bottom: 20px
+		.container
+			padding: 0 110px 0 290px
+			+md
+				padding: 0 50px
+			+sm
+				padding: 0 20px
+		.slick-list
+			margin: 0 -5px
+			+md
+				transform: translateX(5px)
+				margin: 0
+			+sm
+				transform: translateX(0)
+				margin: 0 -5px
+		.col__small
+			width: 160px
+			min-width: 160px
+			margin-top: 0
+			padding: 0
+			#{$parent}__arrows
+				margin: 5px 0
+				+tab-fix
+					margin: 25px 0
+				+mob-fix
+					margin: 30px 15px!important
+			+md
+				position: static
+			+sm
+				order: 2
+				width: 110px
+				min-width: 110px
+				justify-content: flex-end
+				#{$parent}__arrows
+					margin: 7px 0 7px 15px
+		.col__large
+			width: 640px
+			margin-top: 0
+			+md
+				width: calc(100vw - 260px)
+			+sm
+				width: calc(100vw - 150px)
+		.col__wrap
+			+sm
+				flex-direction: row
+		#{$parent}__item
+			max-width: 120px
+			width: 120px
+			height: 60px
+			min-height: 0!important
+			margin: 0 5px
+			padding: 0
+			cursor: pointer
+			overflow: hidden
+			position: relative
+			+md
+				width: auto
+				max-width: 100%
+			+tab-fix
+				height: 100px
+			+mob-fix
+				height: 100px!important
+			&::before
+				content: ''
+				height: 90px
+				width: 90px
+				position: absolute
+				background-color: $color2
+				border-radius: 50%
+				left: 0
+				top: 50%
+				transform: translate(-100%, -50%)
+				transition-delay: .5s
+				+trs-slow
+				+tab-fix
+					height: 200px
+					width: 200px
+				+mob-fix
+					height: 200px!important
+					width: 200px!important
+			&.slick-current
+				&::before
+					left: 11px
+					+tab-fix
+						left: 13px
+					+mob-fix
+						left: 13px!important
+			img
+				margin: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+				font-family: 'object-fit: cover;'
+			+sm
+				height: 54px
+		#{$parent}__preview
+			margin-bottom: 20px
+			height: 375px
+			width: 100%
+			+tab-fix
+				height: 550px
+			+mob-fix
+				height: 300px!important
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				font-family: 'object-fit: cover;'
+			+sm
+				height: 130px
+				margin-bottom: 15px
+	&_clients
+		+md
+			.col__small
+				width: 100%!important
+				display: flex
+				justify-content: flex-end
+	&_sectors
+		padding: 0!important
+		height: 660px
+		background-color: $color2
+		overflow: hidden
+		.container
+			display: flex
+			height: 100%
+		+desk
+			#{$parent}__item
+				.h4 + div
+					min-height: 100px
+		// Slick sliders anim (> 768):
+		+tab
+			.has-anim #{$parent}__item
+				& > *
+					transform: translateY(300%) translateZ(0)
+					opacity: 0
+					transition: .550s cubic-bezier(0.215, 0.61, 0.355, 1)
+				&.has-anim
+					& > *
+						transform: translateY(0) translateZ(0)
+						opacity: 1
+						transition: 850ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+			.has-anim #{$parent}__slides
+				transform: translateX(0) translateZ(0)
+				opacity: 1
+				transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) 3s
+		+only-tab
+			#{$parent}__item
+				& > *
+					transform: translateY(300%) translateZ(0)
+					opacity: 0
+					transition: .550s cubic-bezier(0.215, 0.61, 0.355, 1)
+				&.has-anim
+					& > *
+						transform: translateY(0) translateZ(0)
+						opacity: 1
+						transition: 850ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+		#{$parent}__slides
+			width: 410px
+			margin: 100px 0 100px 105px
+			flex-direction: column
+			justify-content: center
+			+desk
+				transform: translateX(100%) translateZ(0)
+				opacity: 0
+				will-change: transform
+			#{$parent}__item
+				height: 100%
+				align-items: flex-start
+				+sm
+					min-height: auto
+					justify-content: flex-start
+			.h1
+				color: $color0
+				margin: 0 0 45px 0
+				+sm
+					font-size: 23px
+					line-height: 30px
+					width: calc(100% - 130px)
+					margin: 0 0 45px 15px
+			.h4
+				letter-spacing: .2px
+				margin-bottom: 12px
+				+sm
+					+h5
+			ul
+				margin-top: 20px
+				line-height: 30px
+				letter-spacing: 0
+				& + p
+					margin-top: 34px
+					letter-spacing: 0.05px
+				+sm
+					margin-top: 5px
+			p
+				line-height: 22px
+				width: 100%
+			+sm
+				width: 100%
+				height: auto
+				margin: $topOffsetMob 0 $botOffsetMob
+		.slick-dots
+			display: none!important
+		#{$parent}__arrows
+			display: none
+			+sm
+				display: block
+		+md
+			height: 690px
+			.container
+				justify-content: flex-end
+			#{$parent}__slides
+				width: 310px
+				margin: 100px 0 100px 55px
+		+sm
+			height: auto
+			background-repeat: no-repeat
+			background-position: -2px 62px
+			background-image: url("../img/sectors.svg")
+	&_developers
+		#{$parent}__slides
+			margin-top: 50px
+			+md
+				margin-top: 75px
+			+sm
+				margin-top: 30px
+		#{$parent}__item
+			height: auto
+			padding: 0 15px
+			align-items: flex-start
+			img
+				margin-bottom: 19px
+			ul
+				width: calc(100% - 21px)
+				line-height: 18px
+				letter-spacing: 0.1px
+				+small-text
+				& + p
+					margin-top: 34px
+					letter-spacing: 0.05px
+			#{$parent}__item-title
+				letter-spacing: 1px
+				margin-bottom: 16px
+			+sm
+				&::after
+					display: block
+					right: 1px
+		#{$parent}__item-title
+			+h6
+		#{$parent}__title
+			width: calc(100% - 120px)
+			line-height: 30px
+		#{$parent}__col
+			+sm
+				margin-top: 0
+		img
+			height: 100px
+			width: 100px
+			border-radius: 50%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+		ul > li
+			line-height: 18px
+			letter-spacing: .2px
+		+md
+			.col__small
+				width: 100%!important
+				display: flex
+				justify-content: flex-end
+	&_timeline
+		overflow: hidden
+		position: relative
+		#{$parent}__prev, #{$parent}__next
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 5
+			opacity: 0
+			transition: opacity .6s ease 2s
+			span
+				position: absolute
+				top: -5%
+				left: 50%
+				transform: translateX(-50%)
+				height: 20%
+				width: 60%
+				background-color: $color0
+				cursor: pointer
+				+trs-slow
+				&:nth-child(2)
+					top: auto
+					bottom: -5%
+			.no-touch &
+				&:hover
+					span
+						width: 0
+			+md
+				opacity: 1
+				left: 50px
+			+sm
+				right: 0
+				left: auto
+		.has-anim
+			#{$parent}__prev, #{$parent}__next
+				opacity: 1
+		#{$parent}__next
+			right: 0
+			left: auto
+			+md
+				right: 50px
+				left: auto
+			+sm
+				right: auto
+				left: 0
+		.slick-dots
+			display: none!important
+		#{$parent}__slides_timeline
+			margin: 0
+			width: 100%
+			padding: 0 100px
+			z-index: 4
+			overflow: hidden
+			&.is-active
+				.slick-slide
+					transition: opacity 200ms cubic-bezier(0.19, 1, 0.22, 1)!important
+					&:nth-child(even), &:nth-child(odd)
+						.timeline__content
+							transition: all 200ms cubic-bezier(0.19, 1, 0.22, 1)
+			.slick-list
+				overflow: visible
+				width: 980px!important
+				+md
+					width: 100%!important
+			+sm
+				padding: 0 40px
+		#{$parent}__row
+			position: relative
+		+md
+			padding-bottom: 90px
+	&_country
+		background-color: $color1
+		padding: $topOffset2 0 0
+		color: $color0
+		#{$parent}__text
+			margin-top: 60px
+		#{$parent}__row
+			position: relative
+		.col__large
+			flex-direction: column
+			margin-top: 0
+			+sm
+				margin-top: 40px
+		.col__small
+			z-index: 1
+			margin-top: 0
+			+md
+				left: 0
+				right: inherit
+				margin-top: 0
+				padding-right: 0
+				#{$parent}__text
+					display: none
+			+sm
+				position: static
+				#{$parent}__arrows
+					float: right
+		+md
+			padding: $offsetTab 0 0
+		+sm
+			padding: 40px 0 0
+	.slick-slide
+		min-height: 253px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		-ms-flex-pack: space-between
+		+md
+			min-height: 0
+		+sm
+			& > div
+				margin-bottom: 40px
+	.slick-disabled
+		pointer-events: none
+		svg
+			opacity: .4
+			
+.slick-list
+	&::before, &::after
+		display: none

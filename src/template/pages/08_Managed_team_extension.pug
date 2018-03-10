@@ -1,0 +1,467 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Managed team extension',
+		sliderImgSource = ['static/img/clients/ancestry.png', 'static/img/clients/bmc.png', 'static/img/clients/inflection.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png'],
+		sliderMainTitle = ['Stage 0', 'Stage 1', 'Stage 2', 'Stage 3', 'Stage 4', 'Stage 5', 'Stage 6'],
+		sliderSubTitle = ["Identification of Client's Needs", 'Defining Job Description', 'SQS (Svitla Quality Search)', 'Internal Technical Interview', 'Client Interview', 'HR Support', 'Guarantees'],
+		slideUlList = [
+			[
+				'conducting a call with Svitla technical expert or manager'
+			],[
+				'assigning our HR specialist to work on your vacancies',
+				'clarifying and analyzing requirements and estimating budget',
+				'involving our technical expert if needed'
+			],[
+				'filling some positions immediately if we have such people on the bench or in active pipeline using our extensive internal database of potential candidates',
+				'selecting unique recruitment tools and methods on a case by case basis',
+				'conducting HR interview to make sure candidates match professional and soft skill criteria and fit Svitla culture gathering feedback from previous employers'
+			],[
+				"engaging our Technical Expert to evaluate the candidate's technical skills",
+				"adjusting our technical test tasks to boost internal screening",
+				"presenting only the best candidates"
+		],[
+				"after a candidate passes Svitla's evaluations and interviews, we create and send  to the client his/her resume, which includes a summary of the HR interview and detailed information about the candidate's background",
+				"arranging his/her interview with the client in 2-3 days using the most convenient tools (Skype, Slack, GoToMeeting, Google Hangouts, Zoom)",
+				"providing recommendations and background checks"
+		],[
+				null
+		],[
+				"24/7 support"
+		]],
+		slidePrependP = [null, null, null, null, null, null, 'always ready to resolve any issues should they arise'],
+		slideAppendP = [null, 'if we have candidates that fit your job description, they are assigned to your project immediately.', null, null, null, 'we take care of all onboarding procedures (NDA, workplace arrangement, computer equipment, social benefits, medical insurance, visa and travel arrangements, etc.)', null],
+		sliderDevelopersTitle = ['Lindsay, QA team lead', 'tim, QA team lead', 'bob, team lead', 'alex, QA team lead', 'tim, QA team lead', 'bob, team lead', 'alex, QA team lead', 'tim, QA team lead', 'bob, team lead', 'alex, QA team lead', 'tim, QA team lead', 'bob, team lead', 'alex, QA team lead'],
+		sliderDevelopersImg = ['http://cont.ws/uploads/posts/108953.jpg', 'http://dictatorband.ru/images/stories/09/image045.jpg', 'http://www.hram-troicy.prihod.ru/users/67/1167/editor_files/image/0291288709.jpg', 'http://fb.ru/misc/i/gallery/31847/1770495.jpg', 'https://slovodel.com/uploads/2017/03/10/full-cla026-1489152188.jpg', 'http://www.factroom.ru/facts/wp-content/uploads/2012/02/Claudius.jpg', 'http://dokonline.com/uploads/posts/2010-12/1291474304_tc6fbe.jpg', 'http://dictatorband.ru/images/stories/09/image045.jpg', 'http://www.hram-troicy.prihod.ru/users/67/1167/editor_files/image/0291288709.jpg', 'http://fb.ru/misc/i/gallery/31847/1770495.jpg', 'https://slovodel.com/uploads/2017/03/10/full-cla026-1489152188.jpg', 'http://www.factroom.ru/facts/wp-content/uploads/2012/02/Claudius.jpg', 'http://dokonline.com/uploads/posts/2010-12/1291474304_tc6fbe.jpg'],
+		sliderDevelopersDescr = [
+			[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			],[
+				'experience in QA - from 4 years',
+				'good theoretical and practical',
+				'knowledge in QA Processes practical experience in Manual, Auto and Load testing'
+			]
+		],
+		breadList = ['main', 'how we work', 'Managed team extension'];
+
+block main
+	main.content(data-page='managed_team_extension')
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/managed_team_extension_main.jpg' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Managed Team Extension
+					+e.description-bot.hide-sm(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p Our team becomes an extension of your team. Works on your project only.
+					+e.description-btn(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						a.btn(href='')
+							.btn__bg
+								.btn__bg-top
+							.btn__bg
+								.btn__bg-bot
+							.SPAN.btn__text Get a quote
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.title We Deliver
+		//end screen
+
+		//begin blog-1
+		+b.SECTION.blog-1_default.blog-1_one-col.section
+			+e.container.container(data-anim='group')
+				+e.H1.title_dark.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Managed Team Extension
+				+e.H4.text.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') With the Team Extension Model, our developers become an integral part of your team during the entire project. We carefully select each team member based on the requirements and expertise you need. They immerse themselves in your project, maintaining your company culture and working in line with your strategic goals.
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') This solution works best for:
+				+e.row.col__wrap_without-caption(data-anim='group' data-anim-delay='0.15' data-anim-duration='0.3')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Developing New Modules or Applications
+								p(data-anim-stagger='fade-top') You get dedicated developers with strong technical skills who can help you accelerate development and/or integration of your product.
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Saving Time and Resources
+								p(data-anim-stagger='fade-top') You find it tough to hire and secure excellent, cost-effective IT talent at your location or don't want to spend time on onboarding.
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Long-Term Cooperation
+								p(data-anim-stagger='fade-top') Our extension team works on your project only and under the same rules as your own team. You can rely on them 24/7 and expect long-term and fruitful cooperation.
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Getting more for less budget
+								p(data-anim-stagger='fade-top') We build balanced agile teams who reach your goals in the fastest way with optimal resources. You are guaranteed a price, year to year, which protects you from running over the budget.
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Ongoing Bug Fixes & Support
+								p(data-anim-stagger='fade-top') We recommend the best-suited technologies and provide continuous integration of new features in your product.
+							+e.col-2(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.subtitle.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Quality Assurance Expertise
+								p(data-anim-stagger='fade-top') We lower your risk of releasing an immature software product, thus protecting you against additional costs.
+				+e.more(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					p Want to start developing a product ASAP, without managing it yourself?
+					+e.link(data-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'Learn more about Build-to-Order Software Applications',
+							className: 'link-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+		//end blog-1
+
+		//OUR_PROCESS_begin
+		+b.SECTION.process.section
+			.container(data-anim='group')
+				+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Our process
+					+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+								p We've developed a unique recruitment process, based on industry best practices, that enables our recruitment team to find the best experts in the market. This vital part of a project life-cycle ensures a succesful result.
+				+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger) Svitla's Standard Recruitment Process
+					+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+						p Typical candidate search lasts 2 weeks.
+		//OUR_PROCESS_end
+
+		//sectors slider begin
+		+b.slider-inner_sectors.section
+			.container(data-anim='group')
+				+e.arrows_sectors(data-anim-stagger='fade-top' data-anim-parent-trigger)
+					+e.A(href="").prev: +i('arrow-left')
+					+e.A(href="").next: +i('arrow-right')
+				+b.navigation-sectors
+					+e.line
+					+e.center
+					- var i = 0;
+					while i < 7
+						+e.item
+							if index !== 7
+								+e.circle-border
+								+e.circle= i++
+								+e.SPAN.number= '0' +(i - 1)
+								+e.SPAN.title= 'stage 0' + (i - 1)
+					+e.circle_hidden
+					+e.triangle-wrap
+						+e.triangle-scale
+							+e.triangle
+					+e.hover-elements
+						+e.hover-first
+						- var i = 0;
+							while i < 7
+								+e.hover-block
+									+e.hover-field
+									+e.hover-item= i++
+				+e.slides_sectors
+					each source, index in sliderSubTitle
+						+e.item
+							.h1= 'Stage 0' + (index)
+							.h4= sliderSubTitle[index]
+							div
+								if slidePrependP[index] !== null
+									p= slidePrependP[index]
+								if slideUlList[index][0] !== null
+									ul.ul-standart
+										each li in slideUlList[index]
+											li= li
+								if slideAppendP[index] !== null
+									p= slideAppendP[index]
+		//sectors slider end
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_grey.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Project Life-Cycle
+				+e.row.col__wrap(data-anim='group' data-anim-delay='0.15' data-anim-duration='0.3')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							p The project life-cycle clearly does not end once your software has been developed and launched. We take care of your project by continuously testing and incrementally improving it as your needs and requirements change.
+					+e.col.col__large
+						+e.row-2.anim-line_dark
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 01.Initial Meeting
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We start with a detailed discussion of your ideas and needs.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 02.Solution
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Our team drafts a timeline and approximate project plan.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 03.Team Composition
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We employ talented architects, developers, engineers, testers, and designers, who are experts in all emerging technologies.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 04.Development
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Transparent processes, Agile methodology, daily meetings, regular deliverables, and a dedicated Project Coordinator make the development process smooth and transparent.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 05.Deployment
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| On-time and smooth delivery ensures steady operation of your product.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 06.Support
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Our experts take care of your product and help it evolve rapidly with continuous development of new features and updates.
+		//end blog-4
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_blue.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') What you get
+				+e.row.col__wrap(data-anim='group' data-anim-delay='0.15' data-anim-duration='0.3')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/team.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) The Best Team
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Our dedicated team of talented developers under the management of an experienced Project Coordinator will extend your own team to increase output while reducing cost.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/support.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) 24/7 Support and Assistance
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Each project has a Project Coordinator who oversees the entire development process and is always ready to answer your questions.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/expertise.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Our Expertise
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We use Agile methodology to ensure that the project progresses efficiently and on time.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/less.svg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) More for Less
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We guarantee a price, year to year, to protect you from running over budget.
+						+e.footer-description(data-anim-stagger='fade-top' data-anim-parent-trigger) Our team becomes as vested as your own team in the success of your project
+		//end blog-4
+
+		//Developer slider_begin
+		+b.SECTION.slider-inner_developers.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Meet our developers
+				+e.row.col__wrap(data-anim='group' data-anim-delay='0.1' data-anim-duration='0.3')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_developers(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_developers.col__large.anim-line
+							each source, index in sliderDevelopersImg
+								+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									img(src= source data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger" alt="")
+									+e.item-title(data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")= sliderDevelopersTitle[index]
+									ul.ul-standart(data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")
+										each li in sliderDevelopersDescr[index]
+											li(data-anim-stagger='fade-top')= li
+				.preloader-inner__wrap
+					.preloader-inner__squares
+							.square
+							.square
+							.square
+							.square
+		//Developer slider_end
+
+		//begin slider
+		+b.SECTION.slider_large.slider_grey
+			+e.container-top.container(data-anim='group' data-anim-delay='0.25' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Сase studies
+				+e.in
+					+e.anim
+						svg(viewBox='0 0 1180 392')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+							circle(cx='45' cy='196' r='14' stroke-width='14')
+					+e.bg
+						+e.bg-top
+						+e.bg-left
+						+e.bg-right
+						+e.bg-bottom
+					+e.inner
+						-
+							sliderList = [
+							{
+							title: 'Amazon',
+							descr: 'Value to the client',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p>'
+							},{
+							title: 'Amazon_1',
+							descr: 'Value to the client',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p><p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p><p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too!</p>'
+							},
+							{
+							title: 'Amazon_2',
+							descr: 'Value to the client',
+							text: '<p>Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! Development cost reduced by 45%. All the design inspiration you need. It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too! It’s like crack for designers. And good for you too!</p>'
+							}
+							]
+						each el, index in sliderList
+							+e.item
+								+e.item-text
+									+e.item-row
+										+e.item-col-large
+											+e.item-text-title(data-anim-stagger='fade-top')= el.title
+											+e.item-text-descr(data-anim-stagger='fade-top')= el.descr
+											+e.item-text-paragraph(data-anim-stagger='fade-top') !{el.text}
+											+e.item-text-link(data-anim-stagger='fade-top')
+												-
+													link = {
+													text: 'learn more',
+													className: 'link-white js-link-multiple-circle',
+													icons: true
+													}
+												include ../components/link
+										+e.item-col-small.anim-line
+											+e.client-link
+												img(src="static/img/amazon.png" alt="")
+												a(href="https://www.amazon.com") amazon.com
+											+e.UL.list
+												+e.LI.list-item
+													+e.item-text-title Back-end, Front-end, Design, DevOps
+													+e.item-text-descr Services
+												+e.LI.list-item
+													+e.item-text-title Node.js, SQL, React, HTML5, Amazon AWS
+													+e.item-text-descr Technologies
+												+e.LI.list-item
+													+e.item-text-title E-commerce
+													+e.item-text-descr industry
+								+e.item-img
+									img(src=`static/img/slider-1.jpg` alt='image')
+									//img(src=`static/img/slider-${index + 1}.jpg` alt='image')
+			+e.container-bot.container(data-anim='group')
+				+e.controls
+					+e.controls-dots(data-anim-stagger='fade-top')
+					+e.controls-link(data-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'View all cases',
+							className: 'link-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+		//end slider
+
+		//Clients slider_begin
+		+b.SECTION.slider-inner_clients.section
+			.container(data-anim='group')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Clients
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.arrows_clients(data-anim-stagger='fade-top' data-anim-parent-trigger)
+							+e.A(href="").prev: +i('arrow-left')
+							+e.A(href="").next: +i('arrow-right')
+					+e.slides_clients.col__large.anim-line
+							each source, index in sliderImgSource
+								+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									img(src= source data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger" alt="")
+		//Clents slider_end
+
+		//MEET_begin
+		+b.meet_default.section_dark
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.title Contact us
+				+e.row
+					+e.col(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						p We will help you form the right team for your project.
+					+e.col
+						+b.FORM.form.__form(action='URL')
+							.form-group.form-group_half
+								.form-group(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='text' id='formName' autocomplete='off' required)
+									label.form-input-label(for='formName'): span Your Name
+									.help-block Error
+								.form-group.has-error(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									input.form-input(type='email' id='formMail' autocomplete='off' required)
+									label.form-input-label(for='formMail'): span Your Email
+									.help-block Error
+							.form-group.form-group_textarea-submit(data-anim-stagger='fade-top' data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								textarea.form-textarea
+								.form-textarea-label: span Type your message here
+								.help-block Error
+							.form-group.form-group_submit-textarea(data-anim-stagger data-prepare-anim data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+b.BUTTON.btn(type='submit')
+									+e.SPAN.bg
+										+e.SPAN.bg-top
+									+e.SPAN.bg
+										+e.SPAN.bg-bot
+									+e.SPAN.text send
+
+						+e.form-ty
+							+e.form-ty-title.h4 Thank you! <br>We will contact very shortly.
+							p Your message is recieved. Svitla's sales manager of your region will contact you to discuss how we could be helpful.
+		//MEET_end
+
+		//begin half
+		+b.SECTION.half_left._with-img-mask._white.section
+			+e.bg-w.container
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/slider-1.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Want to start developing product ASAP, without managing it yourself?
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p Start developing your project without investing time and effort in managing the team.
+						+e.link(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'Learn more about Build-to-Order Software Applications',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		//end half

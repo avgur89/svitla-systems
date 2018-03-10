@@ -1,0 +1,80 @@
+.tags
+	position: relative
+	&__cont
+		display: flex
+		flex-wrap: wrap
+		overflow: hidden
+	&__title
+		font-size: 10px
+		text-transform: uppercase
+		color: $color1
+		margin: -7px 0 15px
+		+helvetica-bold
+		letter-spacing: 1px
+		+md
+			margin-top: 2px
+			margin-bottom: 11px!important
+		+sm
+			margin-top: -25px
+	&__btn
+		cursor: pointer
+		max-width: 140px
+		display: flex
+		align-items: center
+		span
+			+link-dark
+		.no-touch &
+			&:hover
+				color: $color3
+		.icons-w
+			transform: rotate(90deg)
+			position: relative
+			top: -4px
+			right: -13px
+			color: $color0
+			.icon
+				stroke: $color2
+				font-size: 15px
+				stroke-width: 2px
+		+md
+			margin-top: 6px
+		+sm
+			margin-bottom: -14px
+	&__item
+		font-size: 13px
+		color: $color1
+		line-height: 29px
+		margin-right: 12px
+		padding-right: 15px
+		letter-spacing: 0px
+		cursor: pointer
+		transition: color .3s
+		position: relative
+		&.disabled
+			opacity: .4
+			pointer-events: none
+		&.active
+			color: $color2
+			background-image: url('../img/cli.png')
+			background-size: 10px 10px
+			background-repeat: no-repeat
+			background-position: center right
+		.no-touch &
+			&:hover
+				color: $color2
+		+md
+			line-height: 34px
+		+sm
+			line-height: 30px
+	&__hidden-wrap
+		width: 100%
+		display: none
+		word-wrap: break-word
+	&__hidden
+		display: none
+	&_search
+		margin-bottom: 46px
+		+md
+			margin-bottom: 40px
+		+sm
+			margin-bottom: 34px

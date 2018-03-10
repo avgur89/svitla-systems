@@ -1,0 +1,66 @@
+.program
+	padding-left: 40px
+	&:not(:last-child)
+		margin-bottom: 60px
+	&__item
+		+f('solomon-semibold', 19, 32, 0)
+		letter-spacing: -0.2px
+		margin: 0 70px 11px 0
+		break-inside: avoid-column
+		-webkit-column-break-inside: avoid
+		+sm
+			+f('solomon-semibold', 15, 24, 0)
+			margin: 0 0 15px 0
+	&__wrap
+		column-count: 2
+		column-gap: 40px
+		color: $color1
+		+md
+			column-gap: 8px
+		+sm
+			column-count: 1
+			column-gap: 0
+	&__time
+		color: $color0
+		margin-bottom: -4px
+		+sm
+			margin-bottom: 6px
+	&__subtitle
+		+h3
+		width: 50%
+		color: $color1
+		margin-bottom: 28px
+		+sm
+			width: 100%
+			font-size: 20px
+			margin-bottom: 20px
+	&__middle-line
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			width: 1px
+			height: 0
+			background-color: $color0
+			transition: all 0.8s ease-out
+		.has-anim &
+			&::before
+				height: 100%
+		+md
+			&::before
+				height: 100%
+		+sm
+			display: none
+	+md
+		&::after
+			display: block
+	+sm
+		padding-left: 20px
+		&::after
+			display: none

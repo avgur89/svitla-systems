@@ -1,0 +1,219 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'Portfolio',
+		breadList = ['main', 'portfolio'];
+
+block main
+	main.content(data-page='testemonials')
+
+		//begin screen
+		+b.screen
+			+e.img
+				img(src='static/img/portfolio.jpg' alt='image')
+			+e.CANVAS.canvas_center#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-top(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') We deliver unparalleled value to our clients
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-bot
+							+e.H1.title Portfolio
+		//end screen
+
+		//case begin
+		+b.SECTION.cases
+			+e.container.container(data-anim='group' data-anim-delay='0.4')
+				+e.H2.title.h1 Case studies
+				+e.cont
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.A.media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.A.media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.A.media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						+e.A.media(href="")
+							img(src='static/img/half-11.jpg' alt='image')
+						+e.info
+							+e.A.subtitle.h4(href="" data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+								h2 29PRIME
+							+e.H3.name.h6 Services
+							+e.H4.list.h5 Back-end, Front-end, Design, DevOps
+							+e.H3.name.h6 Technologies
+							+e.H4.list.h5 Node.js, SQL, React, HTML5, Amazon AWS
+							+e.H3.name.h6 platform
+							+e.H4.list.h5 Magento
+							+e.H3.name.h6 industry
+							+e.H4.list.h5 E-commerce
+							+e.text Simplified the work in the admin panel and guarantees the issue of recommendations, which made workers workflow 10% faster.
+							+e.link(data-anim-stagger='fade-top')
+								-
+									link = {
+									text: 'read case',
+									className: 'link-dark js-link-multiple-circle',
+									icons: true
+									}
+								include ../components/link
+					+e.link.all-link(data-anim-stagger='fade-top')
+						-
+							link = {
+							text: 'All case studies',
+							className: 'link-dark js-link-multiple-circle',
+							icons: true
+							}
+						include ../components/link
+		//case end
+
+		//begin testimonals
+		+b.SECTION.testimonals__cont
+			.container(data-anim='group')
+				+e.H2.title.h1 What our clients say
+				+b.testimonals_video._turquoise._main
+					+e.bg-w
+						+e.bg
+							+e.bg-item
+								+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									img(src='static/img/half-11.jpg' alt='image')
+								+e.bg-video
+									video(controls playsinline preload="none")
+										source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+					+e.container.container(data-anim='group')
+						+e.inner
+							+e.inner-bg
+							+e.item
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+									p.qoute Our team in Kyev are personally committed to the success of company. They have great domain knowledge and are familiar with our tools and processes. Critically, the team is aligned to our global purpose and company values – a vital ingredient for an effective, long term collaboration
+								+e.title_white.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Client's name
+								+e.subtitle_white.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Job title, company name
+				+e.small
+					+e.in-cont
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals_video._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+													img(src='static/img/half-11.jpg' alt='image')
+												+e.bg-video
+													video(controls playsinline preload="none")
+														source(src='empty.mp4' data-load-src="static/video/main-2.mp4" type="video/mp4")
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute We enjoyed working with the Svitla team and hope to have other collaborative projects. They showed keen interest in our need, were patient and helpful as we were working our way through specification, came up with many creative solutions and delivered a great product. The PSI team is very pleased
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'view case study',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+						+e.item.anim-line(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							+e.container(data-anim='group')
+								+b.testimonals._main
+									+e.bg-w
+										+e.bg
+											+e.bg-item
+												+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+													img(src='static/img/half-11.jpg' alt='image')
+												+e.bg-video
+									+e.inner
+							+e.__info
+								+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top' data-anim-parent-trigger)
+									p.qoute We enjoyed working with the Svitla team and hope to have other collaborative projects. They showed keen interest in our need, were patient and helpful as we were working our way through specification, came up with many creative solutions and delivered a great product. The PSI team is very pleased
+								+e.name.h4(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Mike Donovan
+								+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Global Head of Business Development, PSI
+								+e.link(data-anim-stagger='fade-top')
+									-
+										link = {
+										text: 'view case study',
+										className: 'link-dark js-link-multiple-circle',
+										icons: true
+										}
+									include ../components/link
+						+e.link.all-link(data-anim-stagger='fade-top')
+							-
+								link = {
+								text: 'All testimonials',
+								className: 'link-dark js-link-multiple-circle',
+								icons: true
+								}
+							include ../components/link
+		////end testimonals

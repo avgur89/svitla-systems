@@ -1,0 +1,93 @@
+.blog-2
+	&_default
+		padding: $topOffset 0 $botOffset
+		+md
+			padding: $offsetTab 0 $offsetTab
+		+sm
+			padding: $topOffsetMob 0 $botOffsetMob
+	&__row
+		display: flex
+		&:not(:first-child)
+			margin-top: 104px
+			+sm
+				margin-top: 45px
+		+sm
+			display: block
+		
+	&__col
+		position: relative
+		flex: 1 1 100%
+		+md
+			flex: 1 0 50%
+		&:first-child
+			flex: 1 0 32.5%
+			padding-right: 40px
+			+md
+				flex: 1 0 50%
+				padding-right: 80px
+			+sm
+				padding-right: 0
+	&__row-2
+		display: flex
+		+md
+			display: block
+		+sm
+			margin-top: 21px
+	
+	&__col-2
+		position: relative
+		padding-left: 40px
+		flex: 1 1 100%
+		&:not(:first-child)
+			flex-basis: 93%
+			+md
+				flex-basis: 100%
+		+md
+			padding-left: 25px
+			&:not(:first-child)
+				margin-top: 53px
+		+sm
+			padding-left: 20px
+			&:not(:first-child)
+				margin-top: 34px
+		p
+			max-width: 295px
+			&:not(:last-child)
+				margin-bottom: 16px
+			+sm
+				max-width: none
+	
+	&__date
+		display: table
+		margin-top: 18px
+		letter-spacing: 0.1em
+		
+	&__title
+		margin-bottom: 13px
+		padding-right: 5px
+		color: $color2
+		& + p
+			margin-bottom: 30px
+		+md
+			padding-right: 0
+		+sm
+			margin-bottom: 15px
+			font-size: 23px
+			line-height: 30px
+		&_dark
+			color: $color5
+			+sm
+				font-size: 30px
+				line-height: 45px
+		a
+			display: block
+			+trs
+			.no-touch &:hover
+				color: $color5
+	&__link-main
+		display: table
+		margin: -20px 0 0 0
+		+sm
+			margin-top: 26px
+		a
+			margin-bottom: -7px

@@ -1,0 +1,111 @@
+extends ../extend/default
+
+block variables
+	-
+		title = 'About',
+		solutionCaption = ['financial_services', 'Big Data ', 'media', 'Data management ', 'Entertainment', 'Telecommunication', 'Human Resources', 'Education', 'Healthcare', 'Travel & Hospitality', 'E-commerce', 'Education', 'Healthcare', 'Travel & Hospitality'],
+		solutionSvgIcon = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '8', '9', '10'],
+		sliderImgSource = ['static/img/clients/ancestry.png', 'static/img/clients/bmc.png', 'static/img/clients/inflection.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png', 'static/img/clients/ingenico.png', 'static/img/clients/inter.png', 'static/img/clients/monster.png', 'static/img/clients/ooma.png', 'static/img/clients/stanford.png'],
+		breadList = ['main', 'about us', 'corporate social responsibility'];
+
+block main
+	main.content(data-page='about_us_csr').about
+		//begin screen
+		+b.screen.csr
+			+e.img
+				img(src='static/img/np1.png' alt='image')
+			+e.CANVAS.canvas_vertical-arc#screenCanvas
+			+e.container.container
+				+e.description(data-anim='group')
+					+e.description-bot.disable-dot(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') At Svitla, we believe in making a positive impact in the communities where we work and live. At Svitla, we believe in making a positive impact in the communities where we work and live. At Svitla, we believe in making a positive impact in the communities where we work and live.
+				+e.svg-line
+					svg(viewBox='0 0 600 600')
+						path(d='M600,0 0,600')
+				+e.svg-circle
+					svg(viewBox='0 0 80 80')
+						circle(cx='40' cy='40' r='30')
+				+e.content
+					+e.scroll.is-active(data-hover='scroll')
+						span scroll
+					+e.title-w
+						+e.SPAN.title-wrap
+							+e.H1.title Corporate Social Responsibility
+		//end screen
+
+		//begin half
+		+b.half_left.section
+			+e.bg-w
+				+e.bg
+					+e.bg-picture(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+						img(src='static/img/half-2.jpg' alt='image')
+			+e.container.container(data-anim='group')
+				+e.inner
+					+e.inner-bg
+					+e.item
+						+e.title.h1(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') Natalia Anon
+						+e.subtitle.h6(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top') founder and CEO of Svitla Systems
+						+e.text(data-anim-stagger='fade-top' data-mob-anim='group' data-mob-anim-stagger='fade-top')
+							p.qoute We build a business that is not only profitable but contributes to the well-being of other communities and makes a lasting difference in the world
+		//end half
+
+		//begin blog-4-section
+		+b.SECTION.blog-4_blue.section
+			.container(data-anim='group' data-anim-delay='.1' data-anim-duration='.7')
+				+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Our Principles
+				+e.row.col__wrap(data-anim='group')
+					+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+					+e.col.col__large
+						+e.row-2.anim-line_white
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/team.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Community Involvement
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We firmly believe in giving back to the society that has so generously hosted us and provided us with the opportunities that we enjoy. Svitla Systems participates and sponsors charity events to help those in need, organizes sports camps and educational events for children.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/support.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Promote Healthy Lifestyle
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| Better health is central to human happiness and well-being. We know that and care deeply not just about professional growth of Svitla employees but also about their well-being.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/expertise.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Education
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We encourage knowledge-sharing among our employees and support them in their desire to present their ideas and mentor others.
+							+e.item(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								img(src="static/img/less.svg" data-anim-stagger='fade-top' data-anim-parent-trigger)
+								+e.H3.title.h4(data-anim-stagger='fade-top' data-anim-parent-trigger) Environmental Sustainability
+								+e.text(data-anim-stagger='fade-top' data-anim-parent-trigger)
+									| We are committed to protecting our environment. Every one of us should behave in the environmentally-friendly way to help stop the global warming and make sure that next generations will enjoy the gifts of nature the same way we do.
+		//end blog-4
+
+		//begin projects
+		+b.SECTION.projects.section
+					.container(data-anim='group')
+						+e.H2.title.h1(data-anim-stagger='fade-top' data-anim-parent-trigger data-mob-anim='group' data-mob-anim-stagger='fade-top') Projects
+						+e.row.col__wrap(data-anim='group')
+							+e.col.col__small(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.text At Svitla, we believe in making a positive impact in the communities where we work and live.
+								+e.SELECT.__select.js-select
+									+e.OPTION.__option(value="2007") 2015
+									+e.OPTION.__option(value="2007") 2014
+									+e.OPTION.__option(value="2007") 2013
+									+e.OPTION.__option(value="2007") 2012
+									+e.OPTION.__option(value="2007") 2011
+									+e.OPTION.__option(value="2007") 2010
+									+e.OPTION.__option(value="2007") 2009
+									+e.OPTION.__option(value="2007") 2008
+									+e.OPTION.__option(value="2007") 2007
+							+e.col.col__large(data-mob-anim='group' data-mob-anim-stagger='fade-top')
+								+e.item.anim-line(href="")
+									img(src="static/img/project1.jpg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+									+e.H3.title.h4(data-anim-stagger='fade-top' data-anim='group' data-anim-parent-trigger) Kharkiv International Ultra Marathon
+								+e.item.anim-line(href="")
+									img(src="static/img/project2.jpg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+									+e.H3.title.h4(data-anim-stagger='fade-top' data-anim='group' data-anim-parent-trigger) Kharkiv International Marathon Kharkiv International Marathon
+								+e.item.anim-line(href="")
+									img(src="static/img/project3.jpg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+									+e.H3.title.h4(data-anim-stagger='fade-top' data-anim='group' data-anim-parent-trigger) Kharkiv International Ultra Marathon
+								+e.item.anim-line(href="")
+									img(src="static/img/project4.jpg" data-anim-stagger='fade-top' data-anim-parent-trigger alt="")
+									+e.H3.title.h4(data-anim-stagger='fade-top' data-anim='group' data-anim-parent-trigger) Kharkiv International Ultra Marathon
+		//end projects

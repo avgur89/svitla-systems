@@ -1,0 +1,42 @@
+.anim-line
+	$parent: &
+	&__item
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 1px
+			height: 0
+			background-color: $color2
+			transition: all 0.8s ease-out
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: -1px
+			width: 1px
+			height: 0
+			background-color: $color2
+			transition: all 0.8s ease-out
+		&.has-anim:after, &.has-anim:before
+			+desk
+				height: 100%
+	&_white
+		#{$parent}__item::before, #{$parent}__item::after
+			background-color: $color0
+	&_dark
+		#{$parent}__item::before, #{$parent}__item::after
+			background-color: $color1
+	+md
+		&__item
+			&::before
+				height: 100%
+				transform: translate(0, 0)
+			&::after
+				display: none
+				height: 100%
+				transform: translate(0, 0)
+				.solutions &
+					display: block

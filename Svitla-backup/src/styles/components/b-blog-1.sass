@@ -1,0 +1,254 @@
+.blog-1
+	$parent: &
+	.pagination
+		margin-top: 57px
+	&_career
+		min-height: 340px
+		.blog-1__title
+			cursor: pointer
+			transition: .4s
+			&:hover
+				color: $color3
+		.blog-1__row-2
+			margin-bottom: 57px
+			& + .pagination
+				margin-top: 0
+		.no-touch &
+			#{$parent}__col
+				a:hover
+					color: $color3
+		+md
+			.col__small
+				display: none
+			.blog-1__col-2
+				flex: 1 0 50%
+				margin-top: 50px
+				&::after
+					display: block
+			.blog-1__row
+				margin-top: 0
+		+sm
+			.blog-1__col-2
+				flex: 1 0 100%
+				margin-top: 35px
+	&_default
+		padding: $topOffset 0 $botOffset
+		+md
+			padding: $offsetTab 0 $offsetTab
+		+sm
+			padding: $topOffsetMob 0 $botOffsetMob
+	&__contact-wrap
+		margin-bottom: $botOffset
+		+md
+			margin-bottom: $offsetTab
+	&_contact
+		padding: $topOffset 0 0
+		+md
+			padding: $offsetTab 0 0
+			#{$parent}__title
+				margin-bottom: 20px
+				& + #{$parent}__row
+					margin-top: 0
+			.col__small
+				width: 100%
+				margin-bottom: 20px
+			#{$parent}__row
+				flex-direction: column
+			#{$parent}__col-2
+				flex: 1 0 50%
+				max-width: 50%
+				&:nth-child(2)
+					margin-top: 0
+		+sm
+			//padding: $topOffsetMob 0 0
+			#{$parent}__col-2
+				flex: 1 0 100%
+				max-width: 100%
+			#{$parent}__text
+				+paragraph-text
+			.col__small
+				margin-bottom: 30px
+			& + section:not(.blog-1_contact)
+				margin-top: 80px
+			& + footer
+				margin-top: 80px
+	&_ceo
+		padding: 112px 0 0
+		& + #{$parent}_ceo
+			margin-top: -22px
+		& + section:not(.blog-1_ceo)
+			margin-top: $botOffset
+		& + footer
+			margin-top: $botOffset
+		+md
+			padding: 117px 0 0
+			& + #{$parent}_ceo
+				margin-top: -55px
+			.col__small
+				display: none
+		+sm
+			padding: 53px 0 0
+			#{$parent}__title
+				margin-bottom: 31px
+			& + #{$parent}_ceo
+				margin-top: -8px
+			& + section:not(.blog-1_ceo)
+				margin-top: $topOffsetMob
+	&_responsive
+		#{$parent}__col-2
+			flex: 1 1 0
+			padding: 0 40px 0 20px
+			&:nth-child(1n + 3)
+				margin-top: 0
+		#{$parent}__subtitle
+			margin-bottom: 0
+		+md
+			.col__small #{$parent}__text
+				width: 250px
+			#{$parent}__col-2
+				flex: 1 0 100%
+				&:not(:first-child)
+					margin-top: 60px
+		+sm
+			#{$parent}__col-2
+				margin-top: 30px
+	&__text
+		margin-top: 5px
+		max-width: 1024px
+		color: $color6
+		& + #{$parent}__title
+			margin-top: $botOffset
+			+md
+				margin-top: $offsetTab
+		+sm
+			margin-top: 0
+			+h5
+			font-size: 15px
+			& + #{$parent}__title
+				margin-top: 45px
+	&__row
+		margin-top: $topOffset
+		+md
+			margin-top: 50px
+		+sm
+			margin-top: 45px
+	&__row-2
+		display: flex
+		flex-wrap: wrap
+	&__col
+		a:not(.link-dark)
+			color: $color2
+			+trs
+			.no-touch &
+				&:hover
+					color: $color1
+		+sm
+			.blog-1__title
+				font-size: 30px
+				line-height: 45px
+	&__col-2
+		padding-left: 40px
+		padding-right: 10px
+		flex: 1 0 50%
+		max-width: 450px
+		&:nth-child(1n + 3)
+			margin-top: 55px
+		+md
+			flex: 1 0 100%
+			max-width: 100%
+			padding-left: 25px
+			&:nth-child(1n + 2)
+				margin-top: 35px
+			&:not(:first-child)
+				margin-top: 53px
+			.col__wrap_one-col &
+				padding-right: 30px
+				&::after
+					display: block
+				&:nth-child(1n + 3)
+					margin-top: 60px
+		+sm
+			padding-left: 20px
+			&:not(:first-child)
+				margin-top: 34px
+			#{$parent}__title
+				font-size: 23px
+				line-height: 30px
+		p
+			max-width: 335px
+			color: $color6
+			&:not(:last-child)
+				margin-bottom: 16px
+			+sm
+				max-width: none
+		ul
+			margin: 0 0 16px 21px
+			li
+				margin: 0 35px 22px 0
+	&__link
+		display: table
+		margin-top: -5px
+		a
+			margin-bottom: -7px
+	&__more
+		margin-top: 90px
+		+md
+			margin-top: $offsetTab
+		p
+			+h5
+		#{$parent}__link
+			margin-top: 13px
+		+sm
+			margin-top: 50px
+			p
+				font-size: 15px
+	&__title
+		margin-bottom: 25px
+		color: $color2
+		&_dark
+			color: $color5
+		& + #{$parent}__row
+			margin-top: 40px
+		+md
+			margin-bottom: 30px
+		+sm
+			margin-bottom: 15px
+			font-size: 23px
+			line-height: 30px
+			& + #{$parent}__row
+				margin-top: 30px
+	&__text-collumns
+		column-count: 2
+		column-gap: 55px
+		padding: 0 20px 0 38px
+		letter-spacing: 0
+		&_quote
+			font-style: italic
+		+md
+			&::after
+				display: block
+		+sm
+			column-count: 1
+			padding: 0 0 0 20px
+			&::after
+				display: none
+			p
+				margin-bottom: 18px
+	&__subtitle
+		margin-bottom: 16px
+		+sm
+			font-size: 17px
+			line-height: 24px
+	&_blue
+		background-color: $color2
+		.link-dark .icons-w .icon
+			stroke: $color0
+		#{$parent}__item
+			padding-right: 30px
+		#{$parent}__title
+			color: $color0
+			margin-bottom: 30px
+		#{$parent}__text, #{$parent}__footer-description
+			color: $color0
+		#{$parent}__title_dark
+			color: $color5

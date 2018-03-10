@@ -1,0 +1,17 @@
+mixin person(className, imgSource, title, descr, linkArray, linkTextArray, linkDescrList, listArray)
+  +b.person(data-mob-anim='group' data-mob-anim-stagger='fade-top' class = className || '')
+    img(src= imgSource data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")
+    +e.title(data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")= title
+    if descr !== null
+      +e.descr(data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")= descr
+    if linkArray !== null
+      +e.links
+        each li, index in linkArray
+          div(data-anim-stagger='fade-top')
+            span= linkDescrList[index]
+            a(href= linkArray[index])= linkTextArray[index]
+    if listArray !== null
+      +e.text
+        ul.ul-standart(data-anim-stagger='fade-top' data-anim-parent-trigger="data-anim-parent-trigger")
+          each li in listArray
+            li(data-anim-stagger='fade-top')= li

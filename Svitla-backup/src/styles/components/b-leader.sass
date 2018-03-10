@@ -1,0 +1,112 @@
+.leader
+	$parent: &
+	cursor: pointer
+	position: relative
+	flex: 1 1 33.33%
+	max-width: 300px
+	padding: 0 20px
+	&__img
+		width: 220px
+		height: 260px
+		object-fit: cover
+		font-family: 'object-fit: cover;'
+		margin-bottom: 18px
+	&__title
+		+h4
+		+trs
+		margin-bottom: 7px
+	&__descr
+		+h6
+		+trs
+		line-height: 17px
+		letter-spacing: 1px
+	&__text
+		+paragraph-text
+		padding: 0 30px 0 20px
+		border-left: 1px solid $color0
+		max-height: 500px
+		overflow: hidden
+		position: relative
+		p
+			margin-bottom: 20px
+		+sm
+			border: none
+			max-height: 300px
+			padding: 0 30px 0 0
+	&__tooltip
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		color: $color1
+		background-color: $color2
+		padding: 20px 45px 60px 45px
+		z-index: 4
+		max-height: 700px
+		+sm
+			max-height: 500px
+			padding: 20px 20px 60px 20px
+		&-title
+			+h1
+			margin-bottom: 8px
+			+sm
+				+medium-text
+		&-descr
+			+h6
+			margin-bottom: 30px
+			letter-spacing: -.1px
+		&-close
+			+link-close
+			position: absolute
+			top: 25px
+			right: 15px
+			.icon-w .icon
+				stroke: $color0
+	.no-touch &
+		&:hover
+			&::before, &::after
+				background-color: $color3
+				z-index: 2
+			#{$parent}__title, #{$parent}__descr
+				color: $color3
+	+desk
+		&:nth-child(1n + 4)
+			margin-top: 60px
+		&:nth-child(3n + 3)
+			#{$parent}__tooltip
+				left: auto
+				right: -1px
+	+md
+		flex-wrap: wrap
+		flex: 1 1 50%
+		max-width: 50%
+		&:nth-child(2n + 2)
+			&::after
+				display: block
+			#{$parent}__tooltip
+				left: auto
+				right: -1px
+		&:nth-child(1n + 3)
+			margin-top: 60px
+	+sm
+		padding: 0 30px
+		flex-wrap: wrap
+		flex: 1 1 100%
+		max-width: 100%
+		&::after
+			display: block
+		&:nth-child(1n + 2)
+			margin-top: 40px
+		+mob-fix
+			flex: 1 1 50%!important
+			max-width: 50%!important
+			&:nth-child(2)
+				margin-top: 0!important
+			//&:nth-child(2n + 2)
+			//	&::after
+			//		display: block
+			//	#{$parent}__tooltip
+			//		left: auto
+			//		right: -1px
+			//&:nth-child(1n + 3)
+			//	margin-top: 60px

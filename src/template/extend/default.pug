@@ -1,0 +1,63 @@
+include ../bemto/index
+include ../partials/_variables
+include ../partials/_mixins
+
+- var suffix = production ? '.min' : '';
+
+doctype html
+html(lang='en')
+
+	block variables
+		- var title = defaultPageTitle;
+		- var preloaderExist = false;
+
+	block head
+		head
+			meta(name='format-detection', content='telephone=no')
+			meta(charset='utf-8')
+			meta(http-equiv='x-ua-compatible', content='IE=edge')
+			meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,target-densityDpi=device-dpi')
+			title= title
+			link(href='static/css/index' + suffix + '.css', rel='stylesheet')
+			link(rel='icon', href='static/favicon.ico')
+
+	block body
+		body.is-loading
+			// SVG
+			block svg
+				div.svg-container(style="position: absolute; width: 0; height: 0; overflow: hidden;")
+					include ../partials/_sprite.svg
+
+			// picture element HTML5 shiv
+			block inlineScripts
+				script.
+					document.createElement('picture');
+
+			// Preloader
+			block preloader
+				if preloaderExist
+					+b.preloader
+						+e.container.container
+							+e.circle
+
+			// Header
+			block header
+				include ../components/_header
+
+			// Breadcrumbs
+			block breadcrumbs
+				.container
+					include ../components/breadcrumbs
+
+			// Main content
+			block main
+					main
+
+			// FooterBlock
+			block footer
+				include ../components/_footer
+
+			// Scripts
+			block scripts
+				script(src='static/js/index.jquery' + suffix + '.js')
+				script(src='static/js/index' + suffix + '.js')

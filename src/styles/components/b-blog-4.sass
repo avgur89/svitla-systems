@@ -1,0 +1,356 @@
+.blog-4
+	$parent: &
+	min-height: 690px
+	padding: $topOffset 0 $botOffset
+	background-color: $color1
+	color: $color0
+	+md
+		padding: $offsetTab 0 $offsetTab
+	+sm
+		padding: $topOffsetMob 0 $botOffsetMob
+		height: auto
+		min-height: 0
+	&_job
+		padding-bottom: 0
+		#{$parent}__three
+			#{$parent}__text
+				letter-spacing: 1px
+				margin-bottom: 9px
+			+md
+				#{$parent}__item:nth-child(1n + 3)
+					margin-top: 55px
+			+sm
+				#{$parent}__item:nth-child(1n + 3)
+					margin-top: 30px
+		#{$parent}__title
+			letter-spacing: 0.2px
+			line-height: 30px
+		#{$parent}__full_item
+			margin-top: 48px
+			&:last-child
+				margin-bottom: 0
+			+md
+				padding: 0 20px
+				margin-top: 60px
+			+sm
+				margin-top: 22px
+		#{$parent}__item__part
+			margin-bottom: 9px
+			&:last-of-type
+				margin-bottom: 0
+			#{$parent}__text
+				padding-top: 6px
+				letter-spacing: 0px
+				margin-left: 10px
+				+sm
+					margin-left: 0
+			+md
+				margin-bottom: 16px
+			+sm
+				margin-bottom: 7px
+		.redactor
+			font-size: 13px
+			line-height: 22px
+			letter-spacing: 0.025em
+			ul
+				margin-left: 19px
+				li
+					position: relative
+					margin: 0 0 6px 0
+					color: $color6
+					font-size: 13px
+					font-weight: 400
+					line-height: 22px
+					//white-space: pre-wrap
+					margin-bottom: 17px
+					&::before
+						content: ''
+						position: absolute
+						width: 5px
+						height: 5px
+						border-radius: 50%
+						//top: 9px
+						//left: -19px
+						top: 9px
+						left: -17px
+						background-color: $color1
+						display: block
+					&:last-child
+						margin-bottom: 0
+					ul
+						margin-left: 40px
+		.h5
+			line-height: 26px
+			+sm
+				line-height: 24px
+				font-size: 16px
+				letter-spacing: -.5px
+				&:last-child
+					margin-bottom: 0
+			.blog-4__title
+				margin-right: 20px
+		+md
+			padding-bottom: 0
+		+sm
+			padding-bottom: 0
+	&_white
+		background-color: $color0
+		color: $color1
+		#{$parent}__item
+			padding-right: 30px
+	&_grey
+		background-color: $color4
+		color: $color1
+	&_blue
+		background-color: $color2
+		#{$parent}__item
+			padding-right: 30px
+		#{$parent}__title, #{$parent}__text, #{$parent}__footer-description
+			color: $color1
+	&_flexibility
+		min-height: 0
+	&_redactor
+		+md
+			padding-top: 62px
+		+sm
+			#{$parent}__item:nth-child(1n + 2)
+				margin-top: 30px
+	&_without-padding-bot
+		padding: $topOffset2 0 0!important
+		+md
+			padding: $offsetTab 0 0!important
+		+sm
+			padding: $topOffsetMob 0 0
+	&_mt-0-append-js
+		margin-top: 0!important
+	&__item
+		flex: 1 0 50%
+		max-width: 450px
+		padding: 0 40px 0 40px
+		position: relative
+		img
+			max-width: 45px
+			max-height: 45px
+			width: auto
+			height: auto
+			margin-bottom: 22px
+			position: absolute
+			top: 0
+			& + div, & + h3
+				margin-top: 58px
+		&:nth-child(1n + 3)
+			margin-top: 55px
+		#{$parent}__title
+			margin-bottom: 18px
+		+md
+			padding: 0 30px 0 20px
+			max-width: 50%
+			&::after
+				display: block
+			&:nth-child(1n + 3)
+				margin-top: 55px
+			.blog-4__title
+				margin-bottom: 16px
+				&:last-of-type
+					margin-bottom: 0
+			#{$parent}__text
+				margin: 0
+		+sm
+			max-width: 100%
+			width: 100%
+			flex: 1 0 100%
+			#{$parent}__title
+				font-size: 17px
+			&:nth-child(1n + 2)
+				margin-top: 40px
+	&__text
+		p
+			margin-bottom: 20px
+		+md
+			margin: -10px 0 25px
+			p
+				margin-bottom: 10px
+		+sm
+			margin: 0
+	&__subtitle
+		+h6
+		letter-spacing: 1px
+		margin-bottom: 9px
+	&__row
+		+md
+			flex-direction: column
+	&__row-2
+		width: 900px
+		display: flex
+		flex-wrap: wrap
+		& + #{$parent}__footer-description
+			margin-top: 55px
+			+sm
+				margin-top: 35px
+		& + #{$parent}__link
+			margin-top: 42px
+		+md
+			width: 100%
+		&_full
+			#{$parent}__item:nth-child(1n + 3)
+				margin-top: 47px
+			#{$parent}__full_item
+				margin-top: 44px
+			#{$parent}__item__part
+				margin-bottom: 22px
+			+sm
+				#{$parent}__item:nth-child(1n + 2)
+					margin-top: 26px
+					#{$parent}__title
+						line-height: 24px
+				#{$parent}__full_item
+					margin-top: 30px
+				#{$parent}__item__part
+					margin-bottom: 24px
+	&__col
+		+md
+			width: 100%
+			//.col__small p
+			//	margin-bottom: 35px
+			& + #{$parent}__col
+				margin-top: 35px
+		+sm
+			&.col__small
+				padding: 0
+			& + #{$parent}__col
+				margin-top: 20px
+	&__title
+		letter-spacing: .4px
+		margin-bottom: 50px
+		&:last-of-type:not(h1, h2, h3)
+			margin-bottom: 0
+		+md
+			margin-bottom: 40px
+		+sm
+			font-size: 23px
+			line-height: 30px
+			letter-spacing: 0px
+			margin-bottom: 25px
+	&__footer-description
+		width: 600px
+		+h4
+		+md
+			width: 100%
+		+sm
+			margin-top: 35px
+			font-size: 15px
+			line-height: 24px
+	&__footer-btn
+		margin-top: 40px
+		.blog-4_blue &
+			.btn
+				color: $color3
+			.btn__bg-top, .btn__bg-bot
+				background-color: $color0
+			.btn__bg-top::before
+				background-color: $color0
+		+md
+			.btn
+				left: 0
+		+sm
+			display: flex
+			justify-content: center
+	.title__out
+		margin-bottom: 50px !important
+		margin-top: 50px
+		padding-right: 230px
+		+md
+			&:before
+				display: none
+			padding-right: 0
+		+sm
+			max-width: 100%
+			width: 100%
+			font-size: 17px
+			line-height: 24px
+			margin-bottom: 30px !important
+	.btn
+		position: relative
+		left: 25px
+		+md
+			left: 0
+			margin-left: 30px
+			&:before
+				display: none
+		+sm
+			margin-left: auto
+			margin-right: auto
+	&__full_item
+		width: 100%
+		padding-left: 40px
+		padding-right: 30px
+		margin-top: 55px
+		+md
+			&:after
+				display: block
+			.blog-4__text
+				margin-bottom: 0
+		+sm
+			padding-left: 20px
+			padding-right: 20px
+			margin-top: 30px
+	&__three_item
+		display: flex
+		justify-content: space-between
+		width: 100%
+		margin-bottom: 0px
+		+md
+			flex-wrap: wrap
+			&:before
+				display: none
+		.blog-4__text
+			text-transform: uppercase
+			+f('helvetica-bold', 10, 14, 0)
+			margin-bottom: 7px
+		.blog-4__item
+			width: 300px
+			max-width: 300px
+			margin-top: 0
+			flex: 1 0 300px
+			+md
+				width: 50%
+				max-width: 50%
+				flex: 1 0 50%
+				margin-top: 30px
+			+sm
+				width: 100%
+				max-width: 100%
+				flex: 1 0 100%
+				margin-top: 30px
+		.blog-4__title
+			margin-bottom: 0
+			+md
+				margin-bottom: 0
+	&__item__part
+		width: 100%
+		max-width: 900px
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		margin-bottom: 35px
+		p
+			margin-bottom: 17px
+		+md
+			max-width: 100%
+		+sm
+			flex-wrap: wrap
+			.blog-4__title,.blog-4__text
+				width: 100%
+			#{$parent}__title
+				font-size: 17px
+		&:last-child
+			margin-bottom: 0
+		.blog-4__title
+			width: 250px
+			min-width: 250px
+			max-width: 250px
+			margin-bottom: 0
+		.blog-4__text
+			padding-top: 9px
+			+sm
+				padding-top: 14px
